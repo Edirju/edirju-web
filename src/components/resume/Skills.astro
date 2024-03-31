@@ -1,0 +1,103 @@
+---
+import Section from "../Section.astro";
+import { skills } from "@cv";
+
+import {
+  Html5,
+  Css3,
+  Javascript,
+  Git,
+  Python,
+  Vite,
+  React,
+  Bootstrap,
+  Tailwindcss,
+  Github,
+  Figma,
+  Slack,
+  Notion,
+  Hubspot,
+  Gumroad,
+  Googleads,
+  Googlegemini,
+  Openai,
+  Meta,
+  Googleanalytics, 
+  Typescript, 
+  Mysql,
+} from "simple-icons-astro";
+import Astrojs from "@/icons/AstroIcon.astro";
+import Next from "@/icons/Next.astro";
+import Node from "@/icons/Node.astro";
+
+const SKILLS_ICONS: Record<string, any> = {
+  Html5,
+  Css3, 
+  Javascript,
+  Next,
+  Node,
+  Git,
+  Python,
+  React,
+  Tailwindcss,
+  Github,
+  Vite,
+  Bootstrap,
+  Astrojs,
+  Figma,
+  Slack,
+  Notion,
+  Hubspot,
+  Gumroad,
+  Googleads,
+  Googlegemini,
+  Openai,
+  Meta,
+  Googleanalytics,
+  Typescript,
+  Mysql,
+};
+---
+
+<Section title="Habilidades">
+  <ul>
+    {
+      skills.map(({ name }) => {
+        const iconName = name === "HTML" ? "Html5" : name;
+        const Icon = SKILLS_ICONS[iconName];
+
+        if (!Icon) {
+          console.error(`Icono no encontrado para la red: ${name}`);
+          return null;
+        }
+
+        return (
+          <li>
+            <Icon class="w-4 h-4" />
+            <span>{name}</span>
+          </li>
+        );
+      })
+    }
+  </ul>
+</Section>
+
+<style>
+  ul {
+    display: inline-flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    border-radius: 0px;
+    background: #eee;
+    color: #1e252c;
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0.2rem 0.6rem;
+    gap: 4px;
+  }
+</style>

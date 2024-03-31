@@ -1,0 +1,52 @@
+---
+import Layout from "@/layouts/Layout.astro";
+const { frontmatter } = Astro.props;
+---
+
+<Layout title={frontmatter.title}>
+  <main>
+    <h2>{frontmatter.title}</h2>
+    <p>{frontmatter.pubDate.slice(0, 10)}</p>
+    <p>{frontmatter.description}</p>
+    <p>Escrito por: {frontmatter.author}</p>
+    <img src={frontmatter.image.url} alt={frontmatter.image.alt} />
+    <slot />
+  </main>
+</Layout>
+
+<style>
+  main {
+    max-width: 700px;
+    margin: 0 auto 72px;
+    padding: 4rem;
+    margin: auto;
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.4;
+    text-wrap: balance;
+    margin: .5rem 0;
+  }
+
+  img{
+    aspect-ratio: 1 / 1; 
+    object-fit: cover;
+    width: 700px;
+    height: 350px;
+    border-radius: 10px;
+    margin-bottom: 16px;
+  }
+
+  @media (width <= 700px) {
+    main {
+      padding: 2rem;
+    }
+  }
+</style>

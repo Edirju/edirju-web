@@ -1,0 +1,80 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import MinNav from "@/components/sections/MinNav.astro";
+import BlogPost from "@/components/sections/BlogPost.astro";
+import Footer from "@/components/sections/Footer.astro";
+
+import { basics } from "@landing";
+const { name, label } = basics;
+---
+
+<Layout title=`Portafolio de ${name} - Blog & Notas`>
+  <MinNav />
+  <main>
+    <div class="title-container">
+      <div class="title-header">
+        <h1 class="title-black">Mis publicaciones</h1>
+        <p>Tecnología | Marketing Digital | Cultura</p>
+      </div>
+      <figure class="title-footer">
+        <img src="/images/Code-typing-bro.svg" alt="hero image" />
+      </figure>
+    </div>
+    <BlogPost />
+    <Footer />
+  </main>
+</Layout>
+
+<style>
+  main {
+    padding: 4rem;
+    margin: auto;
+    width: 100%;
+  }
+
+  .title-container {
+    max-width: 700px;
+    margin: 0 auto 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .title-header {
+    text-wrap: pretty;
+  }
+  .title-header p {
+    font-size: 1rem;
+    line-height: 0.7;
+    color: rgba(30, 37, 44, 60%);
+  }
+  .title-black {
+    font-weight: 900;
+    font-size: 3.5rem;
+    letter-spacing: -0.125rem;
+  }
+
+  .title-footer img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    width: 215px;
+  }
+
+  @media (width <= 700px) {
+    main {
+      padding: 2rem;
+    }
+    .title-container {
+      flex-direction: column-reverse;
+      text-align: center;
+      margin-bottom: 72px;
+    }
+    .title-black {
+      font-size: 36px;
+    }
+    .title-header p {
+      line-height: 1;
+      font-size: 14px;
+    }
+  }
+</style>

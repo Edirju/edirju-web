@@ -1,3 +1,13 @@
 {
-  "extends": "astro/tsconfigs/strict"
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@cv": ["./cv.json"],
+      "@landing": ["./landing.json"]
+    },
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact",
+  }
 }

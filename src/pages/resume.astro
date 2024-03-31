@@ -1,0 +1,39 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Hero from "@/components/resume/Hero.astro";
+import About from "@/components/resume/About.astro";
+import Experience from "@/components/resume/Experience.astro";
+import Education from "@/components/resume/Education.astro";
+import Skills from "@/components/resume/Skills.astro";
+import Projects from "@/components/resume/Projects.astro";
+import KeyboardManager from "@/components/KeyboardManager.astro";
+
+import { basics } from "@cv";
+const { name, label } = basics;
+---
+
+<Layout title={`Curriculum Vitae de ${name} - ${label}`}>
+  <main>
+    <Hero />
+    <About />
+    <Experience />
+    <Education />
+    <Skills />
+    <Projects />
+  </main>
+  <KeyboardManager />
+</Layout>
+
+<style>
+  main {
+    padding: 4rem;
+    margin: auto;
+    width: 100%;
+  }
+
+  @media (width <= 700px) {
+    main {
+      padding: 2rem;
+    }
+  }
+</style>
