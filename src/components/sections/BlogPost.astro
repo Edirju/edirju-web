@@ -1,7 +1,6 @@
 ---
 import Section from "../Section.astro";
 import { Rss } from "simple-icons-astro";
-import Circle from "@/icons/circle.astro";
 import Filetextfill from "@/icons/Filetextfill.astro";
 
 const allPosts = await Astro.glob("@/pages/posts/*.md");
@@ -26,7 +25,7 @@ const allPosts = await Astro.glob("@/pages/posts/*.md");
     {
       allPosts.map((post) => (
         <li>
-          <a href={post.url} target="_blank">
+          <a href={post.url} >
             <Filetextfill />
             <h3>{post.frontmatter.title}</h3>
           </a>
