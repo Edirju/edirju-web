@@ -28,6 +28,12 @@ const { title } = Astro.props;
   :root {
     --bg-white: #f8fafb;
     --color-dark: #1e252c;
+    --color-secondary: rgb(255, 193, 52);
+    --color-secondary-transparent: rgba(255,193,52,.5);
+  }
+
+  *::selection {
+    background-color: var(--color-secondary);
   }
 
   html {

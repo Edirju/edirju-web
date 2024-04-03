@@ -52,8 +52,8 @@ const allPosts = await Astro.glob("@/pages/posts/*.md");
         ))
       }
     </ul>
+    <Footer />
   </main>
-  <Footer />
 </Layout>
 
 <style>
@@ -117,6 +117,7 @@ const allPosts = await Astro.glob("@/pages/posts/*.md");
     display: flex;
     flex-direction: column;
     gap: 16px;
+    margin-bottom: 72px;
   }
 
   li {

@@ -18,7 +18,10 @@ const SOCIAL_ICONS: Record<string, any> = {
     <footer>
       <div class="avatar">
         <img src="../images/avatar.svg" alt=`${name}` class="avatar-img" />
-        <h3>Edinson Rivera Jurado | Desarrollo Web | Community Manager</h3>
+        <h3>
+          Edinson Rivera Jurado <span>•</span> Desarrollo Web <span>•</span
+          > Community Manager
+        </h3>
       </div>
 
       <div class="copyright">
@@ -56,7 +59,6 @@ const SOCIAL_ICONS: Record<string, any> = {
   main {
     margin: 0 auto 0px;
     max-width: 700px;
-    
   }
 
   h2 {
@@ -89,13 +91,13 @@ const SOCIAL_ICONS: Record<string, any> = {
   }
   .avatar h3 {
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 200;
     letter-spacing: -0.05em;
   }
 
   .copyright p {
     font-size: 1rem;
-    font-weight: 300;
+    font-weight: 200;
     letter-spacing: 0.1em;
   }
 
@@ -108,13 +110,13 @@ const SOCIAL_ICONS: Record<string, any> = {
     transition: all 0.2s ease-in-out;
   }
   .social-icons a:hover {
-    color: rgba(30, 37, 44, 40%);
+    color: rgba(30, 37, 44, 30%);
   }
 
   @media (width <= 700px) {
     main {
       margin-bottom: 38px;
-      padding: 2rem;
+      padding: 0rem;
     }
 
     footer {
