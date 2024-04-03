@@ -26,8 +26,10 @@ const instagramInfo = profiles.find(({ network }) => network === "Instagram");
 const instagramUrl = instagramInfo?.url;
 const githubInfo = profiles.find(({ network }) => network === "Github");
 const githubUrl = githubInfo?.url;
+const threadsInfo = profiles.find(({ network }) => network === "Threads");
+const threadsUrl = threadsInfo?.url;
 
-const printInfo = [email, phone, linkedUrl, githubUrl, XUrl, instagramUrl]
+const printInfo = [email, phone, linkedUrl, githubUrl, XUrl, instagramUrl, threadsUrl]
   .filter(Boolean)
   .join(" • ");
 ---

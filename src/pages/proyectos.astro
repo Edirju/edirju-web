@@ -14,20 +14,11 @@ const { name, label } = basics;
   <Section>
     <MinNav />
     <main>
-      <div class="title-container">
-        <div class="title-header">
-          <h1 class="title-black">
-            Bodega de Scripts
-          </h1>
-          <p>Desarrollo Web | Marketing Digital | No-Code </p>
-        </div>
-        <figure class="title-footer">
-          <img src="/images/Code-typing-bro.svg" alt="hero image" />
-        </figure>
-      </div>
-      
-      <h2 class="title-section">Proyectos</h2>
-      
+      <h2 class="title-section">
+        Bodega de Scripts
+        <span>Desarrollo Web | Marketing | No-Code</span>
+      </h2>
+
       <article class="text-description">
         <p>
           Los pequeños detalles marcan una gran diferencia. Con los años he
@@ -97,17 +88,27 @@ const { name, label } = basics;
     margin: auto;
     width: 100%;
   }
- 
+
   .title-section {
     margin-bottom: 1.5rem;
-    font-weight: 800;
+    font-weight: 900;
     line-height: 1.5;
-    font-size: 20px;
+    letter-spacing: -0.025em;
+    font-size: 24px;
     text-transform: uppercase;
     background-color: #1e252c;
     color: #f8fafb;
     width: fit-content;
     padding: 1px 32px 1px 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .title-section span {
+    font-size: 1rem;
+    font-weight: 100;
+    letter-spacing: 0.05em;
   }
 
   .title-container {
@@ -116,18 +117,18 @@ const { name, label } = basics;
     justify-content: space-between;
   }
 
-  .title-header{
+  .title-header {
     text-wrap: pretty;
   }
   .title-header p {
     font-size: 1rem;
     line-height: 0.7;
-    color: rgba(30, 37, 44, 60%)
+    color: rgba(30, 37, 44, 60%);
   }
   .title-black {
     font-weight: 900;
     font-size: 3.5rem;
-    letter-spacing: -.125rem;
+    letter-spacing: -0.125rem;
   }
 
   .title-footer img {
@@ -240,6 +241,18 @@ const { name, label } = basics;
   @media (width <= 700px) {
     main {
       padding: 2rem;
+    }
+    .title-section {
+      flex-wrap: wrap;
+      line-height: 0.9;
+      padding: 4px 32px 4px 16px;
+      letter-spacing: 0.025em;
+    }
+    .title-section span {
+      letter-spacing: 0.025em;
+      text-wrap: pretty;
+      line-height: 1;
+      font-size: 12px;
     }
 
     .title-container {
