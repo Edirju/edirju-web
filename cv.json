@@ -1,15 +1,15 @@
 {
   "basics": {
     "name": "Edinson Rivera Jurado",
-    "label": "Full Stack Developer con más de 15 años de experiencia & Creador de Contenido de Programación",
+    "label": "Ingeniero de Sistemas con intereses en desarrollo web y marketing digital con +5 años de experiencia & Creador de Contenido de Programación.",
     "image": "/me.webp",
     "email": "edirju@gmail.com",
     "phone": "+57 3128288647",
-    "url": "https://midu.dev",
-    "summary": "+15 años de experiencia como Desarrollador Web. Actualmente soy Creador de Contenido y Divulgador sobre Programación. Vivo en Barcelona, España. He trabajado en diferentes entornos: desde acelerar el desarrollador de start-ups hasta liderando equipos de empresas multinacionales.",
+    "url": "https://edinson-rivera-devweb.vercel.app/",
+    "summary": "+5 años de experiencia como Desarrollador Web y Community manager. Ingeniero de Sistemas de la Universidad INCCA de Colombia con intereses en el sector de IT, desarrollo web/software y marketing  digital, con experiencia en aplicaciones informáticas, asesorías  tecnológicas para analizar, diseñar, comprobar y evaluar sistemas de información, troubleshooting presencial y remoto. Actualmente soy freelance - creador de contenido. Vivo en Cali, Colombia. He trabajado en diferentes entornos: desde diseñador web hasta gestor de redes sociales en equipos de empresas multinacionales.",
     "location": {
       "address": "",
-      "postalCode": "08820",
+      "postalCode": "760023",
       "city": "Santiago de Cali",
       "countryCode": "CO",
       "region": "Colombia"
@@ -17,46 +17,54 @@
     "profiles": [
       {
         "network": "Linkedin",
-        "username": "midudev",
-        "url": "https://linkedin.com/in/midudev"
+        "username": "Edinson",
+        "url": "https://www.linkedin.com/in/edinson-rivera-jurado-65187927/"
       },
       {
         "network": "Github",
-        "username": "midudev",
-        "url": "https://github.com/midudev"
+        "username": "Edirju",
+        "url": "https://github.com/Edirju"
       },
       {
         "network": "X",
-        "username": "midudev",
-        "url": "https://x.com/midudev"
+        "username": "edinson_rivera",
+        "url": "https://twitter.com/edinson_rivera"
       }
     ]
   },
   "work": [
     {
-      "name": "midudev",
-      "position": "Divulgador sobre Programación Web",
-      "url": "https://twitch.tv/midudev",
-      "startDate": "2021-01-01",
+      "name": "Freelancer",
+      "position": "Diseño Web & Gestión de Redes Sociales",
+      "url": "https://edinson-rivera-devweb.vercel.app/",
+      "startDate": "2022-03-08",
       "endDate": null,
-      "summary": "Streamer de programación más visto en Español en Twitch. +1 millón de seguidores entre todas mis redes sociales. Reconocido por Google, Microsoft y GitHub por mi impacto en la comunidad de desarrolladores.",
+      "summary": "Desarrollo de web estáticas y aplicaciones, adicionalmente en tareas de gestión de redes sociales para marcas personales y comerciales.",
       "highlights": ["Started the company"]
     },
     {
-      "name": "Adevinta",
-      "position": "Lead Frontend Architect",
-      "url": "https://twitch.tv/midudev",
+      "name": "Telecenter Panamericana",
+      "position": "Ejecutivo de Social Media",
+      "url": "#",
       "startDate": "2016-06-01",
-      "endDate": "2022-09-01",
-      "summary": "Lideré una convergencia técnica entre diferentes productos y migramos una arquitectura monolítica a otra más flexible y optimizada. Fomenté buenas prácticas y mejoras en la cultura de rendimiento, además de la entrega rápida de valor a los usuarios.",
+      "endDate": "2022-03-08",
+      "summary": "Comunicación escrita a usuarios que interactúan en redes sociales de DIRECTV LATAM. Verificación de comentarios en las redes sociales y creación de interacciones para su oportuna gestión. Escalamiento de requerimientos a sectores encargados vía mail. Apertura de atención a usuarios en redes sociales de DIRECTV LATAM / DIRECTV GO, mejorando sustancialmente tiempos de respuesta y manejo de crisis, posicionamiento de productos digitales.",
       "highlights": ["Started the company"]
     },
     {
-      "name": "Hubii",
-      "position": "Senior FrontEnd Developer",
-      "startDate": "2011-03-01",
-      "endDate": "2016-05-01",
-      "summary": "Desarrollé una plataforma de noticias geolocalizadas y una API para consumir la información. Escalé los servicios para soportar la carga de más de cientos de miles de peticiones al día. Recorté los tiempos de entrega y despliegues a producción a la mitad. Colaboré con Mozilla y Telefonica para desarrollar la primera app para televisores con FirefoxOS.",
+      "name": "Telecenter Panamericana",
+      "position": "Ejecutivo de Servicio DIRECTV",
+      "startDate": "2012-12-03",
+      "endDate": "2016-06-01",
+      "summary": "Comunicación telefónica a usuarios que interactúan por soporte técnico. Monitoreo de las necesidades del suscriptor. Verificación remota y toma de evidencias. Cierre efectivo de la gestión o escalamiento a niveles superiores de soporte.",
+      "highlights": ["Started the company"]
+    },
+    {
+      "name": "CEDIMA IPS",
+      "position": "Asistente Administrativo",
+      "startDate": "2005-08-03",
+      "endDate": "2008-03-01",
+      "summary": "Comunicación telefónica a usuarios que interactúan por soporte técnico. Monitoreo de las necesidades del suscriptor. Verificación remota y toma de evidencias. Cierre efectivo de la gestión o escalamiento a niveles superiores de soporte.",
       "highlights": ["Started the company"]
     }
   ],
@@ -73,14 +81,14 @@
   ],
   "education": [
     {
-      "institution": "Universitat Oberta de Catalunya",
+      "institution": "Universidad INCCA de Colombia",
       "url": "https://www.uoc.edu/portal/es/index.html",
-      "area": "Ingeniero de Software",
-      "studyType": "Bachelor",
-      "startDate": "2003-01-01",
-      "endDate": "2009-01-01",
+      "area": "Ingeniero de Sistemas",
+      "studyType": "Profesional",
+      "startDate": "2001-01-01",
+      "endDate": "2006-01-01",
       "score": "4.0",
-      "courses": ["DB1101 - Basic SQL"]
+      "courses": ["Ingeniería de Sistemas - Gestion de proyectos"]
     }
   ],
   "awards": [

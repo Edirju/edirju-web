@@ -1,15 +1,15 @@
 {
   "basics": {
     "name": "Edinson Rivera Jurado",
-    "label": "Full Stack Developer con más de 15 años de experiencia & Creador de Contenido de Programación",
+    "label": "Ingeniero de Sistemas con intereses en desarrollo web y marketing digital con +5 años de experiencia & Creador de Contenido de Programación",
     "image": "/me175.webp",
     "email": "edirju@gmail.com",
     "phone": "+57 3128288647",
-    "url": "https://midu.dev",
-    "summary": "+15 años de experiencia como Desarrollador Web. Actualmente soy Creador de Contenido y Divulgador sobre Programación. Vivo en Barcelona, España. He trabajado en diferentes entornos: desde acelerar el desarrollador de start-ups hasta liderando equipos de empresas multinacionales.",
+    "url": "https://edinson-rivera-devweb.vercel.app/",
+    "summary": "+5 años de experiencia como Desarrollador Web | Community Manager. Actualmente soy freelance & creador de Contenido sobre Programación. Vivo en Cali, Colombia. He trabajado en diferentes entornos: desde desarrollador hasta gestionar redes sociales de empresas multinacionales.",
     "location": {
       "address": "",
-      "postalCode": "08820",
+      "postalCode": "760023",
       "city": "Santiago de Cali",
       "countryCode": "CO",
       "region": "Colombia"
@@ -17,7 +17,7 @@
     "profiles": [
       {
         "network": "Linkedin",
-        "username": "edinson",
+        "username": "Edinson",
         "url": "https://www.linkedin.com/in/edinson-rivera-jurado-65187927/"
       },
       {
