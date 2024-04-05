@@ -2,6 +2,7 @@
 import Layout from "@/layouts/Layout.astro";
 import Logo from "@/icons/Logo.astro";
 import ArrowReturnLeft from "@/icons/ArrowReturnLeft.astro";
+import { slide } from "astro:transitions";
 const { frontmatter } = Astro.props;
 ---
 
@@ -22,11 +23,21 @@ const { frontmatter } = Astro.props;
     </div>
   </header>
   <main>
-    <h2>{frontmatter.title}</h2>
-    <p>{frontmatter.pubDate.slice(0, 10)}</p>
-    <p>{frontmatter.description}</p>
-    <p>Escrito por: {frontmatter.author}</p>
-    <img src={frontmatter.image.url} alt={frontmatter.image.alt} />
+    <h2 transition:animate={slide({ duration: ".5s" })}>{frontmatter.title}</h2>
+    <p transition:animate={slide({ duration: ".5s" })}>
+      {frontmatter.pubDate.slice(0, 10)}
+    </p>
+    <p transition:animate={slide({ duration: ".5s" })}>
+      {frontmatter.description}
+    </p>
+    <p transition:animate={slide({ duration: ".5s" })}>
+      Escrito por: {frontmatter.author}
+    </p>
+    <img
+      src={frontmatter.image.url}
+      alt={frontmatter.image.alt}
+      transition:animate={slide({ duration: ".5s" })}
+    />
     <slot />
   </main>
 </Layout>
