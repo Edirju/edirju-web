@@ -7,6 +7,7 @@ import { Rss } from "simple-icons-astro";
 import Filetextfill from "@/icons/Filetextfill.astro";
 
 import { basics } from "@landing";
+import { slide } from "astro:transitions";
 const { name, label } = basics;
 
 const allPosts = await Astro.glob("@/pages/posts/*.md");
@@ -42,7 +43,7 @@ const allPosts = await Astro.glob("@/pages/posts/*.md");
     <ul>
       {
         allPosts.map((post) => (
-          <li>
+          <li transition:animate={slide({duration: '.5s'})}>
             <a href={post.url}>
               <Filetextfill />
               <h3>{post.frontmatter.title}</h3>
