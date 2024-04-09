@@ -355,20 +355,22 @@
       "skill": "AstroIcon"
     },
     {
-      "name": "AdventJS",
-      "isActive": true,
-      "description": "Retos de programación en JavaScript para cada día de diciembre hasta Navidad",
-      "highlights": ["CSS", "HTML", "JavaScript & TypeScript"],
-      "url": "https://adventjs.dev",
-      "skill": "Html5"
+      "name": "Web de Esland Clone",
+      "isActive": false,
+      "description": "Adaptación de esta web con fines educativos y didácticos.",
+      "highlights": ["CSS", "HTML", "JavaScript", "TypeScript", "Astro"],
+      "url": "https://web-esland-clone.vercel.app/",
+      "github": "https://github.com/Edirju/esland-clone",
+      "skill": "AstroIcon"
     },
     {
-      "name": "Codember",
+      "name": "Retro Blog",
       "isActive": true,
-      "description": "Juego interactivo de programación con retos y secretos",
-      "highlights": ["+2000 usuarios activos", "Retos para cualquier lenguaje"],
-      "url": "https://codember.dev",
-      "skill": "Css3"
+      "description": "Blog con un diseño retro",
+      "highlights": ["Astro", "HTML", "CSS", "JavaScript"],
+      "url": "https://astro-retro-blog.vercel.app/",
+      "github": "https://github.com/Edirju/astro-retro-blog",
+      "skill": "AstroIcon"
     },
     {
       "name": "codi.link",
