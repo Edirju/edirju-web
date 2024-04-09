@@ -346,12 +346,13 @@
   ],
   "projectsB": [
     {
-      "name": "mars.codes",
+      "name": "Spotify Clone",
       "isActive": true,
-      "description": "Historia interactiva con retos de programación para viajar a Marte",
-      "highlights": ["Elige tu propia aventura", "En desarrollo"],
-      "url": "https://mars.codes",
-      "skill": "Javascript"
+      "description": "Proyecto de programacion que emula un entorno basico al estilo de Spotify",
+      "highlights": ["Astro", "Svelte", "React", "Tailwind"],
+      "url": "https://spotify-clone-project-beta.vercel.app/",
+      "github": "https://github.com/Edirju/spotify-clone",
+      "skill": "AstroIcon"
     },
     {
       "name": "AdventJS",
