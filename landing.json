@@ -365,7 +365,7 @@
     },
     {
       "name": "Retro Blog",
-      "isActive": true,
+      "isActive": false,
       "description": "Blog con un diseño retro",
       "highlights": ["Astro", "HTML", "CSS", "JavaScript"],
       "url": "https://astro-retro-blog.vercel.app/",
@@ -373,13 +373,13 @@
       "skill": "AstroIcon"
     },
     {
-      "name": "codi.link",
-      "isActive": true,
-      "description": "Playground de código HTML, CSS y JavaScript para compartir",
-      "highlights": ["100k visitas al mes", "Desarrollado por la comunidad"],
-      "url": "https://codi.link",
-      "github": "https://github.com/midudev/codi.link",
-      "skill": "React"
+      "name": "Web Portfolio # 1",
+      "isActive": false,
+      "description": "Playground de código HTML, CSS y JavaScript para un portafolio web",
+      "highlights": ["HTML", "CSS", "JavaScript", "GSAP"],
+      "url": "https://carpiweb-clone.netlify.app/",
+      "github": "https://github.com/Edirju/web-personal-portafolio",
+      "skill": "Javascript"
     },
     {
       "name": "Pruebas Técnicas",
