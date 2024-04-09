@@ -295,53 +295,57 @@
   ],
   "projects": [
     {
-      "name": "mars.codes",
+      "name": "Bunny Game con CSS",
       "isActive": true,
-      "description": "Historia interactiva con retos de programación para viajar a Marte",
-      "highlights": ["Elige tu propia aventura", "En desarrollo"],
-      "url": "https://mars.codes",
-      "skill": "Javascript"
-    },
-    {
-      "name": "AdventJS",
-      "isActive": true,
-      "description": "Retos de programación en JavaScript para cada día de diciembre hasta Navidad",
-      "highlights": ["CSS", "HTML", "JavaScript & TypeScript"],
-      "url": "https://adventjs.dev",
-      "skill": "Html5"
-    },
-    {
-      "name": "Codember",
-      "isActive": true,
-      "description": "Juego interactivo de programación con retos y secretos",
-      "highlights": ["+2000 usuarios activos", "Retos para cualquier lenguaje"],
-      "url": "https://codember.dev",
+      "description": "Juego de atrapa conejitos en CSS.",
+      "highlights": ["HTML", "CSS"],
+      "url": "https://bunny-game-incss.netlify.app/",
+      "github": "https://github.com/Edirju/Bunny-Game-inCSS",
       "skill": "Css3"
     },
     {
-      "name": "codi.link",
+      "name": "Calculadora de Edad",
       "isActive": true,
-      "description": "Playground de código HTML, CSS y JavaScript para compartir",
-      "highlights": ["100k visitas al mes", "Desarrollado por la comunidad"],
-      "url": "https://codi.link",
-      "github": "https://github.com/midudev/codi.link",
-      "skill": "React"
+      "description": "Aplicación para calcular la edad exacta",
+      "highlights": ["CSS", "HTML", "JavaScript"],
+      "url": "https://calculadora-age.netlify.app/",
+      "github": "https://github.com/Edirju/age-calculator-app-main",
+      "skill": "Javascript"
     },
     {
-      "name": "Pruebas Técnicas",
+      "name": "Web Panel de Productos",
       "isActive": true,
-      "description": "Lista de pruebas técnicas de empresas para practicar programación",
+      "description": "Panel web para mostrar productos como un sitio web",
+      "highlights": ["HTML", "CSS"],
+      "url": "https://web-basica-productos.netlify.app/",
+      "github": "https://github.com/Edirju/web-basic",
+      "skill": "Html5"
+    },
+    {
+      "name": "Baby Yoda",
+      "isActive": true,
+      "description": "Dibujo en CSS de un personaje de ficción",
+      "highlights": ["CSS", "HTML"],
+      "url": "https://baby-yoda-ten.vercel.app/",
+      "github": "https://github.com/Edirju/baby-yoda",
+      "skill": "Css3"
+    },
+    {
+      "name": "Piedra, Papel y Tijera AppGame",
+      "isActive": true,
+      "description": "Aplicacion que permite jugar el clásico piedra, papel y tijera",
       "highlights": ["100% gratuito", "+500 soluciones de la comunidad"],
-      "url": "https://pruebastecnicas.com",
-      "github": "https://github.com/midudev/pruebas-tecnicas",
-      "skill": "React"
+      "url": "https://piedra-papel-tijera-juego-app.netlify.app/",
+      "github": "https://github.com/Edirju/piedra-papel-o-tijera",
+      "skill": "Javascript"
     },
     {
-      "name": "miduConf",
+      "name": "Pókedex Api App",
       "description": "Conferencia de programación en streaming para la comunidad hispanohablante con charlas top",
       "highlights": ["+15k tickets repartidos", "+50k espectadores en directo"],
-      "url": "https://miduconf.com",
-      "skill": "AstroIcon"
+      "url": "https://pokedex-cool-database.netlify.app/",
+      "github": "https://github.com/Edirju/pokedex_api",
+      "skill": "Javascript"
     }
   ],
   "projectsB": [
