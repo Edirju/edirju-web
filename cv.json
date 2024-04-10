@@ -301,44 +301,119 @@
       "github": "https://github.com/Edirju/spotify-clone"
     },
     {
-      "name": "AdventJS",
+      "name": "Reproductor de Música",
       "isActive": true,
-      "description": "Retos de programación en JavaScript para cada día de diciembre hasta Navidad",
-      "highlights": [
-        "+1 millón de visitas",
-        "Multidioma",
-        "JavaScript & TypeScript"
-      ],
-      "url": "https://adventjs.dev"
+      "description": "Aplicación que permite la reproduccion de audios.",
+      "highlights": ["HTML", "CSS", "JavaScript"],
+      "url": "https://basic-music-player-app.netlify.app/",
+      "github": "https://github.com/Edirju/musisc_player"
     },
     {
-      "name": "Codember",
-      "isActive": true,
-      "description": "Juego interactivo de programación con retos y secretos",
-      "highlights": ["+2000 usuarios activos", "Retos para cualquier lenguaje"],
-      "url": "https://codember.dev"
+      "name": "The TODO List App",
+      "description": "Aplicacion que permite listar tareas pendientes",
+      "highlights": ["HTML", "CSS", "JavaScript"],
+      "url": "https://todolist-javascript-app.netlify.app/",
+      "github": "https://github.com/Edirju/toDo_app"
     },
     {
-      "name": "codi.link",
-      "isActive": true,
-      "description": "Playground de código HTML, CSS y JavaScript para compartir",
-      "highlights": ["100k visitas al mes", "Desarrollado por la comunidad"],
-      "url": "https://codi.link",
-      "github": "https://github.com/midudev/codi.link"
+      "name": "Web de Esland Clone",
+      "isActive": false,
+      "description": "Adaptación de esta web con fines educativos y didácticos.",
+      "highlights": ["CSS", "HTML", "JavaScript", "TypeScript", "Astro"],
+      "url": "https://web-esland-clone.vercel.app/",
+      "github": "https://github.com/Edirju/esland-clone"
     },
     {
-      "name": "Pruebas Técnicas",
+      "name": "Retro Blog",
+      "isActive": false,
+      "description": "Blog con un diseño retro",
+      "highlights": ["Astro", "HTML", "CSS", "JavaScript"],
+      "url": "https://astro-retro-blog.vercel.app/",
+      "github": "https://github.com/Edirju/astro-retro-blog"
+    },
+    {
+      "name": "Bunny Game con CSS",
       "isActive": true,
-      "description": "Lista de pruebas técnicas de empresas para practicar programación",
+      "description": "Juego de atrapa conejitos en CSS.",
+      "highlights": ["HTML", "CSS"],
+      "url": "https://bunny-game-incss.netlify.app/",
+      "github": "https://github.com/Edirju/Bunny-Game-inCSS"
+    },
+    {
+      "name": "Calculadora de Edad",
+      "isActive": true,
+      "description": "Aplicación para calcular la edad exacta",
+      "highlights": ["CSS", "HTML", "JavaScript"],
+      "url": "https://calculadora-age.netlify.app/",
+      "github": "https://github.com/Edirju/age-calculator-app-main"
+    },
+    {
+      "name": "Web Panel de Productos",
+      "isActive": true,
+      "description": "Panel web para mostrar productos como un sitio web",
+      "highlights": ["HTML", "CSS"],
+      "url": "https://web-basica-productos.netlify.app/",
+      "github": "https://github.com/Edirju/web-basic"
+    },
+    {
+      "name": "Web Portfolio # 1",
+      "isActive": false,
+      "description": "Playground de código HTML, CSS y JavaScript para un portafolio web",
+      "highlights": ["HTML", "CSS", "JavaScript", "GSAP"],
+      "url": "https://carpiweb-clone.netlify.app/",
+      "github": "https://github.com/Edirju/web-personal-portafolio"
+    },
+    {
+      "name": "Aplicación de Clima",
+      "isActive": true,
+      "description": "Aplicación que consulta el clima de una ciudad en tiempo real a traves de una api",
+      "highlights": ["React", "Vite", "JavaScript", "API's", "CSS"],
+      "url": "https://the-clima-app.vercel.app/",
+      "github": "https://github.com/Edirju/clima-app"
+    },
+    {
+      "name": "Palindrome App",
+      "description": "App que permite validar palabras o frases si son palíndromos.",
+      "highlights": ["HTML", "CSS", "JavaScript"],
+      "url": "https://palindromo-validador.netlify.app/",
+      "github": "https://github.com/Edirju/project_palindrome"
+    },
+    {
+      "name": "SunnySide Agency Web",
+      "description": "Plantilla de una landing de una agencia",
+      "highlights": ["React", "CSS", "Vite", "JavaScript", "HTML"],
+      "url": "https://sunnyside-agency-landingpage-cyan.vercel.app/",
+      "github": "https://github.com/Edirju/sunnyside_agency_landingpage"
+    },
+    {
+      "name": "Baby Yoda",
+      "isActive": true,
+      "description": "Dibujo en CSS de un personaje de ficción",
+      "highlights": ["CSS", "HTML"],
+      "url": "https://baby-yoda-ten.vercel.app/",
+      "github": "https://github.com/Edirju/baby-yoda"      
+    },
+    {
+      "name": "Piedra, Papel y Tijera AppGame",
+      "isActive": true,
+      "description": "Aplicacion que permite jugar el clásico piedra, papel y tijera",
       "highlights": ["100% gratuito", "+500 soluciones de la comunidad"],
-      "url": "https://pruebastecnicas.com",
-      "github": "https://github.com/midudev/pruebas-tecnicas"
+      "url": "https://piedra-papel-tijera-juego-app.netlify.app/",
+      "github": "https://github.com/Edirju/piedra-papel-o-tijera"      
     },
     {
-      "name": "miduConf",
+      "name": "Pókedex Api App",
       "description": "Conferencia de programación en streaming para la comunidad hispanohablante con charlas top",
       "highlights": ["+15k tickets repartidos", "+50k espectadores en directo"],
-      "url": "https://miduconf.com"
+      "url": "https://pokedex-cool-database.netlify.app/",
+      "github": "https://github.com/Edirju/pokedex_api"      
+    },
+    {
+      "name": "Binary converter App",
+      "description": "Aplicación que permite convertir números decimales en binarios",
+      "highlights": ["HTML", "CSS", "JavaScript"],
+      "url": "https://convertidor-decimal-a-binario.netlify.app/",
+      "github": "https://github.com/Edirju/binary-converter"      
     }
   ]
 }
