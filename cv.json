@@ -397,14 +397,14 @@
       "name": "Piedra, Papel y Tijera AppGame",
       "isActive": true,
       "description": "Aplicacion que permite jugar el clásico piedra, papel y tijera",
-      "highlights": ["100% gratuito", "+500 soluciones de la comunidad"],
+      "highlights": ["HTML", "JavaScript", "CSS"],
       "url": "https://piedra-papel-tijera-juego-app.netlify.app/",
       "github": "https://github.com/Edirju/piedra-papel-o-tijera"      
     },
     {
       "name": "Pókedex Api App",
       "description": "Conferencia de programación en streaming para la comunidad hispanohablante con charlas top",
-      "highlights": ["+15k tickets repartidos", "+50k espectadores en directo"],
+      "highlights": ["JavaScript", "HTML", "CSS"],
       "url": "https://pokedex-cool-database.netlify.app/",
       "github": "https://github.com/Edirju/pokedex_api"      
     },
