@@ -346,6 +346,38 @@
       "url": "https://pokedex-cool-database.netlify.app/",
       "github": "https://github.com/Edirju/pokedex_api",
       "skill": "Javascript"
+    },
+    {
+      "name": "Binary converter App",
+      "description": "Aplicación que permite convertir números decimales en binarios",
+      "highlights": ["HTML", "CSS", "JavaScript"],
+      "url": "https://convertidor-decimal-a-binario.netlify.app/",
+      "github": "https://github.com/Edirju/binary-converter",
+      "skill": "Javascript"
+    },
+    {
+      "name": "Reproductor de Música",
+      "description": "Aplicación que permite la reproduccion de audios.",
+      "highlights": ["HTML", "CSS", "JavaScript"],
+      "url": "https://basic-music-player-app.netlify.app/",
+      "github": "https://github.com/Edirju/musisc_player",
+      "skill": "Javascript"
+    },
+    {
+      "name": "Palindrome App",
+      "description": "App que permite validar palabras o frases si son palíndromos.",
+      "highlights": ["HTML", "CSS", "JavaScript"],
+      "url": "https://palindromo-validador.netlify.app/",
+      "github": "https://github.com/Edirju/project_palindrome",
+      "skill": "Javascript"
+    },
+    {
+      "name": "The TODO List App",
+      "description": "Aplicacion que permite listar tareas pendientes",
+      "highlights": ["HTML", "CSS", "JavaScript"],
+      "url": "https://todolist-javascript-app.netlify.app/",
+      "github": "https://github.com/Edirju/toDo_app",
+      "skill": "Javascript"
     }
   ],
   "projectsB": [
