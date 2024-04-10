@@ -395,11 +395,12 @@
       "skill": "React"
     },
     {
-      "name": "miduConf",
-      "description": "Conferencia de programación en streaming para la comunidad hispanohablante con charlas top",
-      "highlights": ["+15k tickets repartidos", "+50k espectadores en directo"],
-      "url": "https://miduconf.com",
-      "skill": "AstroIcon"
+      "name": "SunnySide Agency Web",
+      "description": "Plantilla de una landing de una agencia",
+      "highlights": ["React", "CSS", "Vite", "JavaScript", "HTML"],
+      "url": "https://sunnyside-agency-landingpage-cyan.vercel.app/",
+      "github": "https://github.com/Edirju/sunnyside_agency_landingpage",
+      "skill": "React"
     }
   ]
 }
