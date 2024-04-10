@@ -433,6 +433,14 @@
       "url": "https://sunnyside-agency-landingpage-cyan.vercel.app/",
       "github": "https://github.com/Edirju/sunnyside_agency_landingpage",
       "skill": "React"
+    },
+    {
+      "name": "Busca Películas App",
+      "description": "Aplicacion que permite la busqueda de peliculas a traves del uso de una Api.",
+      "highlights": ["React", "CSS", "Vite", "JavaScript", "API's"],
+      "url": "https://app-busca-peliculas.vercel.app/",
+      "github": "https://github.com/Edirju/app-busca-peliculas",
+      "skill": "React"
     }
   ]
 }

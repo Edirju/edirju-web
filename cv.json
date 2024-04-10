@@ -391,7 +391,7 @@
       "description": "Dibujo en CSS de un personaje de ficción",
       "highlights": ["CSS", "HTML"],
       "url": "https://baby-yoda-ten.vercel.app/",
-      "github": "https://github.com/Edirju/baby-yoda"      
+      "github": "https://github.com/Edirju/baby-yoda"
     },
     {
       "name": "Piedra, Papel y Tijera AppGame",
@@ -399,21 +399,28 @@
       "description": "Aplicacion que permite jugar el clásico piedra, papel y tijera",
       "highlights": ["HTML", "JavaScript", "CSS"],
       "url": "https://piedra-papel-tijera-juego-app.netlify.app/",
-      "github": "https://github.com/Edirju/piedra-papel-o-tijera"      
+      "github": "https://github.com/Edirju/piedra-papel-o-tijera"
     },
     {
       "name": "Pókedex Api App",
       "description": "Conferencia de programación en streaming para la comunidad hispanohablante con charlas top",
       "highlights": ["JavaScript", "HTML", "CSS"],
       "url": "https://pokedex-cool-database.netlify.app/",
-      "github": "https://github.com/Edirju/pokedex_api"      
+      "github": "https://github.com/Edirju/pokedex_api"
     },
     {
       "name": "Binary converter App",
       "description": "Aplicación que permite convertir números decimales en binarios",
       "highlights": ["HTML", "CSS", "JavaScript"],
       "url": "https://convertidor-decimal-a-binario.netlify.app/",
-      "github": "https://github.com/Edirju/binary-converter"      
+      "github": "https://github.com/Edirju/binary-converter"
+    },
+    {
+      "name": "Busca Películas App",
+      "description": "Aplicacion que permite la busqueda de peliculas a traves del uso de una Api.",
+      "highlights": ["React", "CSS", "Vite", "JavaScript", "API's"],
+      "url": "https://app-busca-peliculas.vercel.app/",
+      "github": "https://github.com/Edirju/app-busca-peliculas"      
     }
   ]
 }
