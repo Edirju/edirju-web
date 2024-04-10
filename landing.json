@@ -386,12 +386,12 @@
       "skill": "Javascript"
     },
     {
-      "name": "Pruebas Técnicas",
+      "name": "Aplicación de Clima",
       "isActive": true,
-      "description": "Lista de pruebas técnicas de empresas para practicar programación",
-      "highlights": ["100% gratuito", "+500 soluciones de la comunidad"],
-      "url": "https://pruebastecnicas.com",
-      "github": "https://github.com/midudev/pruebas-tecnicas",
+      "description": "Aplicación que consulta el clima de una ciudad en tiempo real a traves de una api",
+      "highlights": ["React", "Vite", "JavaScript", "API's", "CSS"],
+      "url": "https://the-clima-app.vercel.app/",
+      "github": "https://github.com/Edirju/clima-app",
       "skill": "React"
     },
     {
