@@ -402,6 +402,15 @@
       "github": "https://github.com/Edirju/piedra-papel-o-tijera"
     },
     {
+      "name": "Mis Tareas App",
+      "isActive": false,
+      "description": "Aplicación en react para monitorear tareas con funcionalidades de agregar, eliminar, completar, almacenar información.",
+      "highlights": ["React", "JavaScript", "API's", "CSS", "LocalStorage"],
+      "url": "https://mis-tareas-app-sooty.vercel.app/",
+      "github": "https://github.com/Edirju/react-todo-app",
+      "skill": "React"
+    },
+    {
       "name": "Pókedex Api App",
       "description": "Conferencia de programación en streaming para la comunidad hispanohablante con charlas top",
       "highlights": ["JavaScript", "HTML", "CSS"],
@@ -420,7 +429,23 @@
       "description": "Aplicacion que permite la busqueda de peliculas a traves del uso de una Api.",
       "highlights": ["React", "CSS", "Vite", "JavaScript", "API's"],
       "url": "https://app-busca-peliculas.vercel.app/",
-      "github": "https://github.com/Edirju/app-busca-peliculas"      
+      "github": "https://github.com/Edirju/app-busca-peliculas"
+    },
+    {
+      "name": "Lista de Tareas ",
+      "description": "Aplicacion de listas de tareas pendientes ('Todos').",
+      "highlights": ["React", "CSS", "Vite", "Hooks", "JSX"],
+      "url": "https://to-do-app-vite-theta.vercel.app/",
+      "github": "https://github.com/Edirju/to-do-app",
+      "skill": "Vite"
+    },
+    {
+      "name": "Shopping Cart Simple App",
+      "description": "Proyecto de un carrito de compras, donde se trabaja con apis.",
+      "highlights": ["React", "CSS", "API's", "Hooks", "JSX"],
+      "url": "https://proyecto-carrito-compras-simple.vercel.app/",
+      "github": "https://github.com/Edirju/proyecto-carrito-compras",
+      "skill": "React"
     }
   ]
 }

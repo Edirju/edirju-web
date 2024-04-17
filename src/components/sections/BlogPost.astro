@@ -85,8 +85,8 @@ const allPosts = await Astro.glob("@/pages/posts/*.md");
   }
 
   li {
-    width: 290px;
-    height: 56px;
+    width: 300px;
+    height: 76px;
     border-top: 3px solid rgba(30, 37, 44, 80%);
     padding: 4px 8px;
     transition: all .3s ease;
@@ -98,11 +98,11 @@ const allPosts = await Astro.glob("@/pages/posts/*.md");
   li a {
     display: flex;
     align-items: center;
-    gap: 2px;
+    gap: 4px;
   }
 
   li a h3 {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
     overflow: hidden;
     white-space: nowrap;
@@ -116,6 +116,17 @@ const allPosts = await Astro.glob("@/pages/posts/*.md");
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+  }
+
+  @media (width <= 700px) {
+    /* ul {
+      flex-direction: row;
+      justify-content: center;
+    }
+    li {
+      width: 300px;
+      height: 66px;
+    } */
   }
 
 </style>
