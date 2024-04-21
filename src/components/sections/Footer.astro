@@ -13,104 +13,83 @@ const SOCIAL_ICONS: Record<string, any> = {
 ---
 
 <Section>
-  <main>
-    <h2>Sígueme</h2>
-    <footer>
-      <div class="avatar">
-        <img src="../images/avatar.svg" alt=`${name}` class="avatar-img" />
-        <h3>
-          Edinson Rivera Jurado <span>•</span> Desarrollo Web <span>•</span
-          > Community Manager
-        </h3>
-      </div>
+  <h2 class="section-title">Sígueme</h2>
+  <footer>
+    <div class="avatar">
+      <img src="../images/avatar.svg" alt=`${name}` class="avatar-img" />
+      <h3>
+        Edinson Rivera Jurado <span>•</span> Desarrollo Web <span>•</span> Community
+        Manager
+      </h3>
+    </div>
 
-      <div class="copyright">
-        <p>© 2024 Copyright —@edirju</p>
-      </div>
+    <p class="copyright">© 2024 Copyright —@edirju</p>
 
-      <div class="social-icons">
-        {
-          profiles.map(({ network, url, username }) => {
-            const Icon = SOCIAL_ICONS[network];
+    <div class="social-icons">
+      {
+        profiles.map(({ network, url, username }) => {
+          const Icon = SOCIAL_ICONS[network];
 
-            if (!Icon) {
-              console.error(`Icono no encontrado para la red: ${network}`);
-              return null;
-            }
+          if (!Icon) {
+            console.error(`Icono no encontrado para la red: ${network}`);
+            return null;
+          }
 
-            return (
-              <a
-                href={url}
-                title={`Visitar el perfil de ${name} en ${network}`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Icon />
-              </a>
-            );
-          })
-        }
-      </div>
-    </footer>
-  </main>
+          return (
+            <a
+              href={url}
+              title={`Visitar el perfil de ${name} en ${network}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Icon />
+            </a>
+          );
+        })
+      }
+    </div>
+  </footer>
 </Section>
 
 <style>
-  main {
-    margin: 0 auto 0px;
-    max-width: 700px;
-  }
-
-  h2 {
-    margin-bottom: 1.5rem;
-    font-weight: 800;
-    line-height: 1.5;
-    font-size: 20px;
-    text-transform: uppercase;
-    background-color: #1e252c;
-    color: #f8fafb;
-    width: fit-content;
-    padding: 1px 32px 1px 16px;
-  }
-
   footer {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
     align-items: center;
+    gap: 1rem;
   }
 
   .avatar {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 0.5rem;
   }
-  .avatar img {
-    width: 36px;
-    height: 36px;
-  }
+
   .avatar h3 {
-    font-size: 20px;
-    font-weight: 200;
+    font-size: 18px;
+    font-weight: 300;
     letter-spacing: -0.05em;
   }
 
-  .copyright p {
+  .copyright {
     font-size: 1rem;
-    font-weight: 200;
+    font-weight: 300;
     letter-spacing: 0.1em;
   }
 
   .social-icons {
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
   }
 
   .social-icons a {
-    transition: all 0.2s ease-in-out;
+    transition-property: transform, color;
+    transition-duration: 0.3s, 0.5s;
+    transition-delay: 0s, 0.1s;
   }
   .social-icons a:hover {
-    color: rgba(30, 37, 44, 30%);
+    transform: scale(1.2) rotate(360deg);
+    color: var(--clr-yellow);
   }
 
   @media (width <= 700px) {

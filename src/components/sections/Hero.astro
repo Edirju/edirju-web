@@ -29,17 +29,33 @@ const githubUrl = githubInfo?.url;
 const threadsInfo = profiles.find(({ network }) => network === "Threads");
 const threadsUrl = threadsInfo?.url;
 
-const printInfo = [email, phone, linkedUrl, githubUrl, XUrl, instagramUrl, threadsUrl]
+const printInfo = [
+  email,
+  phone,
+  linkedUrl,
+  githubUrl,
+  XUrl,
+  instagramUrl,
+  threadsUrl,
+]
   .filter(Boolean)
   .join(" • ");
 ---
 
 <Section>
-  <article class="container">
-    <div class="info">
-      <h1>{name}</h1>
-      <h2>{label}</h2>
-      <span>
+  <article
+    class="hero-section max-w-[700px] flex flex-row items-center justify-between mx-auto my-0"
+  >
+    <div class="hero-info flex flex-col gap-4">
+      <h1 class="text-4xl font-black tracking-tighter text-pretty">
+        {name}
+      </h1>
+
+      <h2 class="text-base font-light text-balance">
+        {label}
+      </h2>
+
+      <span class="flex items-center gap-1 text-sm">
         <WorldMap />
         {city}, {region}
       </span>
@@ -53,17 +69,18 @@ const printInfo = [email, phone, linkedUrl, githubUrl, XUrl, instagramUrl, threa
           email && (
             <a
               href={`mailto:${email}`}
-              title={`Enviar un correo electronico a ${name} al correo ${email}`}
+              title={`Enviar un correo electrónico a ${name} al correo ${email}`}
               target="_blank"
               rel="noopener noreferrer"
             >
               <Mail />
             </a>
           )
-        }{
+        }
+        {
           phone && (
             <a
-              href={`tel:${phone}`}
+              href={`Tel:${phone}`}
               title={`Llamar por teléfono a ${name} al número ${phone}`}
               target="_blank"
               rel="noopener noreferrer"
@@ -71,15 +88,14 @@ const printInfo = [email, phone, linkedUrl, githubUrl, XUrl, instagramUrl, threa
               <Phone />
             </a>
           )
-        }{
+        }
+        {
           profiles.map(({ network, url, username }) => {
             const Icon = SOCIAL_ICONS[network];
-
             if (!Icon) {
               console.error(`Icono no encontrado para la red: ${network}`);
               return null;
             }
-
             return (
               <a
                 href={url}
@@ -94,104 +110,78 @@ const printInfo = [email, phone, linkedUrl, githubUrl, XUrl, instagramUrl, threa
         }
       </footer>
     </div>
-    <figure>
+
+    <figure class="hero-image">
       <img src={image} alt={name} />
     </figure>
   </article>
 </Section>
 
 <style>
-  .container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    max-width: 700px;
-    margin: 0 auto;
+  .hero-info span {
+    color: rgb(22, 20, 20, 0.45);
   }
 
-  .info {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .info h1 {
-    font-size: 24px;
-    font-weight: 800;
-    text-wrap: pretty;
-    letter-spacing: -.0625rem;
-  }
-
-  .info h2 {
-    font-size: 14px;
-    font-weight: 500;
-    color: rgba(30, 37, 44, 65%);
-    text-wrap: balance;
-  }
-
-  .info span {
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-    font-size: 14px;
-    color: rgba(30, 37, 44, 45%);
-  }
-
-  img {
+  .hero-image img {
     aspect-ratio: 1 / 1;
     object-fit: cover;
-    width: 280px;
+    width: 330px;
   }
 
   footer {
     display: flex;
     gap: 8px;
-    margin-top: 8px;
-    font-size: 10.4px;
+    font-size: 10px;
   }
 
   footer a {
-    color: #777;
+    color: rgb(22, 20, 20, 0.85);
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #eee;
+    border: 1px solid rgb(22, 20, 20, 0.1);
     border-radius: 6px;
     padding: 4px;
     height: 32px;
     width: 32px;
-    transition: all 0.3s ease;
+
+    transition: all 0.2s ease;
   }
+
   footer a:hover {
-    background-color: #eee;
-    border: 1px solid #ddd;
-    color: #ffc134;
+    background-color: rgb(22, 20, 20, 0.08);
+    border: 1px solid rgb(22, 20, 20, 0.05);
+    color: var(--clr-yellow);
   }
-  
+
   @media (width <= 700px) {
-    .container {
+    .hero-section {
       flex-direction: column-reverse;
     }
-    .info {
+
+    .hero-info {
       justify-content: center;
       align-items: center;
-      padding-right: 0;
       text-align: center;
     }
-    figure {
+
+    .hero-info h1 {
+      font-size: 32px;
+    }
+
+    .hero-info h2 {
+      text-wrap: balance;
+    }
+
+    .hero-image {
       display: flex;
       justify-content: center;
       align-items: center;
       margin: 0 auto;
     }
 
-    img {
+    .hero-image img {
       width: 100%;
-    }
-    h2 {
-      text-wrap: balance;
     }
   }
 </style>

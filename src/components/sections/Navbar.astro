@@ -1,0 +1,89 @@
+---
+import Section from "../Section.astro";
+import Logo from "@/icons/Logo.astro";
+import Download from "@/icons/Download.astro";
+---
+
+<Section>
+  <header class="header" transition:animate="slide">
+    <div
+      class="navigation mx-auto flex flex-wrap py-4 flex-col md:flex-row items-center"
+    >
+      <a href="/" class="logoText flex items-center mb-4 md:mb-0">
+        <Logo />
+        <span class="ml-1 text-2xl font-black">Edinson.</span>
+      </a>
+      <nav
+        class="md:ml-auto flex flex-wrap gap-5 items-center text-sm font-light justify-center"
+      >
+        <a href="/proyectos" class="nav-link">Proyectos</a>
+        <a href="/blog" class="nav-link"> BlogPosts </a>
+        <a
+          href="/resume"
+          target="_blank"
+          class="resume-btn flex items-center gap-1 px-2 uppercase text-sm font-light"
+        >
+          Resume<Download />
+        </a>
+      </nav>
+    </div>
+  </header>
+</Section>
+
+<style>
+  header {
+    color: var(--clr-dark);
+  }
+
+  .logoText {
+    font-family: "Inter Variable", sans-serif;
+  }
+
+  .nav-link {
+    font-family: "Inter Variable", sans-serif;
+
+    position: relative;
+    padding: 2px 8px;
+
+    transition: 0.2s;
+    isolation: isolate;
+  }
+
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: var(--clr-yellow);
+    transition: 0.3s;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: -1;
+  }
+
+  .nav-link:hover::after {
+    height: 50%;
+  }
+
+  .resume-btn {
+    border: 1px solid rgb(22, 20, 20, 0.2);
+    color: #999;
+    transition: all 0.3s ease;
+  }
+
+  .resume-btn:hover {
+    color: var(--clr-yellow);
+    border: 1px solid var(--clr-yellow);
+  }
+
+  @media (width <= 700px) {
+    header {
+      margin-bottom: 38px;
+      border-bottom: 1px solid rgb(22, 20, 20, 0.1);
+    }
+    .navigation {
+      margin-bottom: 16px;
+    }
+  }
+</style>

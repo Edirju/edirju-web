@@ -1,7 +1,7 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import MinNav from "@/components/sections/MinNav.astro";
-// import BlogPost from "@/components/sections/BlogPost.astro";
+import Section from "@/components/Section.astro";
+import MinNav from "@/components/sections/NavbarMin.astro";
 import Footer from "@/components/sections/Footer.astro";
 import { Rss } from "simple-icons-astro";
 import Filetextfill from "@/icons/Filetextfill.astro";
@@ -15,27 +15,23 @@ const allPosts = await Astro.glob("@/pages/posts/*.md");
 
 <Layout title=`Portafolio de ${name} - Blog & Notas`>
   <MinNav />
-  <main>
-    <!-- <div class="title-container">
-      <div class="title-header">
-        <h1 class="title-black">Mis publicaciones</h1>
-        <p>Tecnología | Marketing Digital | Cultura</p>
-      </div>
-      <figure class="title-footer">
-        <img src="/images/Task-bro.svg" alt="hero image" />
-      </figure>
-    </div> -->
-    <!-- <BlogPost /> -->
-    <h2>Blog & Notas <span>Tecnología | Marketing | Cultura</span></h2>
-    <article>
+  <Section>
+    <h2 class="section-title flex flex-wrap items-center">
+      Blog & Notas<span class="ml-1 font-light text-sm tracking-tighter"
+        >Tecnología | Marketing | Cultura</span
+      >
+    </h2>
+
+    <article class="suscribe-container">
       <p>
         Escribo sobre cualquier cosa relacionada con la tecnología, el marketing
         y de vez en cuando sobre cosas interesantes que se cruzan en mí camino.
       </p>
+
       <div class="box-left">
         <a href="#" class="rss-btn">
-          <Rss class="w-3 h-3" />
-          Suscríbete
+          <Rss class="h-3 w-3" />
+          <!-- <span>Suscríbete</span> -->
         </a>
       </div>
     </article>
@@ -43,7 +39,7 @@ const allPosts = await Astro.glob("@/pages/posts/*.md");
     <ul>
       {
         allPosts.map((post) => (
-          <li transition:animate={slide({duration: '.5s'})}>
+          <li transition:animate={slide({ duration: ".5s" })}>
             <a href={post.url}>
               <Filetextfill />
               <h3>{post.frontmatter.title}</h3>
@@ -53,85 +49,33 @@ const allPosts = await Astro.glob("@/pages/posts/*.md");
         ))
       }
     </ul>
-    <Footer />
-  </main>
+  </Section>
+  <Footer />
 </Layout>
 
 <style>
-  main {
-    max-width: 700px;
-    padding: 2rem 0;
-    margin: 0 auto 72px;
-  }
-
-  h2 {
-    margin-bottom: 1.5rem;
-    font-weight: 900;
-    line-height: 1.5;
-    letter-spacing: -0.025em;
-    font-size: 24px;
-    text-transform: uppercase;
-    background-color: #1e252c;
-    color: #f8fafb;
-    width: fit-content;
-    padding: 1px 32px 1px 16px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  h2 span {
-    font-weight: 200;
-    font-size: 1rem;
-    letter-spacing: 0.05em;
-  }
-
-  article {
-    border: 1px solid rgba(30, 37, 44, 10%);
-    padding: 1rem;
-  }
-
-  article p {
-    font-size: 0.75rem;
-    text-wrap: pretty;
-    font-weight: 300;
-    color: rgba(30, 37, 44, 80%);
-  }
-
-  .box-left {
-    display: flex;
-    gap: 0.25rem;
-    justify-content: end;
-    font-size: 0.625rem;
-  }
-  .rss-btn {
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-    padding: 4px;
-    background: rgba(30, 37, 44, 8%);
-    color: rgb(30, 37, 44, 60%);
-  }
-
   ul {
-    margin-top: 2rem;
     display: flex;
-    flex-direction: column;
-    gap: 16px;
-    margin-bottom: 72px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0 16px;
+    margin-top: 2rem;
+    padding: 1rem;
+    border: 1px solid rgb(22, 20, 20, 0.05);
+    background-color: rgb(22, 20, 20, 0.015);
+    border-radius: 10px;
   }
 
   li {
-    width: 100%;
-    height: fit-content;
-    padding: 8px;
-    border: 1px solid transparent;
-    transition: all 0.3s ease-in-out;
+    width: 300px;
+    height: 76px;
+    border-top: 3px solid rgb(22, 20, 20, 1);
+    padding: 4px 8px;
+    transition: all 0.2s ease-in-out;
   }
 
   li:hover {
-    border: 1px solid rgba(30, 37, 44, 15%);
-    background-color: rgba(30, 37, 44, 5%);
+    background-color: var(--clr-yellow);
   }
 
   li a {
@@ -141,36 +85,20 @@ const allPosts = await Astro.glob("@/pages/posts/*.md");
   }
 
   li a h3 {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
-    text-wrap: pretty;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
   }
 
   li p {
-    font-size: 14px;
+    font-size: 12px;
     text-wrap: pretty;
-    color: rgba(30, 37, 44, 60%);
-    /*overflow: hidden;
+    color: rgb(22, 20, 20, 0.65);
+    overflow: hidden;
     white-space: nowrap;
-    text-overflow: ellipsis;*/
+    text-overflow: ellipsis;
   }
-
-  @media (width <= 700px) {
-    main {
-      padding: 2rem;
-    }
-    h2 {
-      flex-wrap: wrap;
-      line-height: 1;
-      padding: 4px 32px 4px 16px;
-      letter-spacing: 0.025em;
-    }
-    h2 span {
-      line-height: 1;
-      font-size: 12px;
-    }
-  }
+  
 </style>

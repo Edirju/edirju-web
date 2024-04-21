@@ -1,5 +1,6 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import Section from "@/components/Section.astro";
 import Logo from "@/icons/Logo.astro";
 import ArrowReturnLeft from "@/icons/ArrowReturnLeft.astro";
 import { slide } from "astro:transitions";
@@ -7,74 +8,57 @@ const { frontmatter } = Astro.props;
 ---
 
 <Layout title={frontmatter.title}>
-  <header class="body-font">
-    <div
-      class="container mx-auto flex flex-wrap py-4 flex-col md:flex-row items-center"
-    >
-      <a href="/" class="logoText flex items-center mb-4 md:mb-0">
-        <Logo />
-        <span class="ml-2 text-xl">Edinson Rivera</span>
-      </a>
-      <nav
-        class="md:ml-auto flex flex-wrap gap-5 items-center text-base justify-center"
+  <Section>
+    <header class="mb-8" transition:animate={slide({ duration: ".5s" })}>
+      <div
+        class="container mx-auto flex flex-wrap py-4 flex-col md:flex-row items-center"
       >
-        <a href="/blog" class="return-btn">Regresar <ArrowReturnLeft /></a>
-      </nav>
-    </div>
-  </header>
+        <a href="/" class="logoText flex items-center mb-4 md:mb-0">
+          <Logo />
+          <span class="ml-1 text-2xl">Edinson.</span>
+        </a>
+        <nav
+          class="md:ml-auto flex flex-wrap gap-5 items-center text-base justify-center"
+        >
+          <a href="/blog" class="return-btn">Regresar <ArrowReturnLeft /></a>
+        </nav>
+      </div>
+    </header>
 
-  <main>
-    <h2 transition:animate={slide({ duration: ".5s" })}>{frontmatter.title}</h2>
-    <p transition:animate={slide({ duration: ".5s" })}>
-      {frontmatter.pubDate.slice(0, 10)}
-    </p>
-    <p transition:animate={slide({ duration: ".5s" })}>
-      {frontmatter.description}
-    </p>
-    <p transition:animate={slide({ duration: ".5s" })}>
-      Escrito por: {frontmatter.author}
-    </p>
-    <img
-      src={frontmatter.image.url}
-      alt={frontmatter.image.alt}
-      transition:animate={slide({ duration: ".5s" })}
-    />
-    <slot />
-  </main>
+    <div>
+      <h2 class="text-2xl font-bold">{frontmatter.title}</h2>
+      <p class="italic text-gray-400">{frontmatter.pubDate.slice(0, 10)}</p>
+      <p class="text-balance">{frontmatter.description}</p>
+      <p>
+        Escrito por: <span class="font-semibold text-gray-500 tracking-wide"
+          >{frontmatter.author}</span
+        >
+      </p>
+      <img src={frontmatter.image.url} alt={frontmatter.image.alt} />
+    </div>
+
+    <div>
+      <slot />
+    </div>
+  </Section>
 </Layout>
 
 <style>
-  main {
-    max-width: 700px;
-    margin: 0 auto 72px;
-    width: 100%;
-  }
-
-  h2 {
-    font-size: 24px;
-    font-weight: 700;
-  }
-
   p {
     font-size: 14px;
-    line-height: 1.4;
+    line-height: 1.5;
     text-wrap: balance;
-    margin: 8px 0;
+    padding-left: 16px;
   }
 
   img {
+    border: 1px solid rgb(30, 37, 44, 0.08);
     aspect-ratio: 1 / 1;
     object-fit: cover;
     width: 700px;
     height: 350px;
-    border-radius: 10px;
-    margin-bottom: 16px;
-  }
-
-  header {
-    color: rgba(30, 37, 44, 85%);
-    max-width: 700px;
-    margin: 0 auto 72px;
+    border-radius: 12px;
+    margin: 16px 0;
   }
 
   .logoText {
@@ -99,9 +83,6 @@ const { frontmatter } = Astro.props;
   }
 
   @media (width <= 700px) {
-    main {
-      padding: 2rem;
-    }
     header {
       margin-bottom: 38px;
     }

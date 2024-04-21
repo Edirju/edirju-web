@@ -14,7 +14,7 @@ const { title } = Astro.props;
 <!doctype html>
 <html lang="es">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -24,90 +24,154 @@ const { title } = Astro.props;
   </head>
   <body>
     <slot />
-  </body>
-  <style is:global>
-    :root {
-      --bg-white: #f8fafb;
-      --color-dark: #1e252c;
-      --color-secondary: rgb(255, 193, 52);
-      --color-secondary-transparent: rgba(255, 193, 52, 0.5);
-    }
+    <style is:global>
+      :root {
+        --clr-light: rgb(255, 254, 254, 1);
+        --clr-dark: rgb(22, 20, 20, 1);
+        --clr-blue-50: rgb(177, 218, 233, 1);
+        --clr-blue-100: rgb(104, 213, 217, 1);
+        --clr-yellow: rgb(255, 193, 52, 1);
+        --clr-red-50: rgb(236, 69, 104, 1);
+        --clr-red-100: rgb(228, 8, 72, 1);
+        --accent-gradient: linear-gradient(
+          45deg,
+          rgb(var(--accent)),
+          rgb(var(--accent-light)) 30%,
+          white 60%
+        );
+      }
 
-    *::selection {
-      background-color: var(--color-secondary);
-    }
+      *::selection {
+        background-color: var(--clr-yellow);
+      }
 
-    html {
-      font-family: system-ui, sans-serif;
-      background: var(--bg-white);
-      /* letter-spacing: -0.0063rem; */
-    }
+      html {
+        font-family: system-ui, sans-serif;
+        background: var(--clr-light);
+        letter-spacing: -0.0063rem;
+      }
 
-    body,
-    figure {
-      margin: 0;
-      padding: 0;
-    }
+      body,
+      figure {
+        margin: 0;
+        padding: 0;
+      }
 
-    a {
-      text-decoration: none;
-    }
+      a {
+        text-decoration: none;
+      }
 
-    ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
 
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-    }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-family: "Inter Variable", sans-serif;
-      margin: 0;
-    }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Inter Variable", sans-serif;
+        margin: 0;
+      }
 
-    body {
-      font-family: "Inconsolata Variable", monospace;
-      color: var(--color-dark);
-    }
+      body {
+        font-family: "Source Sans Pro", sans-serif;
+        color: var(--color-dark);
+      }
 
-    p {
-      color: var(--color-dark);
-      font-size: 0.875rem;
-      line-height: 1.5;
-      margin: 0;
-      text-wrap: pretty;
-    }
+      p {
+        color: var(--color-dark);
+        font-size: 0.875rem;
+        line-height: 1.5;
+        margin: 0;
+        text-wrap: pretty;
+      }
 
-    .print {
-      display: none !important;
-    }
+      code {
+        font-family:
+          Menlo,
+          Monaco,
+          Lucida Console,
+          Liberation Mono,
+          DejaVu Sans Mono,
+          Bitstream Vera Sans Mono,
+          Courier New,
+          monospace;
+      }
 
-    @media print {
-      .no-print {
-        display: none !important;
+      .section-title {
+        margin-bottom: 1.5rem;
+        font-weight: 700;
+        line-height: 1.5;
+        font-size: 20px;
+        text-transform: uppercase;
+        color: var(--clr-light);
+        width: 100%;
+        padding: 1px 32px 1px 16px;
+        background: rgba(22, 20, 20, 1);
+        background: linear-gradient(
+          0deg,
+          rgba(22, 20, 20, 1),
+          rgba(22, 20, 20, 0.7)
+        );
+      }
+
+      .suscribe-container {
+        border: 1px solid rgb(22, 20, 20, 0.08);
+        padding: 8px;
+        margin-bottom: 32px;
+      }
+
+      .suscribe-container p {
+        font-size: 12px;
+        font-weight: 300;
+        text-wrap: pretty;
+        color: rgb(22, 20, 20, 0.55);
+      }
+
+      .box-left {
+        display: flex;
+        justify-content: flex-end;
+        font-size: 10px;
+        color: rgb(22, 20, 20, 0.45);
+      }
+      .box-left .rss-btn {
+        display: flex;
+        align-items: center;
+        padding: 4px;
+        background-color: rgb(22, 20, 20, 0.08);
       }
 
       .print {
-        display: block !important;
-      }
-
-      astro-dev-toolbar {
         display: none !important;
       }
 
-      article {
-        break-inside: avoid;
+      @media print {
+        .no-print {
+          display: none !important;
+        }
+
+        .print {
+          display: block !important;
+        }
+
+        astro-dev-toolbar {
+          display: none !important;
+        }
+
+        article {
+          break-inside: avoid;
+        }
       }
-    }
-  </style>
+    </style>
+  </body>
 </html>

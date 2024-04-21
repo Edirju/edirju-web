@@ -22,8 +22,8 @@ import {
   Googlegemini,
   Openai,
   Meta,
-  Googleanalytics, 
-  Typescript, 
+  Googleanalytics,
+  Typescript,
   Mysql,
 } from "simple-icons-astro";
 import Astrojs from "@/icons/AstroIcon.astro";
@@ -32,7 +32,7 @@ import Node from "@/icons/Node.astro";
 
 const SKILLS_ICONS: Record<string, any> = {
   Html5,
-  Css3, 
+  Css3,
   Javascript,
   Next,
   Node,
@@ -94,10 +94,17 @@ const SKILLS_ICONS: Record<string, any> = {
     align-items: center;
     border-radius: 0px;
     background: #eee;
-    color: #1e252c;
-    font-size: 0.8rem;
+    color: rgb(22, 20, 20, 1);
+    font-size: 12px;
     font-weight: 500;
-    padding: 0.2rem 0.6rem;
+    padding: 4px;
     gap: 4px;
+
+    transition: all 0.2s ease-in-out;
   }
+
+  li:hover {
+    background-color: var(--clr-yellow);
+  }
+  
 </style>

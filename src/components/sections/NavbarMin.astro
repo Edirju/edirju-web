@@ -1,0 +1,75 @@
+---
+import Section from "../Section.astro";
+import Logo from "@/icons/Logo.astro";
+import ArrowReturnLeft from "@/icons/ArrowReturnLeft.astro";
+---
+
+<Section>
+  <header class="body-font">
+    <div
+      class="container mx-auto flex flex-wrap py-4 flex-col md:flex-row items-center"
+    >
+      <a href="/" class="logoText flex items-center mb-4 md:mb-0">
+        <Logo />
+        <span class="ml-1 text-2xl font-black">Edinson.</span>
+      </a>
+      <nav
+        class="md:ml-auto flex flex-wrap gap-5 items-center text-base justify-center"
+      >
+        <a href="/" class="return-btn">Volver a Home <ArrowReturnLeft /></a>
+      </nav>
+    </div>
+  </header>
+</Section>
+
+<style>
+  header {
+    color: var(--clr-dark);
+  }
+
+  .logoText {
+    font-family: "Inter Variable", sans-serif;
+  }
+
+  .return-btn {
+    position: relative;
+    padding: 2px 8px;
+    font-family: "Inter Variable", sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 300;
+
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    color: rgb(22, 20, 20, 0.85);
+
+    transition: 0.2s;
+    isolation: isolate;
+  }
+
+  .return-btn::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: var(--clr-yellow);
+    transition: 0.3s;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: -1;
+  }
+
+  .return-btn:hover::after {
+    height: 100%;
+  }
+
+  @media (width <= 700px) {
+    header {
+      margin-bottom: 38px;
+      border-bottom: 1px solid rgb(22, 20, 20, 0.1);
+    }
+  }
+</style>

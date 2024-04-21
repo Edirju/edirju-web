@@ -60,7 +60,7 @@ const SKILLS_ICONS: Record<string, any> = {
 ---
 
 <Section>
-  <h2>Habilidades</h2>
+  <h2 class="section-title">Habilidades</h2>
   <ul>
     {
       skills.map(({ name }) => {
@@ -77,25 +77,13 @@ const SKILLS_ICONS: Record<string, any> = {
             <Icon class="w-4 h-4" />
             <span>{name}</span>
           </li>
-        )
+        );
       })
     }
   </ul>
 </Section>
 
 <style>
-  h2 {
-    margin-bottom: 1.5rem;
-    font-weight: 800;
-    line-height: 1.5;
-    font-size: 20px;
-    text-transform: uppercase;
-    background-color: #1e252c;
-    color: #f8fafb;
-    width: fit-content;
-    padding: 1px 32px 1px 16px;
-  }
-
   ul {
     display: inline-flex;
     flex-wrap: wrap;
@@ -105,12 +93,17 @@ const SKILLS_ICONS: Record<string, any> = {
   li {
     display: flex;
     align-items: center;
-    background: #f5f5f5;
-    color: #1e252c;
-    font-size: .75rem;
-    font-weight: 500;
-    padding: 0.2rem 0.6rem;
     gap: 4px;
-    border-radius: 0px;
+    font-size: 12px;
+    background-color: #eee;
+    color: rgb(22, 20, 20, 1);
+    padding: 4px;
+
+    transition: all 0.2s ease-in-out;
   }
+
+  li:hover {
+    background-color: var(--clr-yellow);
+  }
+  
 </style>
