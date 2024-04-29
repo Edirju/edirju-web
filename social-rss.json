@@ -1,0 +1,247 @@
+{
+  "basics": {
+    "name": "Edinson Rivera Jurado",
+    "label": "Ingeniero de Sistemas con intereses en desarrollo web y marketing digital con +5 años de experiencia & Creador de Contenido de Programación",
+    "image": "/me175.webp",
+    "email": "edirju@gmail.com",
+    "phone": "+57 3128288647",
+    "url": "https://edinson-rivera-devweb.vercel.app/",
+    "summary": "+5 años de experiencia como Desarrollador Web | Community Manager. Actualmente soy freelance & creador de Contenido sobre Programación. Vivo en Cali, Colombia. He trabajado en diferentes entornos: desde desarrollador hasta gestionar redes sociales de empresas multinacionales.",
+    "location": {
+      "address": "",
+      "postalCode": "760023",
+      "city": "Santiago de Cali",
+      "countryCode": "CO",
+      "region": "Colombia"
+    },
+    "profiles": [
+      {
+        "network": "Linkedin",
+        "username": "Edinson",
+        "url": "https://www.linkedin.com/in/edinson-rivera-jurado-65187927/"
+      },
+      {
+        "network": "Github",
+        "username": "Edirju",
+        "url": "https://github.com/Edirju"
+      },
+      {
+        "network": "X",
+        "username": "edinson_rivera",
+        "url": "https://twitter.com/edinson_rivera"
+      },
+      {
+        "network": "Instagram",
+        "username": "edirju",
+        "url": "https://www.instagram.com/edirju/"
+      },
+      {
+        "network": "Threads",
+        "username": "edirju",
+        "url": "https://www.threads.net/@edirju"
+      }
+    ]
+  },
+  "posts": [
+      {
+        "network": "Linkedin",
+        "description": "Publicación sobre un tema particular en Linkedin",
+        "url": "https://www.linkedin.com/posts/midudev_ya-est%C3%A1-la-beta-de-react-19-trae-nuevos-activity-7190710737059647488-hGI4?utm_source=share&utm_medium=member_desktop"
+      },
+      {
+        "network": "Facebook",
+        "description": "Publicacion sobre un tema particular en Facebook",
+        "url": "https://www.facebook.com/100001232870588/videos/1509557056632620/"
+      },
+      {
+        "network": "X",
+        "description": "Publicacion sobre un tema particular en X",
+        "url": "https://twitter.com/edinson_rivera/status/1784595240743063766"
+      },
+      {
+        "network": "Instagram",
+        "description": "Publicacion sobre un tema particular en Instagram",
+        "url": "https://www.instagram.com/p/C5bJd8vgEgl-M3rF50mtY43NmGLQ74sye7MHDA0/"
+      },
+      {
+        "network": "Threads",
+        "description": "Publicacion sobre un tema particular en Threads",
+        "url": "https://www.threads.net/@edirju/post/C6O6V3BgedTd530eUAUeV2H-dv0tolIhXb1Ek40"
+      }
+  ],
+  "projects": [
+    {
+      "name": "Bunny Game con CSS",
+      "isActive": true,
+      "description": "Juego de atrapa conejitos en CSS.",
+      "highlights": ["HTML", "CSS"],
+      "url": "https://bunny-game-incss.netlify.app/",
+      "github": "https://github.com/Edirju/Bunny-Game-inCSS",
+      "skill": "Css3"
+    },
+    {
+      "name": "Calculadora de Edad",
+      "isActive": true,
+      "description": "Aplicación para calcular la edad exacta",
+      "highlights": ["CSS", "HTML", "JavaScript"],
+      "url": "https://calculadora-age.netlify.app/",
+      "github": "https://github.com/Edirju/age-calculator-app-main",
+      "skill": "Javascript"
+    },
+    {
+      "name": "Web Panel de Productos",
+      "isActive": true,
+      "description": "Panel web para mostrar productos como un sitio web",
+      "highlights": ["HTML", "CSS"],
+      "url": "https://web-basica-productos.netlify.app/",
+      "github": "https://github.com/Edirju/web-basic",
+      "skill": "Html5"
+    },
+    {
+      "name": "Baby Yoda",
+      "isActive": true,
+      "description": "Dibujo en CSS de un personaje de ficción",
+      "highlights": ["CSS", "HTML"],
+      "url": "https://baby-yoda-ten.vercel.app/",
+      "github": "https://github.com/Edirju/baby-yoda",
+      "skill": "Css3"
+    },
+    {
+      "name": "Piedra, Papel y Tijera AppGame",
+      "isActive": true,
+      "description": "Aplicacion que permite jugar el clásico piedra, papel y tijera",
+      "highlights": ["JavaScript", "HTML", "CSS"],
+      "url": "https://piedra-papel-tijera-juego-app.netlify.app/",
+      "github": "https://github.com/Edirju/piedra-papel-o-tijera",
+      "skill": "Javascript"
+    },
+    {
+      "name": "Pókedex Api App",
+      "description": "Conferencia de programación en streaming para la comunidad hispanohablante con charlas top",
+      "highlights": ["JavaScript", "HTML", "CSS"],
+      "url": "https://pokedex-cool-database.netlify.app/",
+      "github": "https://github.com/Edirju/pokedex_api",
+      "skill": "Javascript"
+    },
+    {
+      "name": "Binary converter App",
+      "description": "Aplicación que permite convertir números decimales en binarios",
+      "highlights": ["HTML", "CSS", "JavaScript"],
+      "url": "https://convertidor-decimal-a-binario.netlify.app/",
+      "github": "https://github.com/Edirju/binary-converter",
+      "skill": "Javascript"
+    },
+    {
+      "name": "Reproductor de Música",
+      "description": "Aplicación que permite la reproduccion de audios.",
+      "highlights": ["HTML", "CSS", "JavaScript"],
+      "url": "https://basic-music-player-app.netlify.app/",
+      "github": "https://github.com/Edirju/musisc_player",
+      "skill": "Javascript"
+    },
+    {
+      "name": "Palindrome App",
+      "description": "App que permite validar palabras o frases si son palíndromos.",
+      "highlights": ["HTML", "CSS", "JavaScript"],
+      "url": "https://palindromo-validador.netlify.app/",
+      "github": "https://github.com/Edirju/project_palindrome",
+      "skill": "Javascript"
+    },
+    {
+      "name": "The TODO List App",
+      "description": "Aplicacion que permite listar tareas pendientes",
+      "highlights": ["HTML", "CSS", "JavaScript"],
+      "url": "https://todolist-javascript-app.netlify.app/",
+      "github": "https://github.com/Edirju/toDo_app",
+      "skill": "Javascript"
+    }
+  ],
+  "projectsB": [
+    {
+      "name": "Spotify Clone",
+      "isActive": true,
+      "description": "Proyecto de programacion que emula un entorno basico al estilo de Spotify",
+      "highlights": ["Astro", "Svelte", "React", "Tailwind"],
+      "url": "https://spotify-clone-project-beta.vercel.app/",
+      "github": "https://github.com/Edirju/spotify-clone",
+      "skill": "AstroIcon"
+    },
+    {
+      "name": "Web de Esland Clone",
+      "isActive": false,
+      "description": "Adaptación de esta web con fines educativos y didácticos.",
+      "highlights": ["CSS", "HTML", "JavaScript", "TypeScript", "Astro"],
+      "url": "https://web-esland-clone.vercel.app/",
+      "github": "https://github.com/Edirju/esland-clone",
+      "skill": "AstroIcon"
+    },
+    {
+      "name": "Retro Blog",
+      "isActive": false,
+      "description": "Blog con un diseño retro",
+      "highlights": ["Astro", "HTML", "CSS", "JavaScript"],
+      "url": "https://astro-retro-blog.vercel.app/",
+      "github": "https://github.com/Edirju/astro-retro-blog",
+      "skill": "AstroIcon"
+    },
+    {
+      "name": "Web Portfolio # 1",
+      "isActive": false,
+      "description": "Playground de código HTML, CSS y JavaScript para un portafolio web",
+      "highlights": ["HTML", "CSS", "JavaScript", "GSAP"],
+      "url": "https://carpiweb-clone.netlify.app/",
+      "github": "https://github.com/Edirju/web-personal-portafolio",
+      "skill": "Javascript"
+    },
+    {
+      "name": "Mis Tareas App",
+      "isActive": false,
+      "description": "Aplicación en react para monitorear tareas con funcionalidades de agregar, eliminar, completar, almacenar información.",
+      "highlights": ["React", "JavaScript", "API's", "CSS", "LocalStorage"],
+      "url": "https://mis-tareas-app-sooty.vercel.app/",
+      "github": "https://github.com/Edirju/react-todo-app",
+      "skill": "React"
+    },
+    {
+      "name": "Aplicación de Clima",
+      "isActive": true,
+      "description": "Aplicación que consulta el clima de una ciudad en tiempo real a traves de una api",
+      "highlights": ["React", "Vite", "JavaScript", "API's", "CSS"],
+      "url": "https://the-clima-app.vercel.app/",
+      "github": "https://github.com/Edirju/clima-app",
+      "skill": "React"
+    },
+    {
+      "name": "SunnySide Agency Web",
+      "description": "Plantilla de una landing de una agencia",
+      "highlights": ["React", "CSS", "Vite", "JavaScript", "HTML"],
+      "url": "https://sunnyside-agency-landingpage-cyan.vercel.app/",
+      "github": "https://github.com/Edirju/sunnyside_agency_landingpage",
+      "skill": "Vite"
+    },
+    {
+      "name": "Busca Películas App",
+      "description": "Aplicacion que permite la búsqueda de peliculas a traves del uso de una Api.",
+      "highlights": ["React", "CSS", "Vite", "JavaScript", "API's"],
+      "url": "https://app-busca-peliculas.vercel.app/",
+      "github": "https://github.com/Edirju/app-busca-peliculas",
+      "skill": "React"
+    },
+    {
+      "name": "Lista de Tareas ",
+      "description": "Aplicacion de listas de tareas pendientes ('Todos').",
+      "highlights": ["React", "CSS", "Vite", "Hooks", "JSX"],
+      "url": "https://to-do-app-vite-theta.vercel.app/",
+      "github": "https://github.com/Edirju/to-do-app",
+      "skill": "Vite"
+    },
+    {
+      "name": "Shopping Cart Simple App",
+      "description": "Proyecto de un carrito de compras, donde se trabaja con apis.",
+      "highlights": ["React", "CSS", "API's", "Hooks", "JSX"],
+      "url": "https://proyecto-carrito-compras-simple.vercel.app/",
+      "github": "https://github.com/Edirju/proyecto-carrito-compras",
+      "skill": "React"
+    }
+  ]
+}

@@ -5,7 +5,8 @@
     "paths": {
       "@/*": ["src/*"],
       "@cv": ["./cv.json"],
-      "@landing": ["./landing.json"]
+      "@landing": ["./landing.json"],
+      "@social": ["./social-rss.json"]
     },
     "jsx": "react-jsx",
     "jsxImportSource": "preact",

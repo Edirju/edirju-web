@@ -3,11 +3,26 @@ import Layout from "@/layouts/Layout.astro";
 import Section from "@/components/Section.astro";
 import MinNav from "@/components/sections/NavbarMin.astro";
 import Footer from "@/components/sections/Footer.astro";
-import { Rss } from "simple-icons-astro";
+import {
+  Rss,
+  X,
+  Linkedin,
+  Threads,
+  Facebook,
+  Instagram,
+} from "simple-icons-astro";
 import Filetextfill from "@/icons/Filetextfill.astro";
 
+import { posts } from "@social";
 import { basics } from "@landing";
 import { slide } from "astro:transitions";
+const SOCIAL_ICONS: Record<string, any> = {
+  Facebook,
+  Instagram,
+  Linkedin,
+  Threads,
+  X,
+};
 const { name, label } = basics;
 
 const allPosts = await Astro.glob("@/pages/posts/*.md");
@@ -37,16 +52,41 @@ const allPosts = await Astro.glob("@/pages/posts/*.md");
     </article>
 
     <ul>
+      <h2 class="title-container-post">Publicaciones recientes ...</h2>
       {
         allPosts.map((post) => (
           <li transition:animate={slide({ duration: ".5s" })}>
+            <img
+              src={post.frontmatter.image.url}
+              alt={post.frontmatter.title}
+            />
             <a href={post.url}>
-              <Filetextfill />
               <h3>{post.frontmatter.title}</h3>
+              <p>{post.frontmatter.description}</p>
             </a>
-            <p>{post.frontmatter.description}</p>
           </li>
         ))
+      }
+    </ul>
+
+    <ul class="feeds-rss">
+      <h3 class="feeds-title">
+        <Rss class="w-4 h-4" />
+        Social Media | Posts | RSS
+      </h3>
+      {
+        posts.map(({ network, description, url }) => {
+          const Icon = SOCIAL_ICONS[network];
+
+          return (
+            <li class="feed">
+              <a href={url} target="_blank">
+                <Icon class="w-4 h-4" />
+                {description}
+              </a>
+            </li>
+          );
+        })
       }
     </ul>
   </Section>
@@ -56,49 +96,111 @@ const allPosts = await Astro.glob("@/pages/posts/*.md");
 <style>
   ul {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0 16px;
-    margin-top: 2rem;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 1.5rem;
     padding: 1rem;
     border: 1px solid rgb(22, 20, 20, 0.05);
     background-color: rgb(22, 20, 20, 0.015);
     border-radius: 10px;
   }
 
+  .title-container-post {
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    border-bottom: 1px solid rgb(22, 20, 20, 0.15);
+  }
+
   li {
-    width: 300px;
-    height: 76px;
-    border-top: 3px solid rgb(22, 20, 20, 1);
-    padding: 4px 8px;
-    transition: all 0.2s ease-in-out;
+    display: flex;
+    gap: 16px;
+    width: 100%;
+    background-color: var(--clr-light);
+    border: 1px solid rgb(22, 20, 20, 0.05);
+    border-radius: 8px;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
   }
 
   li:hover {
-    background-color: var(--clr-yellow);
+    background-color: rgb(255, 193, 52, 0.85);
+  }
+
+  li img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
   }
 
   li a {
     display: flex;
-    align-items: center;
-    gap: 4px;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    gap: 8px;
+    overflow: hidden;
   }
 
   li a h3 {
-    font-size: 1rem;
-    font-weight: 600;
+    font-weight: 500;
+    font-size: 20px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
   }
 
-  li p {
-    font-size: 12px;
-    text-wrap: pretty;
-    color: rgb(22, 20, 20, 0.65);
+  li a h3:hover {
+    text-decoration: underline;
+  }
+
+  li a p {
+    font-size: 14px;
+    font-weight: 300;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
   }
-  
+
+  .feeds-rss {
+    background-color: transparent;
+    gap: 8px;
+  }
+
+  .feeds-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgb(22, 20, 20, 0.8);
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    font-size: 14px;
+    margin-bottom: 1rem;
+  }
+
+  .feeds-rss .feed {
+    background-color: rgb(22, 20, 20, 0.005);
+    border: 1px solid rgb(22, 20, 20, 0.02);
+    transition: all 0.3s ease-in;
+    gap: 8px;
+  }
+
+  .feeds-rss li a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    color: rgb(22, 20, 20, 0.65);
+    font-size: 14px;
+  }
+
+  .feeds-rss li:hover {
+    background-color: rgb(255, 193, 52, 0.85);
+  }
+
+  .feeds-rss li a:hover {
+    text-decoration: underline;
+    color: rgb(22, 20, 20, 0.85);
+  }
 </style>
