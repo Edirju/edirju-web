@@ -2,6 +2,8 @@
 import "@fontsource-variable/inter";
 import "@fontsource-variable/inconsolata";
 import "@fontsource/source-sans-pro";
+import "@fontsource-variable/montserrat";
+import "@fontsource/lato";
 import { ViewTransitions } from "astro:transitions";
 
 interface Props {
@@ -79,12 +81,12 @@ const { title } = Astro.props;
       h4,
       h5,
       h6 {
-        font-family: "Inter Variable", sans-serif;
+        font-family: "Montserrat Variable", sans-serif;
         margin: 0;
       }
 
       body {
-        font-family: "Source Sans Pro", sans-serif;
+        font-family: "Lato", sans-serif;
         color: var(--color-dark);
       }
 
@@ -113,7 +115,7 @@ const { title } = Astro.props;
         font-weight: 700;
         line-height: 1.5;
         font-size: 20px;
-        text-transform: uppercase;
+        text-transform: none;
         color: var(--clr-light);
         width: fit-content;
         padding: 1px 32px 1px 16px;
