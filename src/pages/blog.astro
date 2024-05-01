@@ -37,7 +37,7 @@ const allPosts = await Astro.glob("@/pages/posts/*.md");
   <Section>
     <h2 class="section-title flex flex-wrap items-center">
       Blog & Notas<span class="ml-1 font-light text-sm tracking-tighter"
-        >Tecnología | Marketing | Cultura</span
+        >TECNOLOGÍA | MARKETING | CULTURA</span
       >
     </h2>
 
@@ -93,6 +93,7 @@ const allPosts = await Astro.glob("@/pages/posts/*.md");
         })
       }
     </ul>
+    
   </Section>
   <Footer />
 </Layout>
@@ -105,14 +106,14 @@ const allPosts = await Astro.glob("@/pages/posts/*.md");
     margin-top: 1.5rem;
     padding: 1rem;
     border: 1px solid rgb(22, 20, 20, 0.05);
-    background-color: rgb(22, 20, 20, 0.015);
+    background-color: rgb(252, 252, 252, 1);
     border-radius: 10px;
   }
 
   .title-container-post {
     font-size: 14px;
-    font-weight: 400;
-    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.05em;
     margin-bottom: 24px;
     border-bottom: 1px solid rgb(22, 20, 20, 0.15);
   }
@@ -148,7 +149,7 @@ const allPosts = await Astro.glob("@/pages/posts/*.md");
   }
 
   li a h3 {
-    font-weight: 500;
+    font-weight: 600;
     font-size: 20px;
     overflow: hidden;
     white-space: nowrap;
@@ -207,6 +208,4 @@ const allPosts = await Astro.glob("@/pages/posts/*.md");
     text-decoration: underline;
     color: rgb(22, 20, 20, 0.85);
   }
-
-  
 </style>
