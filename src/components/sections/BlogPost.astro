@@ -1,13 +1,17 @@
 ---
 import Section from "../Section.astro";
 import { Rss } from "simple-icons-astro";
-import Filetextfill from "@/icons/Filetextfill.astro";
+import News2 from "@/icons/News2.astro";
+import News from "@/icons/News.astro";
+import RightArrow from "@/icons/RightArrow.astro";
 
 const allPosts = await Astro.glob("@/pages/posts/*.md");
 ---
 
 <Section>
-  <h2 class="section-title">Blog & Notas</h2>
+  <h2 class="section-title flex items-center gap-1">
+    <News2 /> Blog & Notas
+  </h2>
 
   <article class="suscribe-container">
     <p>
@@ -28,10 +32,15 @@ const allPosts = await Astro.glob("@/pages/posts/*.md");
       allPosts.map((post) => (
         <li>
           <a href={post.url}>
-            <Filetextfill />
+            <News />
             <h3>{post.frontmatter.title}</h3>
           </a>
           <p>{post.frontmatter.description}</p>
+          <button>
+            <a href={post.url}>
+              Leer más <RightArrow />
+            </a>
+          </button>
         </li>
       ))
     }
@@ -40,47 +49,46 @@ const allPosts = await Astro.glob("@/pages/posts/*.md");
 
 <style>
   ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0 8px;
-    margin-top: 2rem;
-    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 0.5rem;
   }
-
   li {
-    width: 300px;
-    height: 76px;
-    border-top: 3px solid rgb(22, 20, 20, 1);
-    padding: 4px 8px;
-    transition: all 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: rgb(30, 37, 44, 0.02);
   }
-
-  li:hover {
-    background-color: var(--clr-yellow);
-  }
-
   li a {
     display: flex;
     align-items: center;
-    gap: 4px;
-  }
-
-  li a h3 {
-    font-size: 1rem;
-    font-weight: 600;
+    gap: 0.25rem;
+    padding: 1px;
+    text-underline-offset: 4px;
+    color: rgb(30, 37, 44, 1);
+    font-size: 16px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
   }
-
+  li a:hover {
+    text-decoration: underline;
+  }
   li p {
-    font-size: 12px;
+    font-size: 14px;
+    line-height: 1.4;
+    color: rgb(30, 37, 44, 0.65);
     text-wrap: pretty;
-    color: rgb(22, 20, 20, 0.65);
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    
+  }
+  li button a {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 12px;
   }
 
   @media (width <= 700px) {

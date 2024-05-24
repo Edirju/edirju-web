@@ -1,6 +1,6 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import Navigation from "@/components/sections/Navbar.astro";
+import Navbar from "@/components/sections/Navbar.astro";
 import Hero from "@/components/sections/Hero.astro";
 import About from "@/components/sections/About.astro";
 import Skills from "@/components/sections/Skills.astro";
@@ -8,16 +8,17 @@ import BlogPost from "@/components/sections/BlogPost.astro";
 import Projects from "@/components/sections/Projects.astro";
 import Footer from "@/components/sections/Footer.astro";
 
+
 import { basics } from "@landing";
 const { name, label } = basics;
 ---
 
 <Layout title={`Portafolio de ${name} - ${label}`}>
   <div
-    class="absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"
+    class="absolute inset-0 -z-10 max-h-full max-w-full bg-[#FFFDF8] bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"
   >
   </div>
-  <Navigation />
+  <Navbar />
   <Hero />
   <About />
   <Skills />

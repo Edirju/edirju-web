@@ -25,68 +25,56 @@ const { title } = Astro.props;
     <slot />
     <style is:global>
       :root {
-        --clr-light: rgb(255, 254, 254, 1);
-        --clr-dark: rgb(22, 20, 20, 1);
+        --clr-light: rgb(255, 253, 248, 1);
+        --clr-dark: rgb(30, 37, 44, 1);
         --clr-blue-50: rgb(177, 218, 233, 1);
         --clr-blue-100: rgb(104, 213, 217, 1);
-        --clr-yellow: rgb(255, 193, 52, 1);
+        --clr-yellow: rgb(255, 193, 52);
         --clr-red-50: rgb(236, 69, 104, 1);
         --clr-red-100: rgb(228, 8, 72, 1);
-        --accent-gradient: linear-gradient(
-          45deg,
-          rgb(var(--accent)),
-          rgb(var(--accent-light)) 30%,
-          white 60%
-        );
+        --texts: "Lato", sans-serif;
+        --titles: "Montserrat Variable", sans-serif;
       }
-
       *::selection {
         background-color: var(--clr-yellow);
+        color: var(--clr-dark);
       }
-
       html {
         font-family: system-ui, sans-serif;
         background: var(--clr-light);
         letter-spacing: -0.0063rem;
       }
-
       body,
       figure {
         margin: 0;
         padding: 0;
       }
-
       a {
         text-decoration: none;
       }
-
       ul {
         list-style: none;
         margin: 0;
         padding: 0;
       }
-
       *,
       *::before,
       *::after {
         box-sizing: border-box;
       }
-
       h1,
       h2,
       h3,
       h4,
       h5,
       h6 {
-        font-family: "Montserrat Variable", sans-serif;
+        font-family: var(--titles);
         margin: 0;
       }
-
       body {
-        font-family: "Lato", sans-serif;
+        font-family: var(--texts);
         color: var(--color-dark);
       }
-
       p {
         color: var(--color-dark);
         font-size: 0.875rem;
@@ -94,7 +82,6 @@ const { title } = Astro.props;
         margin: 0;
         text-wrap: pretty;
       }
-
       code {
         font-family:
           Menlo,
@@ -106,7 +93,6 @@ const { title } = Astro.props;
           Courier New,
           monospace;
       }
-
       .section-title {
         margin-bottom: 1.5rem;
         font-weight: 700;
@@ -116,17 +102,17 @@ const { title } = Astro.props;
         color: var(--clr-light);
         width: fit-content;
         padding: 1px 40px 1px 16px;
-        background: rgba(22, 20, 20, 1);
+        background: var(--clr-dark);
         background: linear-gradient(
           0deg,
-          rgba(22, 20, 20, 1),
-          rgba(22, 20, 20, 0.7)
+          rgba(30, 37, 44, 1),
+          rgba(30, 37, 44, 0.7)
         );
-        border-radius: 4px;
+        border-radius: 0px;
       }
 
       .suscribe-container {
-        border: 1px solid rgb(22, 20, 20, 0.08);
+        border: 1px solid rgb(30, 37, 44, 0.08);
         background: var(--clr-light);
         padding: 8px;
         margin-bottom: 32px;
@@ -136,20 +122,20 @@ const { title } = Astro.props;
         font-size: 12px;
         font-weight: 300;
         text-wrap: pretty;
-        color: rgb(22, 20, 20, 0.55);
+        color: rgb(30, 37, 44, 0.55);
       }
 
       .box-left {
         display: flex;
         justify-content: flex-end;
         font-size: 10px;
-        color: rgb(22, 20, 20, 0.45);
+        color: rgb(30, 37, 44, 0.45);
       }
       .box-left .rss-btn {
         display: flex;
         align-items: center;
         padding: 4px;
-        background-color: rgb(22, 20, 20, 0.08);
+        background-color: rgb(30, 37, 44, 0.08);
       }
 
       .print {
@@ -173,6 +159,9 @@ const { title } = Astro.props;
           break-inside: avoid;
         }
       }
-    </style>
+    </style> 
+    <script>
+      import '../scripts/main.js';
+    </script>
   </body>
 </html>

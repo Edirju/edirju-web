@@ -1,14 +1,46 @@
 ---
-import Section from "../Section.astro"
+import Section from "../Section.astro";
+import User from "@/icons/User.astro";
+import Download from "@/icons/DownLoad2.astro";
 
-import { basics } from '@landing'
-const { summary } = basics
+import { basics } from "@landing";
+const { summary } = basics;
 ---
+
 <Section>
-  <h2 class="section-title">Sobre Mí</h2>
+  <h2 class="section-title flex items-center gap-1"><User /> Sobre mí</h2>
+
   <p>{summary}</p>
+
+  <button
+    class="resume flex items-center gap-1 mt-6 uppercase text-sm font-light"
+  >
+    Resume
+    <Download />
+  </button>
 </Section>
 
 <style>
-  
+  .resume {
+    font-family: var(--titles);
+    position: relative;
+    padding: 2px 8px;
+    transition: 0.2s;
+    isolation: isolate;
+  }
+  .resume::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--clr-yellow);
+    transition: 0.2s;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: -1;
+  }
+  .resume:hover::after {
+    height: 50%;
+  }
 </style>

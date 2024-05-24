@@ -2,74 +2,132 @@
 import Section from "../Section.astro";
 import Logo from "@/icons/Logo.astro";
 import ArrowReturnLeft from "@/icons/ArrowReturnLeft.astro";
+import Download from "@/icons/Download.astro";
+import Menu from "@/icons/Menu.astro";
+import Close from "@/icons/CloseX.astro";
+import Briefcase from "@/icons/BriefCaseAlt.astro";
+import News from "@/icons/News.astro";
 ---
 
 <Section>
-  <header class="body-font">
-    <div
-      class="container mx-auto flex flex-wrap py-4 flex-col md:flex-row items-center"
+  <header
+    class="main-header flex items-center justify-between px-0 py-4"
+    transition:animate="slide"
+  >
+    <a href="/" class="logoText flex items-center">
+      <Logo />
+      <span class="ml-1 text-2xl font-black">edinson.dev</span>
+    </a>
+    <nav
+      class="nav-menu flex flex-wrap items-center gap-5 text-sm font-light uppercase justify-center"
     >
-      <a href="/" class="logoText flex items-center mb-4 md:mb-0">
-        <Logo />
-        <!-- <span class="ml-1 text-2xl font-black">Edinson.</span> -->
-      </a>
-      <nav
-        class="md:ml-auto flex flex-wrap gap-5 items-center text-base justify-center"
-      >
-        <a href="/" class="return-btn">Volver a Home <ArrowReturnLeft /></a>
-      </nav>
-    </div>
+      <button class="open-menu" id="open-menu">
+        <Menu />
+      </button>
+      <ul class="nav-list" id="nav-list">
+        <button class="close-menu" id="close-menu">
+          <Close />
+        </button>
+        <a href="/" class="nav-link font-bold">Volver<ArrowReturnLeft /></a>
+      </ul>
+    </nav>
   </header>
 </Section>
 
 <style>
-  header {
-    color: var(--clr-dark);
+  .main-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 1px solid rgb(30, 37, 44, 0.1);
   }
-
+  .main-header::before {
+    background-color: rgb(255, 253, 248, 0.9);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+  }
   .logoText {
-    font-family: "Montserrat Variable", sans-serif;
+    font-family: var(--titles);
   }
-
-  .return-btn {
-    position: relative;
-    padding: 2px 8px;
-    font-family: "Montserrat Variable", sans-serif;
-    font-size: 12px;
-    text-transform: uppercase;
-    font-weight: 300;
-
+  .close-menu,
+  .open-menu {
+    display: none;
+  }
+  .nav-list {
+    display: flex;
+    gap: 1rem;
+  }
+  .nav-link {
     display: flex;
     align-items: center;
     gap: 4px;
-
-    color: rgb(22, 20, 20, 0.85);
-
+    position: relative;
     transition: 0.2s;
-    isolation: isolate;
   }
-
-  .return-btn::after {
+  .nav-link::after {
     content: "";
     position: absolute;
-    bottom: 0;
     left: 0;
     right: 0;
+    top: 100%;
     height: 2px;
-    background-color: var(--clr-yellow);
-    transition: 0.3s;
-    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    z-index: -1;
-  }
 
-  .return-btn:hover::after {
-    height: 100%;
+    background-color: var(--clr-yellow);
+    transform: scaleX(0);
+    transition: 0.2s;
+    transform-origin: left;
+  }
+  .nav-link:hover {
+    color: var(--clr-yellow);
+  }
+  .nav-link:hover::after {
+    transform: scaleX(1);
   }
 
   @media (width <= 700px) {
-    header {
-      margin-bottom: 38px;
-      /* border-bottom: 1px solid rgb(22, 20, 20, 0.1); */
+    .nav-list {
+      position: fixed;
+      inset: 0;
+      flex-direction: column;
+      text-align: right;
+      align-items: end;
+      padding: 4rem 2rem;
+      width: 100%;
+      height: 100dvh;
+      z-index: 1;
+      gap: 2.5rem;
+      background-color: rgb(255, 253, 248, 0.9);
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+
+      visibility: hidden;
+      opacity: 0;
+    }
+    .nav-list.active {
+      visibility: visible;
+      opacity: 1;
+    }
+    .nav-link {
+      font-size: 1.5rem;
+      padding: 8px 4px;
+    }
+    .close-menu {
+      display: block;
+      position: absolute;
+      font-size: 2rem;
+      cursor: pointer;
+      left: 1.5rem;
+      top: 1.5rem;
+      color: var(--clr-dark);
+    }
+    .open-menu {
+      display: block;
+      font-size: 2rem;
+      color: var(--clr-dark);
     }
   }
 </style>

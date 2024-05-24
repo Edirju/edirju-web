@@ -1,5 +1,7 @@
 ---
 import Section from "../Section.astro";
+import Radar from "@/icons/Radar.astro";
+
 import { basics } from "@landing";
 const { name, profiles } = basics;
 import { Github, Instagram, Linkedin, Threads, X } from "simple-icons-astro";
@@ -13,7 +15,10 @@ const SOCIAL_ICONS: Record<string, any> = {
 ---
 
 <Section>
-  <h2 class="section-title">Sígueme</h2>
+  <h2 class="section-title flex items-center gap-1">
+    <Radar /> Sígueme
+  </h2>
+  
   <footer>
     <div class="avatar">
       <img src="../images/avatar.svg" alt=`${name}` class="avatar-img" />

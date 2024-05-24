@@ -25,10 +25,12 @@ import {
   Tailwindcss,
   Typescript,
   Vite,
+  Rss,
 } from "simple-icons-astro";
 import Astrojs from "@/icons/AstroIcon.astro";
 import Next from "@/icons/Next.astro";
 import Node from "@/icons/Node.astro";
+import Briefcase from "@/icons/BriefCaseAlt.astro";
 
 const SKILLS_ICONS: Record<string, any> = {
   Astrojs,
@@ -56,11 +58,30 @@ const SKILLS_ICONS: Record<string, any> = {
   Tailwindcss,
   Typescript,
   Vite,
+  Rss,
 };
 ---
 
 <Section>
-  <h2 class="section-title">Habilidades</h2>
+  <h2 class="section-title flex items-center gap-1">
+    <Briefcase /> Cosas con las que trabajo
+  </h2>
+
+  <article class="suscribe-container">
+    <p>
+      Tengo la inquietante necesidad de construir cosas. A veces el trabajo
+      fluye con facilidad, otras veces me cuestiono mis decisiones. E pluribus
+      unum.
+    </p>
+
+    <!-- <div class="box-left">
+      <a href="#" class="rss-btn">
+        <Rss class="h-3 w-3" />
+         <span>Suscríbete</span> 
+      </a>
+    </div> -->
+  </article>
+
   <ul>
     {
       skills.map(({ name }) => {
@@ -87,18 +108,18 @@ const SKILLS_ICONS: Record<string, any> = {
   ul {
     display: inline-flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 0.5rem;
   }
 
   li {
     display: flex;
     align-items: center;
-    gap: 4px;
-    font-size: 12px;
-    background-color: rgb(22, 20, 20, 0.06);
-    color: rgb(22, 20, 20, 1);
+    gap: 0.25rem;
+    font-size: 11px;
+    text-transform: uppercase;
+    background-color: rgb(30, 37, 44, 0.06);
+    color: var(--clr-dark);
     padding: 4px;
-
     transition: all 0.2s ease-in-out;
   }
 

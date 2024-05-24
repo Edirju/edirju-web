@@ -1,6 +1,7 @@
 ---
 import Section from "../Section.astro";
-import { projects, projectsB } from "@landing";
+//import { projects, projectsB } from "@landing";
+import { basics, projects } from "@cv";
 
 import {
   Rss,
@@ -14,6 +15,7 @@ import {
 } from "simple-icons-astro";
 import Circle from "@/icons/circle.astro";
 import AstroIcon from "@/icons/AstroIcon.astro";
+import Data from "@/icons/Data.astro";
 
 const SKILL_ICONS: Record<string, any> = {
   Html5,
@@ -26,7 +28,9 @@ const SKILL_ICONS: Record<string, any> = {
 ---
 
 <Section>
-  <h2 class="section-title">Proyectos</h2>
+  <h2 class="section-title flex items-center gap-1">
+    <Data /> Proyectos
+  </h2>
 
   <article class="suscribe-container">
     <p>
@@ -34,178 +38,127 @@ const SKILL_ICONS: Record<string, any> = {
       aprendido a fijarme en esos detalles. Nunca dejo de aprender. He aquí
       varias recopilaciones a lo largo de este camino.
     </p>
-
-    <div class="box-left">
+    <!-- <div class="box-left">
       <a href="#" class="rss-btn">
         <Rss class="h-3 w-3" />
-        <!-- <span>Suscríbete</span> -->
+         <span>Suscríbete</span> 
       </a>
-    </div>
+    </div> -->
   </article>
 
-  <article class="projects-container">
-    <header>
-      <h3>
-        Con HTML, CSS y JS
-        <span class="text-red-400"><Circle /></span>
-        <span class="text-blue-400"><Circle /></span>
-        <span class="text-yellow-500"><Circle /></span>
-      </h3>
-      <p>
-        Presento alguno de mis proyectos destacados enfocados en el uso de HTML
-        semantico, reglas CSS y funcionalidades en Javascript.
-      </p>
-    </header>
-
-    <ul class="projects-items">
-      {
-        projects.map(
-          ({ url, description, highlights, name, isActive, github, skill }) => {
-            const Icon = SKILL_ICONS[skill];
-
-            return (
-              <li>
-                <article>
-                  {Icon && <Icon class="w-4 h-4" />}
-                  <header>
-                    <a href={url} target="_blank">
+  <ul class="projects-items">
+    {
+      projects.map(
+        ({ url, description, highlights, name, isActive, github }) => {
+          return (
+            <li class="items">
+              <article class="item">
+                <header>
+                  <h3 class="">
+                    <a
+                      href={url}
+                      title={`Ver el proyecto ${name}`}
+                      target="_blank"
+                    >
                       {name}
                     </a>
                     {isActive && <span>•</span>}
                     {github && (
-                      <a href="">
+                      <a
+                        class="github-code-link"
+                        href={github}
+                        target="_blank"
+                        title={`Ver código fuente del proyecto ${name}`}
+                      >
                         <Github class="w-4 h-4" />
                       </a>
                     )}
-                  </header>
-                </article>
-              </li>
-            );
-          }
-        )
-      }
-    </ul>
-  </article>
-
-  <article class="projects-container">
-    <header>
-      <h3>
-        Con Frameworks
-        <span class="text-green-400"><Circle /></span>
-        <span class="text-red-600"><Circle /></span>
-        <span class="text-purple-500"><Circle /></span>
-      </h3>
-      <p>
-        Algunos de mis proyectos, prácticas que brindan una idea de mi experiencia y habilidades, asi como de la variedad de soluciones que
-        puedo ofrecer.
-      </p>
-    </header>
-
-    <ul class="projects-items">
-      {
-        projectsB.map(
-          ({ url, description, highlights, name, isActive, github, skill }) => {
-            const Icon = SKILL_ICONS[skill];
-
-            return (
-              <li>
-                <article>
-                  {Icon && <Icon class="w-4 h-4" />}
-                  <header>
-                    <a href={url} target="_blank">
-                      {name}
-                    </a>
-                    {isActive && <span>•</span>}
-                    {github && (
-                      <a href="">
-                        <Github class="w-4 h-4" />
-                      </a>
-                    )}
-                  </header>
-                </article>
-              </li>
-            );
-          }
-        )
-      }
-    </ul>
-  </article>
+                  </h3>
+                  <p class=" line-clamp-2">{description}</p>
+                </header>
+                <footer>
+                  <ul>
+                    {highlights.map((highlight) => {
+                      return <span>{highlight}</span>;
+                    })}
+                  </ul>
+                </footer>
+              </article>
+            </li>
+          );
+        }
+      )
+    }
+  </ul>
 </Section>
 
 <style>
-  .projects-container {
-    border: 1px solid rgb(22, 20, 20, 0.05);
-    background-color: rgb(22, 20, 20, 0.015);
-    border-radius: 8px;
-    padding: 16px;
-
+  .projects-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.5rem;
+    border: 1px solid rgb(30, 37, 44, 0.025);
+    background-color: rgb(30, 37, 44, 0.025);
+    border-radius: 0.5rem;
+    padding: 8px;
+  }
+  .items {
+    overflow: hidden;
+    background-color: rgb(255, 253, 248, 1);
+    border-radius: 0.5rem;
+    padding: 8px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+  }
+  .items:hover {
+    background-color: var(--clr-yellow);
+  }
+  .item {
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    margin-bottom: 32px;
+    justify-content: space-between;
+    gap: 0.5rem;
+    height: 100%;
   }
-
-  .projects-container header h3 {
+  .item header h3 {
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 0.25rem;
+  }
+  .item header h3 a {
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 500;
+    letter-spacing: -0.05rem;
     text-wrap: pretty;
+    color: rgb(30, 37, 44, 0.9);
   }
-
-  .projects-container header p {
+  .item header h3 a:hover {
+    text-decoration: underline;
+  }
+  .item header h3 span {
+    color: rgb(0, 188, 47, 1);
+  }
+  .item header p {
     font-size: 12px;
-    font-style: normal;
-    color: rgb(22, 20, 20, 0.8);
+    line-height: 1.4;
+    color: rgb(30, 37, 44, 0.65);
     text-wrap: pretty;
   }
-
-  .projects-items {
+  .item footer ul {
     display: flex;
     flex-wrap: wrap;
     gap: 4px;
-    margin-inline: -8px;
   }
-
-  .projects-items li article {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    border: 1px solid rgb(22, 20, 20, 0.15);
-    padding: 2px 4px;
-    width: fit-content;
-    height: 100%;
+  .item footer ul span {
+    font-size: 10px;
+    color: rgb(30, 37, 44, 0.5);
+    background: rgb(30, 37, 44, 0.08);
+    padding: 1px 3px;
     border-radius: 4px;
-
-    transition: all 0.3s ease-in-out;
+    width: fit-content;
   }
-
-  .projects-items li article:hover {
-    background-color: var(--clr-yellow);
-  }
-
-  .projects-items li article header {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    font-size: 12px;
-    color: rgb(22, 20, 20, 0.65);
-  }
-
-  .projects-items li article header a:hover {
-    text-decoration: underline;
-  }
-
-  .projects-items li article header span {
-    color: rgb(0, 188, 47, 1);
-    font-size: 1rem;
-  }
-
-  @media (width <= 700px) {
-    .projects-items {
-      margin-inline: 0;
-      margin-top: 1rem;
-    }
+  .github-code-link {
+    color: rgb(30, 37, 44, 0.55);
+    margin-left: 8px;
   }
 </style>
