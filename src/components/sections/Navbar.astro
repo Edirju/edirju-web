@@ -13,10 +13,7 @@ import News from "@/icons/News.astro";
     class="main-header flex items-center justify-between px-0 py-4"
     transition:animate="slide"
   >
-    <a 
-      href="/" 
-      class="logoText flex items-center"
-    >
+    <a href="/" class="logoText flex items-center">
       <Logo />
       <span class="ml-1 text-2xl font-black">edinson.dev</span>
     </a>
@@ -30,9 +27,12 @@ import News from "@/icons/News.astro";
         <button class="close-menu" id="close-menu">
           <Close />
         </button>
-        <a href="/proyectos" class="nav-link">Proyectos<Briefcase /></a>
-        <a href="/blog" class="nav-link">BlogPosts<News /></a>
-        <a href="/resume" target="_blank" class="nav-link ">Resume<Download /></a>
+        <a href="/proyectos" class="nav-link transition"
+          >Proyectos<Briefcase /></a
+        >
+        <a href="/blog" class="nav-link transition">BlogPosts<News /></a>
+        <a href="/resume" target="_blank" class="nav-link">Resume<Download /></a
+        >
       </ul>
     </nav>
   </header>
@@ -54,7 +54,7 @@ import News from "@/icons/News.astro";
     position: absolute;
     inset: 0;
     z-index: -1;
-  } 
+  }
   .logoText {
     font-family: var(--titles);
   }
@@ -105,12 +105,9 @@ import News from "@/icons/News.astro";
       height: 100dvh;
       z-index: 1;
       gap: 2.5rem;
-      background-color: rgb(255, 253, 248, 1);
+      background-color: rgb(255, 253, 248, 0.98);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
-      
-      
-
       visibility: hidden;
       opacity: 0;
     }
