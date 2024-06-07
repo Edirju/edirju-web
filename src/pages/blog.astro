@@ -28,11 +28,7 @@ const { name, label } = basics;
 const allPosts = await Astro.glob("@/pages/posts/*.md");
 ---
 
-<Layout title=`Portafolio de ${name} - Blog & Notas`>
-  <div
-    class="absolute inset-0 -z-10 max-h-full max-w-full bg-[#FFFDF8] bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"
-  >
-  </div>
+<Layout title=`Portafolio de ${name} - Blog & Notas`>  
   <MinNav />
   <Section>
     <h2 class="section-title flex flex-wrap items-center">

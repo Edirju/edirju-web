@@ -28,10 +28,10 @@ import News from "@/icons/News.astro";
           <Close />
         </button>
         <a href="/proyectos" class="nav-link transition"
-          >Proyectos<Briefcase /></a
+          ><Briefcase />Proyectos</a
         >
-        <a href="/blog" class="nav-link transition">BlogPosts<News /></a>
-        <a href="/resume" target="_blank" class="nav-link">Resume<Download /></a
+        <a href="/blog" class="nav-link transition"><News />BlogPosts</a>
+        <a href="/resume" target="_blank" class="nav-link"><Download />Resume</a
         >
       </ul>
     </nav>
@@ -44,7 +44,7 @@ import News from "@/icons/News.astro";
     position: -webkit-sticky;
     top: 0;
     z-index: 10;
-    border-bottom: 1px solid rgb(30, 37, 44, 0.1);
+    /* border-bottom: 1px solid rgb(30, 37, 44, 0.1); */
   }
   .main-header::before {
     background-color: rgb(255, 253, 248, 0.9);
@@ -72,6 +72,7 @@ import News from "@/icons/News.astro";
     gap: 4px;
     position: relative;
     transition: 0.2s;
+    color: rgb(30, 37, 44, 0.55);
   }
   .nav-link::after {
     content: "";
@@ -81,13 +82,13 @@ import News from "@/icons/News.astro";
     top: 100%;
     height: 2px;
 
-    background-color: var(--clr-yellow);
+    background-color: var(--clr-dark);
     transform: scaleX(0);
     transition: 0.2s;
     transform-origin: left;
   }
   .nav-link:hover {
-    color: var(--clr-yellow);
+    color: rgb(30, 37, 44, 1);
   }
   .nav-link:hover::after {
     transform: scaleX(1);
