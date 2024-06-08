@@ -62,7 +62,7 @@ const SKILL_ICONS: Record<string, any> = {
                     >
                       {name}
                     </a>
-                    {isActive && <span>•</span>}
+                    {isActive && <span><Circle /></span>}
                     {github && (
                       <a
                         class="github-code-link"
@@ -97,21 +97,22 @@ const SKILL_ICONS: Record<string, any> = {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 0.5rem;
-    border: 1px solid rgb(30, 37, 44, 0.025);
-    background-color: rgb(30, 37, 44, 0.025);
+    /* border: 1px solid rgb(30, 37, 44, 0.025); */
+    /* background-color: rgb(30, 37, 44, 0.025); */
     border-radius: 0.5rem;
     padding: 8px;
   }
   .items {
     overflow: hidden;
     background-color: rgb(255, 253, 248, 1);
+    border: 1px solid rgb(30, 37, 44, 0.08);
     border-radius: 0.5rem;
     padding: 8px;
     transition: all 0.3s ease-in-out;
     position: relative;
   }
   .items:hover {
-    background-color: var(--clr-yellow);
+    background-color: rgb(30, 37, 44, 0.08);
   }
   .item {
     display: flex;
@@ -150,7 +151,7 @@ const SKILL_ICONS: Record<string, any> = {
     gap: 4px;
   }
   .item footer ul span {
-    font-size: 10px;    
+    font-size: 10px;
     color: rgb(30, 37, 44, 0.5);
     background: rgb(30, 37, 44, 0.08);
     padding: 1px 3px;

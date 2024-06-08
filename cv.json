@@ -394,7 +394,7 @@
       "github": "https://github.com/Edirju/baby-yoda"
     },
     {
-      "name": "Piedra, Papel y Tijera AppGame",
+      "name": "Piedra, Papel y Tijera",
       "isActive": true,
       "description": "Aplicacion que permite jugar el clásico piedra, papel y tijera",
       "highlights": ["HTML", "JavaScript", "CSS"],
@@ -405,7 +405,7 @@
       "name": "Mis Tareas App",
       "isActive": false,
       "description": "Aplicación en react para monitorear tareas con funcionalidades de agregar, eliminar, completar, almacenar información.",
-      "highlights": ["React", "JavaScript", "API's", "CSS", "LocalStorage"],
+      "highlights": ["React",  "API's", "CSS", "LocalStorage"],
       "url": "https://mis-tareas-app-sooty.vercel.app/",
       "github": "https://github.com/Edirju/react-todo-app",
       "skill": "React"
