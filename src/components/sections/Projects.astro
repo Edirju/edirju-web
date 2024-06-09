@@ -62,7 +62,11 @@ const SKILL_ICONS: Record<string, any> = {
                     >
                       {name}
                     </a>
-                    {isActive && <span><Circle /></span>}
+                    {isActive && (
+                      <span>
+                        <Circle />
+                      </span>
+                    )}
                     {github && (
                       <a
                         class="github-code-link"
@@ -135,6 +139,7 @@ const SKILL_ICONS: Record<string, any> = {
   }
   .item header h3 a:hover {
     text-decoration: underline;
+    text-underline-offset: 4px;
   }
   .item header h3 span {
     color: rgb(0, 188, 47, 1);
