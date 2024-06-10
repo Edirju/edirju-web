@@ -27,43 +27,84 @@ const SKILL_ICONS: Record<string, any> = {
   Vite,
 };
 
-import { basics, projects, projectsB } from "@landing";
+import { basics } from "@landing";
+import { projects } from "@cv";
 
 const { name, label } = basics;
-
 ---
 
-<Layout title=`Proyectos de ${name} - ${label}`>  
+<Layout title=`Proyectos de ${name} - ${label}`>
   <MinNav />
   <Section>
-    <h2
-      class="section-title flex flex-wrap items-center"
-      
-    >
-      Proyectos<span class="ml-1 font-light text-sm tracking-tighter"
-        >HTML-CSS-JS | FRONTEND | BACKEND
-      </span>
+    <h2 class="section-title flex flex-wrap items-center">
+      <Data />Proyectos | Prácticas
     </h2>
 
-    <article
-      class="suscribe-container"
-      
-    >
+    <article class="suscribe-container">
       <p>
         Los pequeños detalles marcan una gran diferencia. Con los años he
         aprendido a fijarme en esos detalles. Nunca dejo de aprender. He aquí
         varias recopilaciones a lo largo de este camino.
       </p>
 
-      <div class="box-left">
+      <!-- <div class="box-left">
         <a href="#" class="rss-btn">
           <Rss class="h-3 w-3" />
-          <!-- <span>Suscríbete</span> -->
+          <span>Suscríbete</span>
         </a>
-      </div>
+      </div> -->
     </article>
 
-    <article
+    <ul class="projects-items">
+      {
+        projects.map(
+          ({ url, description, highlights, name, isActive, github }) => {
+            return (
+              <li class="items">
+                <article class="item">
+                  <header>
+                    <h3 class="">
+                      <a
+                        href={url}
+                        title={`Ver el proyecto ${name}`}
+                        target="_blank"
+                      >
+                        {name}
+                      </a>
+                      {isActive && (
+                        <span>
+                          <Circle />
+                        </span>
+                      )}
+                      {github && (
+                        <a
+                          class="github-code-link"
+                          href={github}
+                          target="_blank"
+                          title={`Ver código fuente del proyecto ${name}`}
+                        >
+                          <Github class="w-4 h-4" />
+                        </a>
+                      )}
+                    </h3>
+                    <p class=" line-clamp-2">{description}</p>
+                  </header>
+                  <footer>
+                    <ul>
+                      {highlights.map((highlight) => {
+                        return <span>{highlight}</span>;
+                      })}
+                    </ul>
+                  </footer>
+                </article>
+              </li>
+            );
+          }
+        )
+      }
+    </ul>
+
+    <!-- <article
       class="projects-container"
       
     >
@@ -208,64 +249,32 @@ const { name, label } = basics;
           )
         }
       </ul>
-    </article>
+    </article> -->
   </Section>
   <Footer />
 </Layout>
 
 <style>
-  .projects-container {
-    border: 1px solid transparent;
-    background-color: rgb(255, 253, 248, 1);
-    border-radius: 0.5rem;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin-bottom: 32px;
-    background: #fffdf8;
-    box-shadow:
-      1px 5px 40px #dedcd8,
-      -1px -5px 40px #fffdf8;
-  }
-  .projects-container header {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  .projects-container header h3 {
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-    font-size: 14px;
-    font-weight: 600;
-    text-wrap: pretty;
-    color: rgb(30, 37, 44, 0.8);
-  }
-  .projects-container header p {
-    font-size: 12px;
-    text-wrap: pretty;
-    color: rgb(30, 37, 44, 0.6);
-  }
   .projects-items {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 0.5rem;
-    border: 1px solid rgb(30, 37, 44, 0.025);
-    background-color: rgb(30, 37, 44, 0.025);
+    /* border: 1px solid rgb(30, 37, 44, 0.025);
+    background-color: rgb(30, 37, 44, 0.025); */
     border-radius: 0.5rem;
     padding: 8px;
   }
   .items {
     overflow: hidden;
     background-color: rgb(255, 253, 248, 1);
+    border: 1px solid rgb(30, 37, 44, 0.08);
     border-radius: 0.5rem;
     padding: 8px;
     transition: all 0.3s ease-in-out;
     position: relative;
   }
   .items:hover {
-    background-color: var(--clr-yellow);
+    background-color: rgb(30, 37, 44, 0.08);
   }
   .item {
     display: flex;
@@ -288,6 +297,7 @@ const { name, label } = basics;
   }
   .item header h3 a:hover {
     text-decoration: underline;
+    text-underline-offset: 4px;
   }
   .item header h3 span {
     color: rgb(0, 188, 47, 1);
@@ -304,8 +314,7 @@ const { name, label } = basics;
     gap: 4px;
   }
   .item footer ul span {
-    font-size: 9px;
-    text-transform: uppercase;
+    font-size: 10px;    
     color: rgb(30, 37, 44, 0.5);
     background: rgb(30, 37, 44, 0.08);
     padding: 1px 3px;

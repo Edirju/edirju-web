@@ -12,6 +12,7 @@ import {
   Instagram,
 } from "simple-icons-astro";
 import Filetextfill from "@/icons/Filetextfill.astro";
+import News from "@/icons/News.astro";
 
 import { posts } from "@social";
 import { basics } from "@landing";
@@ -28,13 +29,11 @@ const { name, label } = basics;
 const allPosts = await Astro.glob("@/pages/posts/*.md");
 ---
 
-<Layout title=`Portafolio de ${name} - Blog & Notas`>  
+<Layout title=`Portafolio de ${name} - Blog & Notas`>
   <MinNav />
   <Section>
     <h2 class="section-title flex flex-wrap items-center">
-      Blog & Notas<span class="ml-1 font-light text-sm tracking-tighter"
-        >TECNOLOGÍA | MARKETING | CULTURA</span
-      >
+      Social Media | Posts | RSS
     </h2>
 
     <article class="suscribe-container">
@@ -52,37 +51,48 @@ const allPosts = await Astro.glob("@/pages/posts/*.md");
     </article>
 
     <ul>
-      <h2 class="title-container-post">Publicaciones recientes ...</h2>
+      
       {
         allPosts.map((post) => (
-          <li>
-            <img
-              src={post.frontmatter.image.url}
-              alt={post.frontmatter.title}
-            />
-            <a href={post.url}>
-              <h3>{post.frontmatter.title}</h3>
-              <p>{post.frontmatter.description}</p>
+          <li class="px-2 py-3 border rounded-lg transition duration-300 ease-in-out hover:bg-[rgba(30,37,44,0.08)]">            
+            <a
+              href={post.url}
+              class="flex flex-col gap-1 text-sm"
+              title={`Ver el post ${post.frontmatter.title}`}
+            >
+              <div class="flex items-center gap-1">
+                <News class="block h-4 w-4" />
+                <h3 class="truncate font-medium ">{post.frontmatter.title}</h3>
+              </div>
+              <p class="line-clamp-2 text-xs text-[rgba(30,37,44,0.65)] text-pretty">
+                {post.frontmatter.description}
+              </p>
             </a>
           </li>
         ))
       }
     </ul>
 
-    <ul class="feeds-rss">
-      <h3 class="feeds-title">
-        <Rss class="w-4 h-4" />
-        Social Media | Posts | RSS
-      </h3>
+    <ul class="items">      
       {
-        posts.map(({ network, description, url }) => {
+        posts.map(({ network, title, description, url }) => {
           const Icon = SOCIAL_ICONS[network];
 
           return (
-            <li class="feed">
-              <a href={url} target="_blank">
-                <Icon class="w-4 h-4" />
-                {description}
+            <li class="p-2 border rounded-lg transition duration-300 ease-in-out hover:bg-[rgba(30,37,44,0.08)]">
+              <a
+                href={url}
+                target="_blank"
+                class="flex flex-col gap-1 text-sm"
+                title={`Ver el post ${title}`}
+              >
+                <div class="flex items-center gap-1">
+                  <Icon class="w-4 h-4" />
+                  <h3 class="truncate font-medium ">{title}</h3>
+                </div>
+                <p class="line-clamp-2 text-xs text-[rgba(30,37,44,0.65)] text-pretty">
+                  {description}
+                </p>
               </a>
             </li>
           );
@@ -95,112 +105,10 @@ const allPosts = await Astro.glob("@/pages/posts/*.md");
 
 <style>
   ul {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    margin-top: 1.5rem;
-    padding: 1rem;
-    border: 1px solid rgb(30, 37, 44, 0.05);
-    background-color: var(--clr-light);
-    border-radius: 10px;
-  }
-
-  .title-container-post {
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 0.05em;
-    margin-bottom: 24px;
-    border-bottom: 1px solid rgb(30, 37, 44, 0.15);
-  }
-
-  li {
-    display: flex;
-    gap: 16px;
-    width: 100%;
-    background-color: var(--clr-light);
-    border: 1px solid rgb(30, 37, 44, 0.05);
-    border-radius: 8px;
-    padding: 0.5rem;
-    transition: all 0.3s ease;
-  }
-
-  li:hover {
-    background-color: var(--clr-yellow);
-  }
-
-  li img {
-    width: 80px;
-    height: 80px;
-    border-radius: 8px;
-    object-fit: cover;
-  }
-
-  li a {
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    gap: 8px;
-    overflow: hidden;
-  }
-
-  li a h3 {
-    font-weight: 600;
-    font-size: 20px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
-
-  li a h3:hover {
-    text-decoration: underline;
-  }
-
-  li a p {
-    font-size: 14px;
-    font-weight: 300;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
-
-  .feeds-rss {
-    background-color: var(--clr-light);
-    gap: .5rem;
-  }
-
-  .feeds-title {
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 0.5rem;
-    color: rgb(30, 37, 44, 0.8);
-    font-weight: 500;
-    letter-spacing: 0.05em;
-    font-size: 14px;
-    margin-bottom: 1rem;
+    margin-bottom: 8px;
   }
-
-  .feeds-rss .feed {
-    background-color: rgb(30, 37, 44, 0.005);
-    border: 1px solid rgb(30, 37, 44, 0.02);
-    transition: all 0.3s ease-in;
-    gap: 8px;
-  }
-
-  .feeds-rss li a {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 1rem;
-    color: rgb(30, 37, 44, 0.65);
-    font-size: 14px;
-  }
-
-  .feeds-rss li:hover {
-    background-color: var(--clr-yellow);
-  }
-
-  .feeds-rss li a:hover {
-    text-decoration: underline;
-    color: rgb(30, 37, 44, 0.85);
-  }
+  
 </style>
