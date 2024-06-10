@@ -20,6 +20,7 @@
     "@fontsource/lato": "^5.0.21",
     "@fontsource/source-sans-pro": "^5.0.8",
     "astro": "^4.10.0",
+    "boxicons": "^2.1.4",
     "ninja-keys": "^1.2.2",
     "preact": "^10.20.1",
     "simple-icons-astro": "^11.10.0",

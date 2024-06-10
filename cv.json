@@ -36,7 +36,7 @@
     {
       "name": "Freelancer",
       "position": "Diseño Web & Gestión de Redes Sociales",
-      "url": "https://edinson-rivera-devweb.vercel.app/",
+      "url": "#",
       "startDate": "2022-03-08",
       "endDate": null,
       "summary": "Desarrollo de web estáticas y aplicaciones, adicionalmente en tareas de gestión de redes sociales para marcas personales y comerciales.",
@@ -82,13 +82,23 @@
   "education": [
     {
       "institution": "Universidad INCCA de Colombia",
-      "url": "https://www.uoc.edu/portal/es/index.html",
+      "url": "https://unincca.edu.co/",
       "area": "Ingeniero de Sistemas",
       "studyType": "Profesional",
       "startDate": "2001-01-01",
       "endDate": "2006-01-01",
       "score": "4.0",
       "courses": ["Ingeniería de Sistemas - Gestion de proyectos"]
+    },
+    {
+      "institution": "Fundación Centro Colombiano de Estudios Profesionales",
+      "url": "https://www.cecep.edu.co/",
+      "area": "Tecnología de Sistemas",
+      "studyType": "Tecnólogo",
+      "startDate": "2001-01-01",
+      "endDate": "2006-01-01",
+      "score": "4.0",
+      "courses": ["Tecnología de Sistemas de información"]
     }
   ],
   "awards": [
@@ -101,10 +111,178 @@
   ],
   "certificates": [
     {
-      "name": "Certificate",
-      "date": "2021-11-07",
-      "issuer": "Company",
-      "url": "https://certificate.com"
+      "name": "JavaScript Algorithms and Data Structures (Beta)",
+      "date": "2024-03-01",
+      "issuer": "freeCodeCamp",
+      "url": "https://freecodecamp.org/certification/fcc65dd77ca-8051-4190-adf4-11013a92472a/javascript-algorithms-and-data-structures-v8"
+    },
+    {
+      "name": "Taller de Creación de Contenido con Inteligencia Artificial",
+      "date": "2023-03-01",
+      "issuer": "Platzi",
+      "url": "https://platzi.com/p/Ediriv/curso/6176-course/diploma/detalle/"
+    },
+    {
+      "name": "Curso de Storytelling",
+      "date": "2022-07-01",
+      "issuer": "Platzi",
+      "url": "https://platzi.com/p/Ediriv/curso/2240-course/diploma/detalle/"
+    },
+    {
+      "name": "Curso de Manejo de Crisis en Redes Sociales",
+      "date": "2022-05-01",
+      "issuer": "Platzi",
+      "url": "https://platzi.com/p/Ediriv/curso/1714-course/diploma/detalle/"
+    },
+    {
+      "name": "Curso de Marketing con YouTube",
+      "date": "2022-05-01",
+      "issuer": "Platzi",
+      "url": "https://platzi.com/p/Ediriv/curso/1714-course/diploma/detalle/"
+    },
+    {
+      "name": "Desarrollo de Apps Moviles",
+      "date": "2022-05-01",
+      "issuer": "Universidad Complutense de Madrid",
+      "url": "https://learndigital.withgoogle.com/link/1nur091p2ww"
+    },
+    {
+      "name": "Cloud Computing",
+      "date": "2022-04-01",
+      "issuer": "Google",
+      "url": "https://learndigital.withgoogle.com/link/1nur091p2ww"
+    },
+    {
+      "name": "Curso Definitivo de HTML y CSS",
+      "date": "2022-04-01",
+      "issuer": "Platzi",
+      "url": "https://platzi.com/p/Ediriv/curso/2008-html-css/diploma/detalle/"
+    },
+    {
+      "name": "Curso Profesional de CSS Grid Layout",
+      "date": "2022-04-01",
+      "issuer": "Platzi",
+      "url": "https://platzi.com/p/Ediriv/curso/2222-course/diploma/detalle/"
+    },
+    {
+      "name": "Curso de Content Marketing Avanzado",
+      "date": "2022-04-01",
+      "issuer": "Platzi",
+      "url": "https://platzi.com/p/Ediriv/course/1664-content-marketing/diploma/detalle/"
+    },
+    {
+      "name": "Curso de Diseño Web con CSS Grid y Flexbox",
+      "date": "2022-04-01",
+      "issuer": "Platzi",
+      "url": "https://platzi.com/p/Ediriv/course/2229-flexbox-css-grid/diploma/detalle/"
+    },
+    {
+      "name": "Curso de Sistemas de Diseño",
+      "date": "2022-04-01",
+      "issuer": "Platzi",
+      "url": "https://platzi.com/p/Ediriv/course/1420-sistemas-diseno/diploma/detalle/"
+    },
+    {
+      "name": "Diseño para Developers",
+      "date": "2022-04-01",
+      "issuer": "Platzi",
+      "url": "https://platzi.com/p/Ediriv/curso/1906-diseno-programadores/diploma/detalle/"
+    },
+    {
+      "name": "Responsive Design: Maquetación Mobile First",
+      "date": "2022-04-01",
+      "issuer": "Platzi",
+      "url": "https://platzi.com/p/Ediriv/curso/2030-mobile-first/diploma/detalle/"
+    },
+    {
+      "name": "Avanzado de Escritura Creativa",
+      "date": "2022-03-01",
+      "issuer": "Platzi",
+      "url": "https://platzi.com/p/Ediriv/curso/2782-escritura-avanzada/diploma/detalle/"
+    },
+    {
+      "name": "Curso Básico de JavaScript",
+      "date": "2022-03-01",
+      "issuer": "Platzi",
+      "url": "https://platzi.com/p/Ediriv/curso/1814-basico-javascript/diploma/detalle/"
+    },
+    {
+      "name": "Curso Profesional de Git y GitHub",
+      "date": "2022-03-01",
+      "issuer": "Platzi",
+      "url": "https://platzi.com/p/Ediriv/curso/1557-git-github/diploma/detalle/"
+    },
+    {
+      "name": "Curso Práctico de Frontend Developer",
+      "date": "2022-03-01",
+      "issuer": "Platzi",
+      "url": "https://platzi.com/p/Ediriv/curso/2477-frontend-developer-practico/diploma/detalle/"
+    },
+    {
+      "name": "Curso Práctico de JavaScript",
+      "date": "2022-03-01",
+      "issuer": "Platzi",
+      "url": "https://platzi.com/p/Ediriv/curso/2327-javascript-practico/diploma/detalle/"
+    },
+    {
+      "name": "Curso de Flujo de Desarrollo Moderno CodeStream",
+      "date": "2022-03-01",
+      "issuer": "Platzi",
+      "url": "https://platzi.com/p/Ediriv/curso/2157-desarrollo-moderno-codestream/diploma/detalle/"
+    },
+    {
+      "name": "Frontend Developer",
+      "date": "2022-03-01",
+      "issuer": "Platzi",
+      "url": "https://platzi.com/p/Ediriv/curso/2467-frontend-developer/diploma/detalle/"
+    },
+    {
+      "name": "Algoritmos y Pensamiento Lógico",
+      "date": "2022-02-01",
+      "issuer": "Platzi",
+      "url": "https://platzi.com/p/Ediriv/curso/2218-pensamiento-logico/diploma/detalle/"
+    },
+    {
+      "name": "Curso de Estrategias de Interacción para Redes Sociales",
+      "date": "2022-02-01",
+      "issuer": "Platzi",
+      "url": "https://platzi.com/p/Ediriv/curso/2407-interaccion-redes-sociales/diploma/detalle/"
+    },
+    {
+      "name": "Fundamentos de Ingeniería de Software",
+      "date": "2022-02-01",
+      "issuer": "Platzi",
+      "url": "https://platzi.com/p/Ediriv/curso/1098-ingenieria/diploma/detalle/"
+    },
+    {
+      "name": "Atención al Cliente y Soporte a Usuarios",
+      "date": "2022-01-01",
+      "issuer": "Platzi",
+      "url": "https://platzi.com/p/Ediriv/curso/1282-atencion-cliente/diploma/detalle/"
+    },
+    {
+      "name": "Curso de Brand Storytelling",
+      "date": "2022-01-01",
+      "issuer": "Platzi",
+      "url": "https://platzi.com/p/Ediriv/curso/2515-brand-storytelling/diploma/detalle/"
+    },
+    {
+      "name": "Curso de Copywriting para Plataformas Digitales",
+      "date": "2022-01-01",
+      "issuer": "Platzi",
+      "url": "https://platzi.com/p/Ediriv/curso/1476-copywriting-digital/diploma/detalle/"
+    },
+    {
+      "name": "Community Manager",
+      "date": "2021-12-01",
+      "issuer": "Platzi",
+      "url": "https://platzi.com/p/Ediriv/curso/1302-community-manager/diploma/detalle/"
+    },
+    {
+      "name": "Curso de Content Marketing",
+      "date": "2021-12-01",
+      "issuer": "Platzi",
+      "url": "https://platzi.com/p/Ediriv/curso/1666-contenido/diploma/detalle/"
     }
   ],
   "publications": [

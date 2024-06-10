@@ -6,7 +6,10 @@ import Experience from "@/components/resume/Experience.astro";
 import Education from "@/components/resume/Education.astro";
 import Skills from "@/components/resume/Skills.astro";
 import Projects from "@/components/resume/Projects.astro";
+import Certificates from "@/components/resume/Certificates.astro";
 import KeyboardManager from "@/components/KeyboardManager.astro";
+
+
 
 import { basics } from "@cv";
 const { name, label } = basics;
@@ -20,14 +23,71 @@ const { name, label } = basics;
     <Education />
     <Projects />
     <Skills />
+    <Certificates />
   </main>
   <KeyboardManager />
 </Layout>
 
 <style>
-  body {
-    font-family: "Lato", sans-serif;
+  /* CSS RESET */
+  * {
+    margin: 0;
+    padding: 0;
   }
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+  body {
+    min-height: 100vh;
+  }
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-wrap: balance;
+  }
+  img,
+  video,
+  svg {
+    height: auto;
+    max-width: 100%;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+      transition: none;
+    }
+  }
+  :root {
+    --clr-light: rgb(255, 253, 248, 1);
+    --clr-dark: rgb(30, 37, 44, 1);
+    --clr-blue-50: rgb(177, 218, 233, 1);
+    --clr-blue-100: rgb(104, 213, 217, 1);
+    --clr-yellow: rgb(255, 193, 52);
+    --clr-red-50: rgb(236, 69, 104, 1);
+    --clr-red-100: rgb(228, 8, 72, 1);
+  }
+
+  /* -------------- */
+
   main {
     margin: 64px 0;
     /* padding: 4rem;
