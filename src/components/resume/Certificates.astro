@@ -1,12 +1,11 @@
 ---
 import Section from "../Section.astro";
 import { certificates } from "@cv";
-
 ---
 
 <Section title="Certificaciones">
   <ul>
-    {
+    <!-- {
       certificates.map(({ name, date, issuer, url }) => {
         const startYear = new Date(date).getFullYear();
 
@@ -21,6 +20,22 @@ import { certificates } from "@cv";
               <h4 class="font-light text-xs">{issuer}</h4>
               <time class="font-medium text-xs">{startYear}</time>
             </article>
+          </li>
+        );
+      })
+    } -->
+    {
+      certificates.map(({ name, date, issuer, url }) => {
+        const startYear = new Date(date).getFullYear();
+
+        return (
+          <li class="text-[11px] bg-[#eee] text-[rgba(30,37,44,.9)] p-1 transition duration-300 ease-in-out hover:bg-[rgba(30,37,44,.9)] hover:text-[rgba(255,253,248,.9)]">
+            {/* <i class="bx bx-certification" /> */}
+            <a href={url}>
+              <span class="mr-1 font-medium">{name}</span>
+            </a>
+            <span class="mr-1 italic text-[9px]">{issuer}</span>
+            <span class="text-[9px] font-regular">{startYear} </span>
           </li>
         );
       })
