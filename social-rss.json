@@ -39,40 +39,51 @@
         "network": "Threads",
         "username": "edirju",
         "url": "https://www.threads.net/@edirju"
+      },
+      {
+        "network": "News",
+        "username": "Blogger",
+        "url": "https://www.threads.net/@edirju"
       }
     ]
   },
   "posts": [
-      {
-        "network": "Linkedin",
-        "title": "Publicación de Linkedin con video",
-        "description": "Publicación sobre un tema particular en Linkedin",
-        "url": "https://www.linkedin.com/posts/midudev_ya-est%C3%A1-la-beta-de-react-19-trae-nuevos-activity-7190710737059647488-hGI4?utm_source=share&utm_medium=member_desktop"
-      },
-      {
-        "network": "Facebook",
-        "title": "Aplicación de facebook con video",
-        "description": "Publicacion sobre un tema particular en Facebook",
-        "url": "https://www.facebook.com/100001232870588/videos/1509557056632620/"
-      },
-      {
-        "network": "X",
-        "title": "Aplicación de ex-twitter",
-        "description": "Publicacion sobre un tema particular en X",
-        "url": "https://twitter.com/edinson_rivera/status/1784595240743063766"
-      },
-      {
-        "network": "Instagram",
-        "title": "Aplicación de Instagram",
-        "description": "Publicacion sobre un tema particular en Instagram",
-        "url": "https://www.instagram.com/p/C5bJd8vgEgl-M3rF50mtY43NmGLQ74sye7MHDA0/"
-      },
-      {
-        "network": "Threads",
-        "title": "Aplicación de Threads",
-        "description": "Publicacion sobre un tema particular en Threads con un video asociado y un link a un proyecto",
-        "url": "https://www.threads.net/@edirju/post/C6O6V3BgedTd530eUAUeV2H-dv0tolIhXb1Ek40"
-      }
+    {
+      "network": "Linkedin",
+      "title": "Publicación de Linkedin con video",
+      "description": "Publicación sobre un tema particular en Linkedin",
+      "url": "https://www.linkedin.com/posts/midudev_ya-est%C3%A1-la-beta-de-react-19-trae-nuevos-activity-7190710737059647488-hGI4?utm_source=share&utm_medium=member_desktop"
+    },
+    {
+      "network": "Facebook",
+      "title": "Aplicación de facebook con video",
+      "description": "Publicacion sobre un tema particular en Facebook",
+      "url": "https://www.facebook.com/100001232870588/videos/1509557056632620/"
+    },
+    {
+      "network": "X",
+      "title": "Aplicación de ex-twitter",
+      "description": "Publicacion sobre un tema particular en X",
+      "url": "https://twitter.com/edinson_rivera/status/1784595240743063766"
+    },
+    {
+      "network": "Instagram",
+      "title": "Aplicación de Instagram",
+      "description": "Publicacion sobre un tema particular en Instagram",
+      "url": "https://www.instagram.com/p/C5bJd8vgEgl-M3rF50mtY43NmGLQ74sye7MHDA0/"
+    },
+    {
+      "network": "Threads",
+      "title": "Aplicación de Threads",
+      "description": "Publicacion sobre un tema particular en Threads con un video asociado y un link a un proyecto",
+      "url": "https://www.threads.net/@edirju/post/C6O6V3BgedTd530eUAUeV2H-dv0tolIhXb1Ek40"
+    },
+    {
+      "network": "News",
+      "title": "Los tres albumes mas vendidos",
+      "description": "Publicacion sobre un tema particular en Threads con un video asociado y un link a un proyecto",
+      "url": "https://blogandnotas.blogspot.com/2024/04/los-tres-albumes-mas-vendidos-de-la.html"
+    }
   ],
   "projects": [
     {
