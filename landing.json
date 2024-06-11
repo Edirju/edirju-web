@@ -17,27 +17,27 @@
     "profiles": [
       {
         "network": "Linkedin",
-        "username": "Edinson",
-        "url": "https://www.linkedin.com/in/edinson-rivera-jurado-65187927/"
+        "username": "Edinson Rivera Jurado",
+        "url": "https://www.linkedin.com/in/edinson-rivera-jurado/"
       },
       {
         "network": "Github",
-        "username": "Edirju",
+        "username": "Edirju | Edinson Rivera",
         "url": "https://github.com/Edirju"
       },
       {
         "network": "X",
-        "username": "edinson_rivera",
+        "username": "Edirju | Edinson Rivera",
         "url": "https://twitter.com/edinson_rivera"
       },
       {
         "network": "Instagram",
-        "username": "edirju",
+        "username": "Edirju | Edinson Rivera",
         "url": "https://www.instagram.com/edirju/"
       },
       {
         "network": "Threads",
-        "username": "edirju",
+        "username": "Edirju | Edinson Rivera",
         "url": "https://www.threads.net/@edirju"
       }
     ]
