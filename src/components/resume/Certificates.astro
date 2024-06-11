@@ -29,9 +29,9 @@ import { certificates } from "@cv";
         const startYear = new Date(date).getFullYear();
 
         return (
-          <li class="text-[11px] bg-[#eee] text-[rgba(30,37,44,.9)] p-1 transition duration-300 ease-in-out hover:bg-[rgba(30,37,44,.9)] hover:text-[rgba(255,253,248,.9)]">
+          <li class="text-[11px] bg-[rgba(30,37,44,0.06)] text-[rgba(30,37,44,1)] p-1 transition duration-300 ease-in-out hover:bg-[rgba(30,37,44,.9)] hover:text-[rgba(255,253,248,.9)]">
             {/* <i class="bx bx-certification" /> */}
-            <a href={url}>
+            <a href={url} target="_blank" class="hover:underline-offset-4 hover:underline">
               <span class="mr-1 font-medium">{name}</span>
             </a>
             <span class="mr-1 italic text-[9px]">{issuer}</span>
