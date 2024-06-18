@@ -1,6 +1,7 @@
 ---
 import Section from "../Section.astro";
 import Logo from "@/icons/Logo.astro";
+import Home from "@/icons/Home.astro";
 import ArrowReturnLeft from "@/icons/ArrowReturnLeft.astro";
 import Download from "@/icons/Download.astro";
 import Menu from "@/icons/Menu.astro";
@@ -10,7 +11,28 @@ import News from "@/icons/News.astro";
 ---
 
 <Section>
-  <header
+  <header class="text-gray-600 body-font " transition:animate="slide">
+    <div
+      class="container mx-auto flex flex-row items-center justify-between pt-4"
+    >
+      <a
+        class="flex title-font font-medium items-center text-gray-900 "
+      >
+        <Logo />
+        <h3 class="ml-2 text-xl font-bold tracking-tighter">Edinson.</h3>
+      </a>      
+
+      <a
+        class="inline-flex items-center gap-1 bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-sm  md:mt-0"
+        href="/"
+      >
+        Regresar
+        <Home class="w-4 h-4" />
+      </a>
+    </div>
+  </header>
+
+  <!-- <header
     class="main-header flex items-center justify-between px-0 py-4"
     transition:animate="slide"
   >
@@ -31,7 +53,7 @@ import News from "@/icons/News.astro";
         <a href="/" class="nav-link ">Volver<ArrowReturnLeft /></a>
       </ul>
     </nav>
-  </header>
+  </header> -->
 </Section>
 
 <style>
@@ -100,7 +122,7 @@ import News from "@/icons/News.astro";
       height: 100dvh;
       z-index: 1;
       gap: 2.5rem;
-      background-color: rgb(255, 253, 248, .98);
+      background-color: rgb(255, 253, 248, 0.98);
       -webkit-backdrop-filter: blur(10px);
       backdrop-filter: blur(10px);
 

@@ -1,7 +1,8 @@
 ---
 import Section from "../Section.astro";
 import Logo from "@/icons/Logo.astro";
-import Download from "@/icons/Download.astro";
+import Download from "@/icons/DownLoad2.astro";
+import Home from "@/icons/Home.astro";
 import Menu from "@/icons/Menu.astro";
 import Close from "@/icons/CloseX.astro";
 import Briefcase from "@/icons/BriefCaseAlt.astro";
@@ -9,7 +10,50 @@ import News from "@/icons/News.astro";
 ---
 
 <Section>
-  <header
+  <header class="text-gray-600 body-font" transition:animate="slide">
+    <div
+      class="container mx-auto flex flex-wrap py-4 flex-col md:flex-row items-center"
+    >
+      <a
+        class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
+      >
+        <Logo />
+        <h3 class="ml-2 text-xl font-bold tracking-tighter">Edinson.</h3>
+      </a>
+
+      <nav
+        class="md:ml-auto md:mr-auto flex flex-wrap gap-4 items-center text-base justify-center"
+      >
+        <a class=" hover:text-gray-900 flex items-center gap-1" href="/">
+          <Home />
+          Inicio
+        </a>
+        <a
+          class=" hover:text-gray-900 flex items-center gap-1"
+          href="/blog"
+        >
+          <News />Blogposts
+        </a>
+        <a
+          class=" hover:text-gray-900 flex items-center gap-1"
+          href="/proyectos"
+        >
+          <Briefcase />Proyectos
+        </a>
+      </nav>
+
+      <a
+        class="inline-flex items-center gap-1 bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-sm mt-4 md:mt-0"
+        href="/resume"
+        target="_blank"
+      >
+        Resume
+        <Download class="w-4 h-4" />
+      </a>
+    </div>
+  </header>
+
+  <!-- <header
     class="main-header flex items-center justify-between px-0 py-4"
     transition:animate="slide"
   >
@@ -35,15 +79,15 @@ import News from "@/icons/News.astro";
         >
       </ul>
     </nav>
-  </header>
+  </header> -->
 </Section>
 
 <style>
-  .main-header {
+  
+  /* .main-header {
     position: sticky;
     top: 0;
-    z-index: 10;
-    /* border-bottom: 1px solid rgb(30, 37, 44, 0.1); */
+    z-index: 10;    
   }
   .main-header::before {
     background-color: rgb(255, 253, 248, 0.9);
@@ -133,5 +177,5 @@ import News from "@/icons/News.astro";
       font-size: 2rem;
       color: var(--clr-dark);
     }
-  }
+  } */
 </style>

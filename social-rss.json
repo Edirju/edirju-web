@@ -39,11 +39,6 @@
         "network": "Threads",
         "username": "edirju",
         "url": "https://www.threads.net/@edirju"
-      },
-      {
-        "network": "News",
-        "username": "Blogger",
-        "url": "https://www.threads.net/@edirju"
       }
     ]
   },
@@ -77,12 +72,6 @@
       "title": "Aplicación de Threads",
       "description": "Publicacion sobre un tema particular en Threads con un video asociado y un link a un proyecto",
       "url": "https://www.threads.net/@edirju/post/C6O6V3BgedTd530eUAUeV2H-dv0tolIhXb1Ek40"
-    },
-    {
-      "network": "News",
-      "title": "Los tres albumes mas vendidos",
-      "description": "Publicacion sobre un tema particular en Threads con un video asociado y un link a un proyecto",
-      "url": "https://blogandnotas.blogspot.com/2024/04/los-tres-albumes-mas-vendidos-de-la.html"
     }
   ],
   "projects": [

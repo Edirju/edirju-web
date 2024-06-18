@@ -38,14 +38,29 @@ const { title } = Astro.props;
         --clr-red-100: rgb(228, 8, 72, 1);
         --texts: "Lato", sans-serif;
         --titles: "Montserrat Variable", sans-serif;
+
+        --primary-100: 255, 193, 7;
+        --primary-200: 221, 164, 0;
+        --primary-300: 145, 100, 0;
+        --accent-100: 76, 175, 80;
+        --accent-200: 0, 81, 0;
+        --text-100: 255, 254, 254;
+        --text-200: 224, 224, 224;
+        --bg-50: 0, 78, 146;
+        --bg-100: 25, 57, 104;
+        --bg-200: 46, 73, 122;
+        --bg-300: 75, 99, 150;
+        --light: 255, 253, 248;
+        --dark: 30, 37, 44;
+        --heading-font: "Montserrat Variable", sans-serif;
+        --body-font: "Lato", sans-serif;
       }
       *::selection {
-        background-color: var(--clr-yellow);
-        color: var(--clr-dark);
+        background-color: rgb(var(--dark));
+        color: rgb(var(--light));
       }
       html {
         font-family: system-ui, sans-serif;
-        background: var(--clr-light);
         letter-spacing: -0.0063rem;
       }
       body,
@@ -72,16 +87,16 @@ const { title } = Astro.props;
       h4,
       h5,
       h6 {
-        font-family: var(--titles);
+        font-family: var(--heading-font);
         margin: 0;
       }
       body {
-        font-family: var(--texts);
-        color: var(--color-dark);
+        font-family: var(--body-font);
+        color: rgb(var(--dark));
       }
       p {
-        color: var(--color-dark);
-        font-size: 0.875rem;
+        color: rgb(var(--dark));
+        font-size: 14px;
         line-height: 1.5;
         margin: 0;
         text-wrap: pretty;
@@ -99,49 +114,43 @@ const { title } = Astro.props;
       }
       .section-title {
         margin-bottom: 2rem;
-        font-weight: 600;
+        font-weight: 700;
         line-height: 1.5;
-        font-size: 20px;
+        letter-spacing: -0.03em;
+        font-size: 1.25rem;
         text-transform: none;
-        color: var(--clr-light);
+        color: rgb(var(--dark), .9);
         width: fit-content;
-        padding: 1px 40px 1px 16px;
-        background: var(--clr-dark);
-        background: linear-gradient(
-          0deg,
-          rgba(30, 37, 44, 1),
-          rgba(30, 37, 44, 0.7)
-        );
-        border-radius: 0px;
+        padding: .0625rem 2.5rem .0625rem 1rem;        
+        border-radius: 6px;
+        border: 2px solid rgb(var(--dark), .95);
+        box-shadow: 0.1em 0.1em rgb(var(--dark), .95);
       }
-
       .suscribe-container {
-        border: 1px solid rgb(30, 37, 44, 0.08);
-        background: var(--clr-light);
-        padding: 8px;
-        margin-bottom: 32px;
+        border: 1px solid rgb(var(--dark), 0.08);
+        background: rgb(var(--light));
+        padding: .5rem;
+        margin-bottom: 2rem;
       }
-
       .suscribe-container p {
-        font-size: 12px;
+        font-size: .75rem;
         font-weight: 300;
         text-wrap: pretty;
-        color: rgb(30, 37, 44, 0.75);
+        color: rgb(var(--dark), 0.75);
       }
 
       .box-left {
         display: flex;
         justify-content: flex-end;
-        font-size: 10px;
-        color: rgb(30, 37, 44, 0.45);
+        font-size: .625rem;
+        color: rgb(var(--dark), 0.45);
       }
       .box-left .rss-btn {
         display: flex;
         align-items: center;
-        padding: 4px;
-        background-color: rgb(30, 37, 44, 0.08);
+        padding: .25rem;
+        background-color: rgb(var(--dark), 0.08);
       }
-
       .print {
         display: none !important;
       }
@@ -150,20 +159,18 @@ const { title } = Astro.props;
         .no-print {
           display: none !important;
         }
-
         .print {
           display: block !important;
         }
-
         astro-dev-toolbar {
           display: none !important;
         }
-
         article {
           break-inside: avoid;
         }
       }
     </style>
+
     <script>
       import "../scripts/main.js";
     </script>

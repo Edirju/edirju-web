@@ -1,0 +1,84 @@
+
+:root {
+  /* Colors */
+  --primary-100: 255, 193, 7;
+  --primary-200: 221, 164, 0;
+  --primary-300: 145, 100, 0;
+  --accent-100: 76, 175, 80;
+  --accent-200: 0, 81, 0;
+  --text-100: 255, 254, 254;
+  --text-200: 224, 224, 224;
+  --bg-50: 0, 78, 146;
+  --bg-100: 25, 57, 104;
+  --bg-200: 46, 73, 122;
+  --bg-300: 75, 99, 150;
+  --light: 255, 253, 248;
+  --dark: 30, 37, 44;
+  /* Fonts */
+  --heading-font: "Montserrat Variable", sans-serif;
+  --body-font: "Lato", sans-serif;
+}
+
+/* === Reset CSS === */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100dvh;
+  font-family: var(--body-font);
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p {
+  text-wrap: pretty;
+  line-height: 1.5;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+  font-family: var(--heading-font);
+  margin: 0;
+}
+
+img,
+video,
+svg {
+  height: auto;
+  max-width: 100%;
+}
+
+@media(prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+    transition: none;
+  }
+}
+/* === End Reset CSS === */
+
+/* === Global Base Styles === */
+
