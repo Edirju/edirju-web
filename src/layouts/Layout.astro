@@ -1,6 +1,7 @@
 ---
 import "@fontsource-variable/montserrat";
 import "@fontsource/lato";
+import NoiseBackground from "@/components/NoiseBackground.astro";
 import { ViewTransitions } from "astro:transitions";
 
 interface Props {
@@ -26,7 +27,12 @@ const { title } = Astro.props;
     <ViewTransitions />
   </head>
   <body>
-    <slot />
+    
+    <NoiseBackground />
+    
+    <div>
+      <slot />
+    </div>
     <style is:global>
       :root {
         --clr-light: rgb(255, 253, 248, 1);
@@ -92,7 +98,10 @@ const { title } = Astro.props;
       body {
         font-family: var(--body-font);
         color: rgb(var(--dark));
+        
       }
+      
+
       p {
         color: rgb(var(--dark));
         font-size: 14px;
@@ -126,7 +135,7 @@ const { title } = Astro.props;
         box-shadow: 0.1em 0.1em rgb(var(--dark), 0.95);
       }
       .suscribe-container {
-        border: 1px solid rgb(var(--dark), 0.08);        
+        border: 1px solid rgb(var(--dark), 0.08);
         padding: 0.5rem;
         margin-bottom: 2rem;
       }
