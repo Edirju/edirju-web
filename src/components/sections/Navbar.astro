@@ -3,8 +3,6 @@ import Section from "../Section.astro";
 import Logo from "@/icons/Logo.astro";
 import Download from "@/icons/DownLoad2.astro";
 import Home from "@/icons/Home.astro";
-import Menu from "@/icons/Menu.astro";
-import Close from "@/icons/CloseX.astro";
 import Briefcase from "@/icons/BriefCaseAlt.astro";
 import News from "@/icons/News.astro";
 ---
@@ -51,131 +49,10 @@ import News from "@/icons/News.astro";
         <Download class="w-4 h-4" />
       </a>
     </div>
-  </header>
-
-  <!-- <header
-    class="main-header flex items-center justify-between px-0 py-4"
-    transition:animate="slide"
-  >
-    <a href="/" class="logoText flex items-center">
-      <Logo />
-      <span class="ml-1 text-2xl font-black">edinson.dev</span>
-    </a>
-    <nav
-      class="nav-menu flex flex-wrap items-center gap-5 text-sm font-light uppercase justify-center"
-    >
-      <button class="open-menu" id="open-menu">
-        <Menu />
-      </button>
-      <ul class="nav-list" id="nav-list">
-        <button class="close-menu" id="close-menu">
-          <Close />
-        </button>
-        <a href="/proyectos" class="nav-link transition"
-          ><Briefcase />Proyectos</a
-        >
-        <a href="/blog" class="nav-link transition"><News />BlogPosts</a>
-        <a href="/resume" target="_blank" class="nav-link"><Download />Resume</a
-        >
-      </ul>
-    </nav>
-  </header> -->
+  </header>  
 </Section>
 
 <style>
   
-  /* .main-header {
-    position: sticky;
-    top: 0;
-    z-index: 10;    
-  }
-  .main-header::before {
-    background-color: rgb(255, 253, 248, 0.9);
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-  }
-  .logoText {
-    font-family: var(--titles);
-  }
-  .close-menu,
-  .open-menu {
-    display: none;
-  }
-  .nav-list {
-    display: flex;
-    gap: 1rem;
-  }
-  .nav-link {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    position: relative;
-    transition: 0.2s;
-    color: rgb(30, 37, 44, 0.55);
-  }
-  .nav-link::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 100%;
-    height: 2px;
 
-    background-color: var(--clr-dark);
-    transform: scaleX(0);
-    transition: 0.2s;
-    transform-origin: left;
-  }
-  .nav-link:hover {
-    color: rgb(30, 37, 44, 1);
-  }
-  .nav-link:hover::after {
-    transform: scaleX(1);
-  }
-
-  @media (width <= 700px) {
-    .nav-list {
-      position: fixed;
-      inset: 0;
-      flex-direction: column;
-      text-align: right;
-      align-items: end;
-      padding: 4rem 2rem;
-      width: 100%;
-      height: 100dvh;
-      z-index: 1;
-      gap: 2.5rem;
-      background-color: rgb(255, 253, 248, 0.98);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      visibility: hidden;
-      opacity: 0;
-    }
-    .nav-list.active {
-      visibility: visible;
-      opacity: 1;
-    }
-    .nav-link {
-      font-size: 1.5rem;
-      padding: 8px 4px;
-    }
-    .close-menu {
-      display: block;
-      position: absolute;
-      font-size: 2rem;
-      cursor: pointer;
-      left: 1.5rem;
-      top: 1.5rem;
-      color: var(--clr-dark);
-    }
-    .open-menu {
-      display: block;
-      font-size: 2rem;
-      color: var(--clr-dark);
-    }
-  } */
 </style>
