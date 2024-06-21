@@ -47,8 +47,8 @@ const printInfo = [
     class="hero-section max-w-[700px] flex flex-row items-center justify-between mx-auto my-0"
   >
     <div class="hero-info flex flex-col gap-4">
-      <h1 class="text-4xl font-black tracking-tighter text-pretty">
-        Hola! Soy <span class="text-title-hero">Edinson Rivera</span>.
+      <h1 class="animated-text">
+        Hola! Soy <span class="text-hero"></span>
       </h1>
 
       <h2 class="text-base font-light text-balance">
@@ -118,18 +118,86 @@ const printInfo = [
 </Section>
 
 <style>
-  .hero-info .text-title-hero {    
-    text-shadow: 0px 0px 8px rgb(var(--dark), 0.25);
-    background: #1e252c;
-    background: linear-gradient(
-      to left,
-      rgb(var(--dark), 0.95) 0%,
-      rgb(var(--dark), 0.45) 50%,
-      rgb(var(--dark), 0.95) 100%
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  .animated-text {
+    font-size: 36px;
+    font-weight: 900;
+    letter-spacing: -0.05em;
+    text-wrap: pretty;
   }
+  .animated-text span {
+    position: relative;
+  }
+  .animated-text span::before {
+    content: "Edinson Rivera.";
+    color: #ff7f50;
+    animation: words 20s infinite;
+  }
+  .animated-text span::after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    background-color: rgb(var(--text-100));
+    border-left: 2px solid #ff7f50;
+    right: -8px;
+    animation:
+      cursor 0.8s infinite,
+      typing 20s steps(14) infinite;
+  }
+  @keyframes cursor {
+    to {
+      border-left: 2px solid #ff7f5000;
+    }
+  }
+  @keyframes words {
+    0%,
+    20% {
+      content: "Edinson Rivera.";
+    }
+    21%,
+    40% {
+      content: "Developer.";
+    }
+    41%,
+    60% {
+      content: "Diseñador.";
+    }
+    61%,
+    80% {
+      content: "Marketer.";
+    }
+    81%,
+    100% {
+      content: "Social Media.";
+    }
+  }
+  @keyframes typing {
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90%,
+    95% {
+      width: 0;
+    }
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85% {
+      width: calc(100% + 8px);
+    }
+  }
+
+  /* css */
   .hero-info span {
     color: rgb(30, 37, 44, 0.45);
   }

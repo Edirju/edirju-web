@@ -1,0 +1,123 @@
+---
+import Section from "../Section.astro";
+
+import { basics } from "@landing";
+const { name, label, image, location, profiles, phone, email } = basics;
+const { city, region } = location;
+
+import { Github, Linkedin, X, Instagram, Threads } from "simple-icons-astro";
+import WorldMap from "@/icons/WorldMap.astro";
+import Mail from "@/icons/Mail.astro";
+import Phone from "@/icons/Phone.astro";
+
+const SOCIAL_ICONS: Record<string, any> = {
+  Github,
+  Linkedin,
+  X,
+  Instagram,
+  Threads,
+};
+
+const linkedInfo = profiles.find(({ network }) => network === "Linkedin");
+const linkedUrl = linkedInfo?.url;
+const XInfo = profiles.find(({ network }) => network === "X");
+const XUrl = XInfo?.url;
+const instagramInfo = profiles.find(({ network }) => network === "Instagram");
+const instagramUrl = instagramInfo?.url;
+const githubInfo = profiles.find(({ network }) => network === "Github");
+const githubUrl = githubInfo?.url;
+const threadsInfo = profiles.find(({ network }) => network === "Threads");
+const threadsUrl = threadsInfo?.url;
+
+const printInfo = [
+  email,
+  phone,
+  linkedUrl,
+  githubUrl,
+  XUrl,
+  instagramUrl,
+  threadsUrl,
+]
+  .filter(Boolean)
+  .join(" • ");
+---
+
+<Section>
+  <main>
+    <div class="container">
+      <svg viewBox="0 0 960 160">
+        <symbol id="s-text">
+          <text text-anchor="middle" x="50%" y="80%">Developer</text>
+        </symbol>
+        <g class="ants">
+          <use xlink:href="#s-text" class="copy"></use>
+          <use xlink:href="#s-text" class="copy"></use>
+          <use xlink:href="#s-text" class="copy"></use>
+          <use xlink:href="#s-text" class="copy"></use>
+          <use xlink:href="#s-text" class="copy"></use>
+        </g>
+      </svg>      
+    </div>
+  </main>
+</Section>
+
+<style>
+  main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .container {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  svg {
+    display: block;
+    font: 8em var(--heading-font);
+    width: 90%;
+    height: 60%;
+    margin: 0 auto;
+  }
+  .copy {
+    fill: none;
+    stroke: rgb(var(--dark));
+    stroke-dasharray: 6% 29%;
+    stroke-width: 8px;
+    stroke-dashoffset: 0%;
+    letter-spacing: 3px;
+
+    animation: move 5.5s linear infinite;
+  }
+  .copy:nth-child(1) {
+    stroke: #1e252c;
+    animation-delay: 1s;
+  }
+  .copy:nth-child(2) {
+    stroke: #f50368;
+    animation-delay: 2s;
+  }
+  .copy:nth-child(3) {
+    stroke: #0058fb;
+    animation-delay: 3s;
+  }
+  .copy:nth-child(4) {
+    stroke: #bd0034;
+    animation-delay: 4s;
+  }
+  .copy:nth-child(5) {
+    stroke: #fdb731;
+    animation-delay: 5s;
+  }
+
+  @keyframes move {
+    100% {
+      stroke-dashoffset: -35%;
+    }
+  }
+
+  @media (width <= 700px) {
+  }
+</style>

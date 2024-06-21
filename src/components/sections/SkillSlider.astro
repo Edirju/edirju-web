@@ -1,0 +1,206 @@
+---
+import Section from "../Section.astro";
+import Briefcase from "@/icons/BriefCaseAlt.astro";
+import { skills } from "@landing";
+
+import {
+  Bootstrap,
+  Css3,
+  Figma,
+  Git,
+  Github,
+  Googleads,
+  Googleanalytics,
+  Googlegemini,
+  Gumroad,
+  Html5,
+  Hubspot,
+  Javascript,
+  Meta,
+  Mysql,
+  Notion,
+  Openai,
+  Python,
+  React,
+  Slack,
+  Tailwindcss,
+  Typescript,
+  Vite,
+  Rss,
+  Blogger,
+  Nextdotjs,
+  Nodedotjs,
+  Photopea,
+  Adobephotoshop,
+} from "simple-icons-astro";
+import Astrojs from "@/icons/AstroIcon.astro";
+import Next from "@/icons/Next.astro";
+import Node from "@/icons/Node.astro";
+---
+
+<Section>
+  <h2 class="section-title flex items-center gap-1">
+    <Briefcase /> Habilidades
+  </h2>
+
+  <article class="suscribe-container">
+    <p>
+      Tengo la inquietante necesidad de construir cosas. A veces el trabajo
+      fluye con facilidad, otras veces me cuestiono mis decisiones. E pluribus
+      unum.
+    </p>
+  </article>
+
+  <div class="stock-ticker">
+    <ul>
+      <li class="minus">
+        <Html5 class="w-4 h-4" />
+        <span class="skill">HTML</span>
+      </li>
+      <li class="plus">
+        <Css3 class="w-4 h-4" />
+        <span class="company">CSS</span>
+      </li>
+      <li class="plus">
+        <Javascript class="w-4 h-4" />
+        <span class="company">Javascript</span>
+      </li>
+      <li class="minus">
+        <Python class="w-4 h-4" />
+        <span class="company">Python</span>
+      </li>
+      <li class="plus">
+        <React class="w-4 h-4" />
+        <span class="company">React</span>
+      </li>
+      <li class="minus">
+        <Astrojs class="w-4 h-4" />
+        <span class="company">Astro</span>
+      </li>
+      <li class="plus">
+        <Nextdotjs class="w-4 h-4" />
+        <span class="company">Next.js</span>
+      </li>
+      <li class="minus">
+        <Nodedotjs class="w-4 h-4" />
+        <span class="company">Node.js</span>
+      </li>
+    </ul>
+
+    <ul aria-hidden="true">
+      <li class="minus">
+        <Html5 class="w-4 h-4" />
+        <span class="company">HTML</span>
+      </li>
+      <li class="plus">
+        <Css3 class="w-4 h-4" />
+        <span class="company">CSS</span>
+      </li>
+      <li class="plus">
+        <Javascript class="w-4 h-4" />
+        <span class="company">Javascript</span>
+      </li>
+      <li class="minus">
+        <Python class="w-4 h-4" />
+        <span class="company">Python</span>
+      </li>
+      <li class="plus">
+        <React class="w-4 h-4" />
+        <span class="company">React</span>
+      </li>
+      <li class="minus">
+        <Astrojs class="w-4 h-4" />
+        <span class="company">Astro</span>
+      </li>
+      <li class="plus">
+        <Nextdotjs class="w-4 h-4" />
+        <span class="company">Next.js</span>
+      </li>
+      <li class="minus">
+        <Nodedotjs class="w-4 h-4" />
+        <span class="company">Node.js</span>
+      </li>
+    </ul>
+  </div>
+</Section>
+
+<style>
+  .stock-ticker {
+    font-family: var(--heading-font);
+    color: rgb(var(--dark), 0.65);
+    font-size: 12px;
+    text-transform: uppercase;
+    padding-block: 8px;
+    border-block: 1px solid rgb(var(--dark), 0.1);
+    overflow: hidden;
+    user-select: none;
+
+    --gap: 20px;
+    display: flex;
+    gap: var(--gap);
+  }
+
+  .stock-ticker ul {
+    list-style: none;
+    flex-shrink: 0;
+    min-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--gap);
+
+    animation: scroll 20s linear infinite;
+  }
+
+  .stock-ticker:hover ul {
+    animation-play-state: paused;    
+  }
+
+  @keyframes scroll {
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+  .stock-ticker ul li {
+    display: flex;
+    items-align: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 4px;
+  }
+
+  .stock-ticker ul:first-child {
+    /* background-color: yellow; */
+  }
+
+  .stock-ticker ul:last-child {
+    /* background-color: pink; */
+  }
+
+  .stock-ticker .company,
+  .stock-ticker .price {
+    font-weight: bold;
+  }
+
+  .stock-ticker .price {
+    margin-inline: 4px;
+  }
+
+  /* .stock-ticker .plus::before {
+    content: "↑";
+  }
+
+  .stock-ticker .minus::before {
+    content: "↓";
+  } */
+
+  .stock-ticker .plus .change,
+  .stock-ticker .plus::before {
+    color: #089981;
+  }
+
+  .stock-ticker .minus .change,
+  .stock-ticker .minus::before {
+    color: #f23645;
+  }
+</style>
