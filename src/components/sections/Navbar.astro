@@ -5,54 +5,97 @@ import Download from "@/icons/DownLoad2.astro";
 import Home from "@/icons/Home.astro";
 import Briefcase from "@/icons/BriefCaseAlt.astro";
 import News from "@/icons/News.astro";
+import { Github, X, Instagram, Threads, Linkedin } from "simple-icons-astro";
 ---
 
 <Section>
-  <header class="text-gray-600 body-font" transition:animate="slide">
+  <header class="" transition:animate="slide">
     <div
       class="container mx-auto flex flex-wrap py-4 flex-col md:flex-row items-center"
     >
-      <a
-        class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
+      <h2
+        class="flex title-font font-medium items-center mb-4 md:mb-0 text-[rgba(var(--text-100),.85)] hover:text-[rgba(var(--text-200),.90)] hover:drop-shadow-lg"
       >
         <Logo />
-        <h3 class="ml-2 text-xl font-bold tracking-tighter">Edinson.</h3>
-      </a>
+        <span class="ml-1 text-2xl font-bold tracking-tighter">Edinson.</span>
+      </h2>
 
       <nav
-        class="md:ml-auto md:mr-auto flex flex-wrap gap-4 items-center text-base justify-center"
+        class="md:ml-auto md:mr-auto flex flex-wrap gap-4 items-center text-sm uppercase justify-center"
       >
-        <a class=" hover:text-gray-900 flex items-center gap-1" href="/">
+        <a
+          class="hover:text-[rgba(var(--text-200),.95)] flex items-center gap-1 hover:underline-offset-4 hover:underline"
+          href="/"
+        >
           <Home />
           Inicio
         </a>
         <a
-          class=" hover:text-gray-900 flex items-center gap-1"
+          class="hover:text-[rgba(var(--text-200),.95)] flex items-center gap-1 hover:underline-offset-4 hover:underline"
           href="/blog"
         >
           <News />Blogposts
         </a>
         <a
-          class=" hover:text-gray-900 flex items-center gap-1"
+          class="hover:text-[rgba(var(--text-200),.95)] flex items-center gap-1 hover:underline-offset-4 hover:underline"
           href="/proyectos"
         >
           <Briefcase />Proyectos
         </a>
       </nav>
 
-      <a
-        class="inline-flex items-center gap-1 bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-sm mt-4 md:mt-0"
-        href="/resume"
-        target="_blank"
+      <div
+        class="social-links inline-flex items-center gap-4 border-0 py-1 px-3 focus:outline-none mt-4 md:mt-0"
       >
-        Resume
-        <Download class="w-4 h-4" />
-      </a>
+        <a
+          href="https://www.linkedin.com/in/edinson-rivera-jurado/"
+          target="_blank"
+          class="text-[rgba(var(--text-100),.8)] hover:text-[rgba(var(--text-200),.8)] hover:drop-shadow-lg"
+          title="Visitar perfil en Linkedin"
+        >
+          <span class="sr-only">Follow Edinson on Linkedin</span>
+          <Linkedin />
+        </a>
+        <a
+          href="https://github.com/Edirju"
+          target="_blank"
+          class="text-[rgba(var(--text-100),.8)] hover:text-[rgba(var(--text-200),.8)] hover:drop-shadow-lg"
+          title="Visitar perfil de GitHub"
+        >
+          <span class="sr-only">Go to Edinson's GitHub repo</span>
+          <Github />
+        </a>
+        <a
+          href="/resume"
+          target="_blank"
+          class="text-[rgba(var(--text-100),.8)] hover:text-[rgba(var(--text-200),.8)] hover:drop-shadow-lg"
+          title="Ver Curriculum Vitae"
+        >
+          <span class="sr-only">Download Edinson's Resume</span>
+          <Download />
+        </a>
+
+        <!-- <a
+          class="inline-flex items-center gap-1 bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-sm mt-4 md:mt-0"
+          href="/resume"
+          target="_blank"
+        >
+          
+          <Download class="w-4 h-4" />
+        </a> -->
+      </div>
     </div>
-  </header>  
+  </header>
 </Section>
 
 <style>
-  
-
+  header {
+    color: rgb(var(--text-100), 0.9);
+  }
+  nav a {
+    text-emphasis: none;
+  }
+  nav a:hover {
+    text-shadow: 0 0 0.5rem rgb(var(--text-200), 0.2);
+  }
 </style>

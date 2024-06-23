@@ -2,6 +2,8 @@
 import Section from "../Section.astro";
 import News2 from "@/icons/News2.astro";
 import News from "@/icons/News.astro";
+import RightArrow from "@/icons/RightArrow.astro";
+import Filetextfill from "@/icons/Filetextfill.astro";
 
 import {
   Rss,
@@ -12,21 +14,22 @@ import {
   Instagram,
 } from "simple-icons-astro";
 
-// const SOCIAL_ICONS: Record<string, any> = {
-//   Facebook,
-//   Instagram,
-//   Linkedin,
-//   Threads,
-//   X,
-//   News,
-// };
+import { posts } from "@social";
+const SOCIAL_ICONS: Record<string, any> = {
+  Facebook,
+  Instagram,
+  Linkedin,
+  Threads,
+  X,
+  News,
+};
 
 const allPosts = await Astro.glob("@/pages/posts/*.md");
 ---
 
 <Section>
   <h2 class="section-title flex items-center gap-1">
-    <News2 />Posts publicados
+    <News2 />Social Media posts
   </h2>
 
   <article class="suscribe-container">
@@ -43,17 +46,31 @@ const allPosts = await Astro.glob("@/pages/posts/*.md");
     </div>
   </article>
 
-  <ul class="mb-2">
+  <ul>
     {
-      allPosts.map((post) => (
-        <li class="items">
-          <a href={post.url}>
-            <News class="h-4 w-4" />
-            <h3 class="truncate">{post.frontmatter.title}</h3>
-          </a>
-          <p class="line-clamp-2">{post.frontmatter.description}</p>
-        </li>
-      ))
+      posts.map(({ network, title, description, url }) => {
+        const Icon = SOCIAL_ICONS[network];
+
+        return (
+          <li>
+            <article>
+              <header>
+                <Icon class="w-4 h-4" />
+                <h3 class="truncate">
+                  <a
+                    href={url}
+                    title={`Ver el proyecto ${title}`}
+                    target="_blank"
+                  >
+                    {title}
+                  </a>
+                </h3>
+              </header>
+              <p class="line-clamp-2">{description}</p>
+            </article>
+          </li>
+        );
+      })
     }
   </ul>
 </Section>
@@ -63,41 +80,42 @@ const allPosts = await Astro.glob("@/pages/posts/*.md");
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 0.5rem;
-  }  
-  .items {
+  }
+  li article {
     padding: 0.5rem;
     border-radius: 0.5rem;
-    border: 1px solid rgb(var(--primary-300), 0.1);
+    border: 1px solid rgb(var(--secondary-100), 0.08);
 
     transition: all 0.2s ease-in-out;
     /* background-color: rgb(30, 37, 44, 0.03); */
   }
-  
-  .items:hover {
-    background-color: rgb(var(--primary-200), 0.05);
-    border: 1px solid rgb(var(--primary-300), 0.1);
+  li article:hover {
+    background-color: rgb(var(--secondary-100), 0.05);
+    border: 1px solid rgb(var(--secondary-100), 0.1);
     box-shadow:
-      4px 4px 16px rgb(var(--primary-200), 0.1),
-      -4px -4px 16px rgb(var(--primary-200), 0.1);
+      4px 4px 16px rgb(var(--secondary-100), 0.1),
+      -4px -4px 16px rgb(var(--secondary-100), 0.1);
   }
-    
-  .items a {
+  li article header {
     display: flex;
     align-items: center;
     gap: 0.25rem;
   }
-  .items a h3 {
+  li article header a {
     font-size: 14px;
     font-weight: 500;
-    color: rgb(var(--dark), 0.85);
+    color: rgb(30, 37, 44, 0.9);
+    inset: 0;
+    width: auto;
   }
-  .items a h3:hover {
+  li article header a:hover {
     text-decoration: underline;
     text-underline-offset: 4px;
   }
-  .items p {
+  li article p {
     font-size: 12px;
-    color: rgb(var(--dark), 0.65);
+    line-height: 1.4;
+    color: rgb(30, 37, 44, 0.65);
     text-wrap: pretty;
   }
 

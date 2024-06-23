@@ -1,32 +1,35 @@
 :root {
   /* Colors */
-  --clr-light: rgb(255, 253, 248, 1);
-  --clr-dark: rgb(30, 37, 44, 1);
-  --clr-blue-50: rgb(177, 218, 233, 1);
-  --clr-blue-100: rgb(104, 213, 217, 1);
-  --clr-yellow: rgb(255, 193, 52);
-  --clr-red-50: rgb(236, 69, 104, 1);
-  --clr-red-100: rgb(228, 8, 72, 1);
+  --white: 255, 255, 255;  /* #FFFFFF */
+  --black: 0, 0, 0;  /* #000000 */
+  --text-100: 30, 37, 44;  /* #1E252C */
+  --text-200: 0, 78, 146;  /* #004E92 */
+  --text-300: 224, 224, 224;  /* #E0E0E0 */
+  --text-400: 255, 254, 254;  /* #FFFEFE */
+  --bg-body: 255, 254, 254;  /* #FFFEFE */
+  --bg-100: 25, 57, 104;  /* #193968 */
+  --bg-200: 46, 73, 122;  /* #2E4B7A */
+  --bg-300: 75, 99, 150;  /* #4B6396 */
+  --primary-100: 255, 193, 7;  /* #FFC907 */
+  --primary-200: 221, 164, 0;  /* #DDA600 */
+  --primary-300: 145, 100, 0;  /* #916400 */
+  --primary-400: 255, 193, 52;  /* #FFC950 */
+  --secondary-100: 236, 69, 104;  /* #EC4568 */
+  --secondary-200: 214, 53, 58;  /* #D6333A */
+  --secondary-300: 228, 8, 72;  /* #E80072 */
+  --tertiary-100: 104, 213, 217;  /* #68D5D7 */
+  --tertiary-200: 177, 218, 233;  /* #B3DAE9 */
+  --accent-100: 76, 175, 80;  /* #4CBA50 */
+  --accent-200: 0, 81, 0;  /* #005100 */
+  --dark: 16, 14, 14;  /* #100E0E */
+  --light:255,253,248;  /* #FFFEFE */
 
-  --primary-100: 255, 193, 7;
-  --primary-200: 221, 164, 0;
-  --primary-300: 145, 100, 0;
-  --accent-100: 76, 175, 80;
-  --accent-200: 0, 81, 0;
-  --text-100: 255, 254, 254;
-  --text-200: 224, 224, 224;
-  --bg-50: 0, 78, 146;
-  --bg-100: 25, 57, 104;
-  --bg-200: 46, 73, 122;
-  --bg-300: 75, 99, 150;
-  --light: 255, 253, 248;
-  --dark: 30, 37, 44;
-  --secondary-100: 255, 193, 52;
-  --tertiary-100: 236, 69, 104;
-  --quaternary-100: 177, 218, 233;
+  --gray-gradient: rgba(var(--white), 10%), #fffefe;
+  --box-shadow: 0 2px 6px rgba(var(--dark), 1.5%), 0 8px 24px rgba(var(--dark), 5%), 0 16px 32px rgba(var(--dark), 5%);
+
   /* Fonts */
-  --heading-font: "Montserrat Variable", sans-serif;
-  --body-font: "Lato", sans-serif;
+  --heading-font: "Montserrat Variable", sans-serif;  /* Montserrat Variable */
+  --body-font: "Lato", sans-serif;  /* Lato */
 }
 
 *::selection {
@@ -73,13 +76,13 @@ h6 {
 
 body {
   font-family: var(--body-font);
-  color: rgb(var(--dark));
+  color: rgb(var(--text-100));
 
 }
 
 
 p {
-  color: rgb(var(--dark));
+  color: rgb(var(--text-100));
   font-size: 14px;
   line-height: 1.5;
   margin: 0;

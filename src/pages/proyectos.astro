@@ -258,20 +258,24 @@ const { name, label } = basics;
   .projects-items {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 0.5rem;    
+    gap: 0.5rem;
     border-radius: 0.5rem;
     padding: 8px;
   }
   .items {
-    overflow: hidden;    
-    border: 1px solid rgb(30, 37, 44, 0.08);
+    overflow: hidden;
+    border: 1px solid rgb(var(--text-200), 0.1);
     border-radius: 0.5rem;
     padding: 8px;
     transition: all 0.3s ease-in-out;
     position: relative;
   }
   .items:hover {
-    background-color: rgb(30, 37, 44, 0.08);
+    background-color: rgb(var(--text-200), 0.05);
+    border: 1px solid rgb(var(--black), 0.1);
+    box-shadow:
+      4px 4px 16px rgb(var(--text-200), 0.1),
+      -4px -4px 16px rgb(var(--text-200), 0.1);
   }
   .item {
     display: flex;
@@ -290,7 +294,7 @@ const { name, label } = basics;
     font-weight: 500;
     letter-spacing: -0.05rem;
     text-wrap: pretty;
-    color: rgb(30, 37, 44, 0.9);
+    color: rgb(var(--text-200), 0.8);
   }
   .item header h3 a:hover {
     text-decoration: underline;
@@ -302,7 +306,7 @@ const { name, label } = basics;
   .item header p {
     font-size: 12px;
     line-height: 1.4;
-    color: rgb(30, 37, 44, 0.65);
+    color: rgb(var(--text-100), 0.5);
     text-wrap: pretty;
   }
   .item footer ul {
@@ -311,9 +315,9 @@ const { name, label } = basics;
     gap: 4px;
   }
   .item footer ul span {
-    font-size: 10px;    
-    color: rgb(30, 37, 44, 0.5);
-    background: rgb(30, 37, 44, 0.08);
+    font-size: 10px;
+    color: rgb(var(--text-200), 0.5);
+    background: rgb(var(--text-100), 0.08);
     padding: 1px 3px;
     border-radius: 4px;
     width: fit-content;

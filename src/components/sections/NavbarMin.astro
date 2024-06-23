@@ -2,33 +2,52 @@
 import Section from "../Section.astro";
 import Logo from "@/icons/Logo.astro";
 import Home from "@/icons/Home.astro";
+import { Github, X, Instagram, Threads, Linkedin } from "simple-icons-astro";
 ---
 
 <Section>
-  <header class="text-gray-600 body-font " transition:animate="slide">
+  <header class="text-gray-600 body-font" transition:animate="slide">
     <div
       class="container mx-auto flex flex-row items-center justify-between pt-4"
     >
-      <a
-        class="flex title-font font-medium items-center text-gray-900 "
+      <h2
+        class="flex title-font font-medium items-center mb-4 md:mb-0 text-[rgba(var(--text-100),.85)] hover:text-[rgba(var(--text-200),.90)] hover:drop-shadow-lg"
       >
         <Logo />
-        <h3 class="ml-2 text-xl font-bold tracking-tighter">
-          Edinson.
-        </h3>
-      </a>      
+        <span class="ml-1 text-2xl font-bold tracking-tighter">Edinson.</span>
+      </h2>
 
-      <a
-        class="inline-flex items-center gap-1 bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-sm  md:mt-0"
-        href="/"
+      <div
+        class="social-links inline-flex items-center gap-2 border-0 py-1 px-3 focus:outline-none mt-4 md:mt-0"
       >
-        Regresar
-        <Home class="w-4 h-4" />
-      </a>
+        <a
+          href="https://www.linkedin.com/in/edinson-rivera-jurado/"
+          target="_blank"
+          class="text-[rgba(var(--text-100),.8)] hover:text-[rgba(var(--text-200),.8)] hover:drop-shadow-lg"
+          title="Visitar perfil en Linkedin"
+        >
+          <span class="sr-only">Follow Edinson on Linkedin</span>
+          <Linkedin />
+        </a>
+        <a
+          href="https://github.com/Edirju"
+          target="_blank"
+          class="text-[rgba(var(--text-100),.8)] hover:text-[rgba(var(--text-200),.8)] hover:drop-shadow-lg"
+          title="Visitar perfil de GitHub"
+        >
+          <span class="sr-only">Go to Edinson's GitHub repo</span>
+          <Github />
+        </a>
+        <a
+          class="inline-flex items-center gap-1 bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 hover:text-[rgba(var(--text-200),1)] rounded text-sm md:mt-0 hover:underline-offset-4 hover:underline"
+          href="/"
+        >
+          Volver
+          <Home class="w-4 h-4" />
+        </a>
+      </div>
     </div>
-  </header>  
+  </header>
 </Section>
 
-<style>  
-  
-</style>
+<style></style>
