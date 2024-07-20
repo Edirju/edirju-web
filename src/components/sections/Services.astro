@@ -1,0 +1,204 @@
+---
+import Section from "../Section.astro";
+import { skills } from "@landing";
+
+import {
+  Bootstrap,
+  Css3,
+  Figma,
+  Git,
+  Github,
+  Googleads,
+  Googleanalytics,
+  Googlegemini,
+  Gumroad,
+  Html5,
+  Hubspot,
+  Javascript,
+  Meta,
+  Mysql,
+  Notion,
+  Openai,
+  Python,
+  React,
+  Slack,
+  Tailwindcss,
+  Typescript,
+  Vite,
+  Rss,
+  Blogger,
+} from "simple-icons-astro";
+import Astrojs from "@/icons/AstroIcon.astro";
+import Next from "@/icons/Next.astro";
+import Node from "@/icons/Node.astro";
+import Briefcase from "@/icons/BriefCaseAlt.astro";
+import Coding from "@/icons/Coding.astro";
+import Gestor from "@/icons/Gestor.astro";
+
+const SKILLS_ICONS: Record<string, any> = {
+  Astrojs,
+  Bootstrap,
+  Css3,
+  Figma,
+  Git,
+  Github,
+  Googleads,
+  Googleanalytics,
+  Googlegemini,
+  Gumroad,
+  Html5,
+  Hubspot,
+  Javascript,
+  Meta,
+  Mysql,
+  Next,
+  Node,
+  Notion,
+  Openai,
+  Python,
+  React,
+  Slack,
+  Tailwindcss,
+  Typescript,
+  Vite,
+  Rss,
+  Blogger,
+};
+---
+
+<Section>
+  <div class="area_section-2">
+    <h2 class="section-title">
+      <Briefcase /> Servicios
+    </h2>
+    <p class="parrafo">
+      Tengo la inquietante necesidad de construir cosas. A veces el trabajo
+      fluye con facilidad, otras veces me cuestiono mis decisiones. E pluribus
+      unum.
+    </p>
+
+    <ul class="mt-4">
+      <li>
+        <article>
+          <header>
+            <h3 class="title">
+              <Coding class="w-4 h-4" />
+              <span>Desarrollo Web</span>
+            </h3>
+            <p class="description">
+              My personal website and blog. Built with Next.js and Notion API.
+            </p>
+          </header>
+          <footer>
+            <ul class="skills">
+              <li>Blogs</li>
+              <li>Portafolios</li>
+              <li>Landing pages</li>
+              <li>E-commerce</li>
+              <li>Web applications</li>
+              <li>UI/UX Design</li>
+            </ul>
+          </footer>
+        </article>
+      </li>
+      <li>
+        <article>
+          <header>
+            <h3 class="title">
+              <Gestor class="w-4 h-4" />
+              <span>Gestion de redes sociales</span>
+            </h3>
+            <p class="description">
+              My personal website and blog. Built with Next.js and Notion API.
+            </p>
+          </header>
+          <footer>
+            <ul class="skills">
+              <li>Manejo de crisis</li>
+              <li>Campañas</li>
+              <li>Marca Personal</li>
+              <li>Marketing digital</li>
+              <li>Contenido</li>
+              <li>Community management</li>
+            </ul>
+          </footer>
+        </article>
+      </li>
+      <!-- {
+          skills.map(({ name }) => {
+            const iconName = name === "HTML" ? "Html5" : name;
+            const Icon = SKILLS_ICONS[iconName];
+            if (!Icon) {
+              console.error(`Icono no encontrado para la red: ${name}`);
+              return null;
+            }
+            return (
+              <li>
+                <Icon class="w-4 h-4" />
+                <span>{name}</span>
+              </li>
+            );
+          })
+        } -->
+    </ul>
+  </div>
+</Section>
+
+<style>
+  .parrafo {
+    color: rgb(var(--dark), 0.65);
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+  }
+  ul li article {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: space-between;
+    height: 100%;
+    border: 1px solid rgb(var(--dark), 0.1);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+  }
+  ul li article:hover {
+    /* background-color: rgb(var(--accent-50), 0.05); */
+    box-shadow: var(--box-shadow);
+  }
+  .title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 14px;
+    font-weight: 600;
+    text-wrap: pretty;
+    letter-spacing: -0.05rem;
+    text-transform: uppercase;
+    color: rgb(var(--accent-65), 0.9);
+  }
+  .description {
+    font-size: 12px;
+    font-family: var(--heading-font);
+    color: rgb(var(--dark), 0.5);
+  }
+  footer ul {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+  footer ul li {
+    font-family: var(--body-font);
+    font-size: 9px;
+    text-transform: uppercase;
+    color: rgb(var(--dark), 0.55);
+    background-color: rgb(var(--accent-65), 0.1);
+    padding: 4px;
+    border-radius: 3px;
+  }
+</style>

@@ -1,7 +1,9 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import Section from "@/components/Section.astro";
-import MinNav from "@/components/sections/NavbarMin.astro";
+import MinNav from "@/components/sections/Navbar.astro";
+import BlogPost from "@/components/sections/BlogPost.astro";
+import PostMedia from "@/components/sections/PostMedia.astro";
 import Footer from "@/components/sections/Footer.astro";
 import {
   Rss,
@@ -29,85 +31,24 @@ const allPosts = await Astro.glob("@/pages/posts/*.md");
 ---
 
 <Layout title=`Portafolio de ${name} - Blog & Notas`>
-  <MinNav />
-  <Section>
-    <h2 class="section-title flex flex-wrap items-center">
-      Social Media | Posts | RSS
-    </h2>
-
-    <article class="suscribe-container">
-      <p>
-        Escribo sobre cualquier cosa relacionada con la tecnología, el marketing
-        y de vez en cuando sobre cosas interesantes que se cruzan en mí camino.
-      </p>
-
-      <div class="box-left">
-        <a href="#" class="rss-btn">
-          <Rss class="h-3 w-3" />
-          <!-- <span>Suscríbete</span> -->
-        </a>
-      </div>
-    </article>
-
-    <ul>
-      
-      {
-        allPosts.map((post) => (
-          <li class="px-2 py-3 border rounded-lg transition duration-300 ease-in-out hover:bg-[rgba(30,37,44,0.08)]">            
-            <a
-              href={post.url}
-              class="flex flex-col gap-1 text-sm"
-              title={`Ver el post ${post.frontmatter.title}`}
-            >
-              <div class="flex items-center gap-1">
-                <News class="block h-4 w-4" />
-                <h3 class="truncate font-medium ">{post.frontmatter.title}</h3>
-              </div>
-              <p class="line-clamp-2 text-xs text-[rgba(30,37,44,0.65)] text-pretty">
-                {post.frontmatter.description}
-              </p>
-            </a>
-          </li>
-        ))
-      }
-    </ul>
-
-    <ul class="items">      
-      {
-        posts.map(({ network, title, description, url }) => {
-          const Icon = SOCIAL_ICONS[network];
-
-          return (
-            <li class="p-2 border rounded-lg transition duration-300 ease-in-out hover:bg-[rgba(30,37,44,0.08)]">
-              <a
-                href={url}
-                target="_blank"
-                class="flex flex-col gap-1 text-sm"
-                title={`Ver el post ${title}`}
-              >
-                <div class="flex items-center gap-1">
-                  <Icon class="w-4 h-4" />
-                  <h3 class="truncate font-medium ">{title}</h3>
-                </div>
-                <p class="line-clamp-2 text-xs text-[rgba(30,37,44,0.65)] text-pretty">
-                  {description}
-                </p>
-              </a>
-            </li>
-          );
-        })
-      }
-    </ul>
-  </Section>
+  <MinNav />  
+  <BlogPost />
+  <PostMedia />
   <Footer />
 </Layout>
 
 <style>
   ul {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 0.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 1rem;
     margin-bottom: 8px;
   }
-  
+  .subtitle {
+    margin-block: 16px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
 </style>

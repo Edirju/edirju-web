@@ -1,50 +1,36 @@
 ---
 import Section from "../Section.astro";
 import Logo from "@/icons/Logo.astro";
-import Download from "@/icons/DownLoad2.astro";
-import Home from "@/icons/Home.astro";
-import Briefcase from "@/icons/BriefCaseAlt.astro";
+import Data from "@/icons/Data.astro";
 import News from "@/icons/News.astro";
+import Download from "@/icons/DownLoad2.astro";
 import { Github, X, Instagram, Threads, Linkedin } from "simple-icons-astro";
 ---
 
 <Section>
-  <header class="" transition:animate="slide">
+  <header class="header" transition:animate="slide">
     <div
-      class="container mx-auto flex flex-wrap py-4 flex-col md:flex-row items-center"
+      class="container flex items-center justify-between py-4 md:flex-row flex-col mx-auto"
     >
-      <h2
-        class="flex title-font font-medium items-center mb-4 md:mb-0 text-[rgba(var(--text-100),.85)] hover:text-[rgba(var(--text-200),.90)] hover:drop-shadow-lg"
-      >
-        <Logo />
-        <span class="ml-1 text-2xl font-bold tracking-tighter">Edinson.</span>
-      </h2>
+      <a href="/" class="logo">
+        <h2 class="flex items-center gap-1 mb-4 md:mb-0 tracking-tighter">
+          <Logo />
+          <span class="text-2xl font-bold"
+            >edirju<span class="text-[#00D8FF]">dev</span>.</span
+          >
+        </h2>
+      </a>
 
-      <nav
-        class="md:ml-auto md:mr-auto flex flex-wrap gap-4 items-center text-sm uppercase justify-center"
-      >
-        <a
-          class="hover:text-[rgba(var(--text-200),.95)] flex items-center gap-1 hover:underline-offset-4 hover:underline"
-          href="/"
-        >
-          <Home />
-          Inicio
-        </a>
-        <a
-          class="hover:text-[rgba(var(--text-200),.95)] flex items-center gap-1 hover:underline-offset-4 hover:underline"
-          href="/blog"
-        >
+      <nav class="navbar flex items-center gap-4 uppercase tracking-tighter">
+        <a class="nav-link" href="/blog">
           <News />Blogposts
         </a>
-        <a
-          class="hover:text-[rgba(var(--text-200),.95)] flex items-center gap-1 hover:underline-offset-4 hover:underline"
-          href="/proyectos"
-        >
-          <Briefcase />Proyectos
+        <a class="nav-link" href="/proyectos">
+          <Data />Proyectos
         </a>
       </nav>
 
-      <div
+      <!-- <div
         class="social-links inline-flex items-center gap-4 border-0 py-1 px-3 focus:outline-none mt-4 md:mt-0"
       >
         <a
@@ -82,20 +68,40 @@ import { Github, X, Instagram, Threads, Linkedin } from "simple-icons-astro";
         >
           
           <Download class="w-4 h-4" />
-        </a> -->
-      </div>
+        </a> 
+      </div> -->
     </div>
   </header>
 </Section>
 
 <style>
   header {
-    color: rgb(var(--text-100), 0.9);
+    color: rgb(var(--dark), 0.9);
   }
-  nav a {
+  .container {
+    border-bottom: 1px solid rgb(var(--dark), 0.1);
+  }
+  .logo {
+    font-size: clamp(20px, 1.5vw, 24px);
+  }
+  .logo:hover {
+    text-shadow: 0 0 0.5rem rgb(var(--accent-50), 0.15);
+  }
+  .navbar {
+    font-size: clamp(14px, 1.5vw, 16px);
+    font-weight: 300;
+  }
+  .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
     text-emphasis: none;
+    transition: all 0.2s ease;
   }
-  nav a:hover {
-    text-shadow: 0 0 0.5rem rgb(var(--text-200), 0.2);
+  .nav-link:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    color: rgb(var(--accent-50), 0.9);
+    text-shadow: 0 0 0.5rem rgb(var(--dark), 0.2);
   }
 </style>

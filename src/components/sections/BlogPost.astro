@@ -2,6 +2,7 @@
 import Section from "../Section.astro";
 import News2 from "@/icons/News2.astro";
 import News from "@/icons/News.astro";
+import File from "@/icons/File.astro";
 
 import {
   Rss,
@@ -25,54 +26,77 @@ const allPosts = await Astro.glob("@/pages/posts/*.md");
 ---
 
 <Section>
-  <h2 class="section-title flex items-center gap-1">
-    <News2 />Posts publicados
-  </h2>
+  <div class="area_section-2">
+    <h2 class="section-title">
+      <News2 />Blog | Posts publicados
+    </h2>
 
-  <article class="suscribe-container">
-    <p>
+    <p class="parrafo">
       Escribo sobre cualquier cosa relacionada con la tecnología, el marketing y
       de vez en cuando sobre cosas interesantes que se cruzan en mí camino.
     </p>
 
-    <div class="box-left">
-      <a href="#" class="rss-btn">
-        <Rss class="h-3 w-3" />
-        <!-- <span>Suscríbete</span> -->
-      </a>
-    </div>
-  </article>
-
-  <ul class="mb-2">
-    {
-      allPosts.map((post) => (
-        <li class="items">
-          <a href={post.url}>
-            <News class="h-4 w-4" />
-            <h3 class="truncate">{post.frontmatter.title}</h3>
-          </a>
-          <p class="line-clamp-2">{post.frontmatter.description}</p>
-        </li>
-      ))
-    }
-  </ul>
+    <ul class="blog-posts">
+      {
+        allPosts.map((post) => (
+          <li>
+            <a href={post.url} class="posts">
+              <File />
+              <div class="text-post">
+                <h3 class="title">{post.frontmatter.title}</h3>
+                <p class="textos line-clamp-1">{post.frontmatter.description}</p>
+              </div>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
 </Section>
 
 <style>
-  ul {
+  .blog-posts {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  li {
+    /* border: 1px solid rgb(var(--dark), 0.1); */
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+  }
+  li:hover {
+    background-color: rgb(var(--accent-50), 0.05);
+    /* color: rgb(var(--dark), 0.95); */
+  }
+  .posts {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .text-post {    
+    border-left: 1px solid rgb(var(--dark), 0.25);
+    padding-left: 0.5rem;
+  }
+  li .title {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  li .textos {
+    font-size: 12px;
+    font-weight: 300;
+  }
+  /* ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 0.5rem;
-  }  
+  }
   .items {
     padding: 0.5rem;
     border-radius: 0.5rem;
     border: 1px solid rgb(var(--primary-300), 0.1);
-
-    transition: all 0.2s ease-in-out;
-    /* background-color: rgb(30, 37, 44, 0.03); */
+    transition: all 0.2s ease-in-out;    
   }
-  
   .items:hover {
     background-color: rgb(var(--primary-200), 0.05);
     border: 1px solid rgb(var(--primary-300), 0.1);
@@ -80,7 +104,6 @@ const allPosts = await Astro.glob("@/pages/posts/*.md");
       4px 4px 16px rgb(var(--primary-200), 0.1),
       -4px -4px 16px rgb(var(--primary-200), 0.1);
   }
-    
   .items a {
     display: flex;
     align-items: center;
@@ -99,7 +122,7 @@ const allPosts = await Astro.glob("@/pages/posts/*.md");
     font-size: 12px;
     color: rgb(var(--dark), 0.65);
     text-wrap: pretty;
-  }
+  } */
 
   @media (width <= 700px) {
     /* ul {

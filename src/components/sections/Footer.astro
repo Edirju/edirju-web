@@ -1,118 +1,102 @@
 ---
 import Section from "../Section.astro";
 import Radar from "@/icons/Radar.astro";
-
 import { basics } from "@landing";
 const { name, profiles } = basics;
-import { Github, Instagram, Linkedin, Threads, X } from "simple-icons-astro";
-const SOCIAL_ICONS: Record<string, any> = {
+import {
   Github,
   Instagram,
   Linkedin,
   Threads,
   X,
-};
+  Mastodon,
+  Facebook,
+} from "simple-icons-astro";
+
 ---
 
 <Section>
-  <h2 class="section-title flex items-center gap-1">
-    <Radar />Sígueme
-  </h2>
+  <div class="area_section-2">
+    <h2 class="section-title">
+      <Radar />Encuéntrame en:
+    </h2>
+    <footer>
+      <div class="avatar flex flex-col items-center gap-1">
+        <img src="../images/avatar.svg" alt=`${name}` class="avatar-img" />
+        <h3>
+          Edinson Rivera Jurado <span>•</span> Desarrollo Web <span>•</span> Community
+          Manager
+        </h3>
+      </div>
+      <p class="copyright">© 2024 Copyright —@edirju</p>
 
-  <footer>
-    <div class="avatar">
-      <img src="../images/avatar.svg" alt=`${name}` class="avatar-img" />
-      <h3>
-        Edinson Rivera Jurado <span>•</span> Desarrollo Web <span>•</span> Community
-        Manager
-      </h3>
-    </div>
-
-    <p class="copyright">© 2024 Copyright —@edirju</p>
-
-    <div class="social-icons">
-      {
-        profiles.map(({ network, url, username }) => {
-          const Icon = SOCIAL_ICONS[network];
-
-          if (!Icon) {
-            console.error(`Icono no encontrado para la red: ${network}`);
-            return null;
-          }
-
-          return (
-            <a
-              href={url}
-              target="_blank"
-              rel="noopener noreferrer"
-              title={`Visitar el perfil de ${name} en ${network}`}
-            >
-              <Icon />
-            </a>
-          );
-        })
-      }
-    </div>
-  </footer>
+      <div class="social-links">
+        <a
+          href="https://www.linkedin.com/in/edinson-rivera-jurado-65187927/"
+          target="_blank"
+        >
+          <span class="sr-only">Ir a perfil de Linkedin</span>
+          <Linkedin />
+        </a>
+        <a href="https://github.com/Edirju" target="_blank">
+          <span class="sr-only">Go to Astro's GitHub repo</span>
+          <Github />
+        </a>
+        <a href="https://twitter.com/edinson_rivera" target="_blank">
+          <span class="sr-only">Follow Astro on Twitter</span>
+          <X />
+        </a>
+        <a href="https://mastodon.social/@edirju" target="_blank">
+          <span class="sr-only">Follow Astro on Mastodon</span>
+          <Mastodon />
+        </a>
+        <a href="https://www.instagram.com/edirju/" target="_blank">
+          <span class="sr-only">Ir a perfil de Instagram</span>
+          <Instagram />
+        </a>
+        <a href="https://www.threads.net/@edirju" target="_blank">
+          <span class="sr-only">Ir a perfil de Threads</span>
+          <Threads />
+        </a>
+        <a href="https://www.facebook.com/edirjudev" target="_blank">
+          <span class="sr-only">Ir a perfil de Facebook</span>
+          <Facebook />
+        </a>
+      </div>
+    </footer>
+  </div>
 </Section>
 
 <style>
   footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
+    padding: 0 1em 0 1em;
+    text-align: center;
   }
-
-  .avatar {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  .avatar h3 {
-    font-size: 16px;
-    font-weight: 400;
-    letter-spacing: -0.05em;
-  }
-
-  .copyright {
-    font-size: 14px;
+  h3 {
+    font-size: 1rem;
     font-weight: 300;
-    letter-spacing: 0.1em;
-    color: rgb(var(--text-100), 0.45);
+    letter-spacing: -0.025em;
+    color: rgb(var(--dark), 0.8);
   }
-
-  .social-icons {
+  p {
+    color: rgb(var(--dark), 0.5);
+    font-size: 14px;
+  }
+  .social-links {
     display: flex;
-    gap: 1.5rem;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1em;
   }
-
-  .social-icons a {
+  .social-links a {
+    text-decoration: none;
+    color: rgb(var(--dark), 0.75);
     transition-property: transform, color;
     transition-duration: 0.3s, 0.5s;
     transition-delay: 0s, 0.1s;
-    color: rgb(var(--dark), 0.65);
   }
-  .social-icons a:hover {
+  .social-links a:hover {
+    color: rgb(var(--accent-50), 1);
     transform: scale(1.2) rotate(360deg);
-    color: rgb(var(--text-200), 1);
-  }
-
-  @media (width <= 700px) {
-    main {
-      margin-bottom: 38px;
-      padding: 0rem;
-    }
-
-    .avatar {
-      flex-direction: column;
-      text-align: center;
-    }
-
-    .avatar img {
-      width: 48px;
-      height: 48px;
-    }
-  }
+  }  
 </style>

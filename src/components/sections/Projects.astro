@@ -28,96 +28,88 @@ const SKILL_ICONS: Record<string, any> = {
 ---
 
 <Section id="proyectos1">
-  <h2 class="section-title flex items-center gap-1">
-    <Data /> Proyectos
-  </h2>
-
-  <article class="suscribe-container">
-    <p>
+  <div class="area_section-1">
+    <h2 class="section-title">
+      <Data /> Proyectos
+    </h2>
+    <p class="parrafo">
       Los pequeños detalles marcan una gran diferencia. Con los años he
       aprendido a fijarme en esos detalles. Nunca dejo de aprender. He aquí
       varias recopilaciones a lo largo de este camino.
     </p>
-    <!-- <div class="box-left">
-      <a href="#" class="rss-btn">
-        <Rss class="h-3 w-3" />
-         <span>Suscríbete</span> 
-      </a>
-    </div> -->
-  </article>
-
-  <ul class="projects-items">
-    {
-      projects.map(
-        ({ url, description, highlights, name, isActive, github }) => {
-          return (
-            <li class="items">
-              <article class="item">
-                <header>
-                  <h3 class="">
-                    <a
-                      href={url}
-                      title={`Ver el proyecto ${name}`}
-                      target="_blank"
-                    >
-                      {name}
-                    </a>
-                    {isActive && (
-                      <span>
-                        <Circle />
-                      </span>
-                    )}
-                    {github && (
+    <ul class="projects-items">
+      {
+        projects.map(
+          ({ url, description, highlights, name, isActive, github }) => {
+            return (
+              <li class="items">
+                <article class="item">
+                  <header>
+                    <h3 class="">
                       <a
-                        class="github-code-link"
-                        href={github}
+                        href={url}
+                        title={`Ver el proyecto ${name}`}
                         target="_blank"
-                        title={`Ver código fuente del proyecto ${name}`}
                       >
-                        <Github class="w-4 h-4" />
+                        {name}
                       </a>
-                    )}
-                  </h3>
-                  <p class=" line-clamp-2">{description}</p>
-                </header>
-                <footer>
-                  <ul>
-                    {highlights.map((highlight) => {
-                      return <span>{highlight}</span>;
-                    })}
-                  </ul>
-                </footer>
-              </article>
-            </li>
-          );
-        }
-      )
-    }
-  </ul>
+                      {isActive && (
+                        <span>
+                          <Circle />
+                        </span>
+                      )}
+                      {github && (
+                        <a
+                          class="github-code-link"
+                          href={github}
+                          target="_blank"
+                          title={`Ver código fuente del proyecto ${name}`}
+                        >
+                          <Github class="w-4 h-4" />
+                        </a>
+                      )}
+                    </h3>
+                    <p class=" line-clamp-2">{description}</p>
+                  </header>
+                  <footer>
+                    <ul>
+                      {highlights.map((highlight) => {
+                        return <span>{highlight}</span>;
+                      })}
+                    </ul>
+                  </footer>
+                </article>
+              </li>
+            );
+          }
+        )
+      }
+    </ul>
+  </div>
 </Section>
 
 <style>
   .projects-items {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 0.5rem;
-    border-radius: 0.5rem;
-    padding: 0px 8px;
+    gap: 1.5rem;
+    /* border-radius: 0.5rem; */
+    /* padding: 0px 8px; */
   }
   .items {
-    overflow: hidden;
-    border: 1px solid rgb(var(--text-200), 0.1);
+    padding: 0.5rem;
     border-radius: 0.5rem;
-    padding: 8px;
-    transition: all 0.3s ease-in-out;
     position: relative;
+    overflow: hidden;
+    border: 1px solid rgb(var(--dark), 0.1);
+    transition: all 0.3s ease-in-out;
   }
   .items:hover {
-    background-color: rgb(var(--text-200), 0.05);
-    border: 1px solid rgb(var(--black), 0.1);
+    background-color: rgb(var(--accent-50), 0.05);
+    border: 1px solid rgb(var(--accent-50), 0.25);
     box-shadow:
-      4px 4px 16px rgb(var(--text-200), 0.1),
-      -4px -4px 16px rgb(var(--text-200), 0.1);
+      4px 4px 16px rgb(var(--dark), 0.05),
+      -4px -4px 16px rgb(var(--dark), 0.05);
   }
   .item {
     display: flex;
@@ -136,36 +128,39 @@ const SKILL_ICONS: Record<string, any> = {
     font-weight: 500;
     letter-spacing: -0.05rem;
     text-wrap: pretty;
-    color: rgb(30, 37, 44, 0.9);
+    color: rgb(var(--dark), 0.9);
   }
   .item header h3 a:hover {
     text-decoration: underline;
     text-underline-offset: 4px;
+    color: rgb(var(--accent-65), 1);
   }
   .item header h3 span {
-    color: rgb(0, 188, 47, 1);
+    color: rgb(var(--accent-55), 1);
   }
   .item header p {
     font-size: 12px;
-    line-height: 1.4;
-    color: rgb(30, 37, 44, 0.65);
+    line-height: 1.2;
+    color: rgb(var(--dark), 0.45);
+    letter-spacing: -0.025em;
     text-wrap: pretty;
   }
   .item footer ul {
     display: flex;
     flex-wrap: wrap;
     gap: 4px;
+    font-family: var(--body-font);    
+    font-size: 10px;
+    color: rgb(var(--accent-65), 0.5);
   }
   .item footer ul span {
-    font-size: 10px;
-    color: rgb(30, 37, 44, 0.5);
-    background: rgb(30, 37, 44, 0.08);
-    padding: 1px 3px;
+    background: rgb(var(--dark), 0.05);
+    padding: 1px 4px;
     border-radius: 4px;
     width: fit-content;
   }
   .github-code-link {
-    color: rgb(30, 37, 44, 0.55);
+    color: rgb(var(--dark), 0.55);
     margin-left: 8px;
   }
 </style>

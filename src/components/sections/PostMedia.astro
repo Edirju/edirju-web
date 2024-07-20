@@ -1,132 +1,80 @@
 ---
 import Section from "../Section.astro";
 import News2 from "@/icons/News2.astro";
-import News from "@/icons/News.astro";
-import RightArrow from "@/icons/RightArrow.astro";
-import Filetextfill from "@/icons/Filetextfill.astro";
-
-import {
-  Rss,
-  X,
-  Linkedin,
-  Threads,
-  Facebook,
-  Instagram,
-} from "simple-icons-astro";
-
+import { Rss} from "simple-icons-astro";
 import { posts } from "@social";
-const SOCIAL_ICONS: Record<string, any> = {
-  Facebook,
-  Instagram,
-  Linkedin,
-  Threads,
-  X,
-  News,
-};
-
-const allPosts = await Astro.glob("@/pages/posts/*.md");
 ---
 
 <Section>
-  <h2 class="section-title flex items-center gap-1">
-    <News2 />Social Media posts
-  </h2>
-
-  <article class="suscribe-container">
-    <p>
+  <div class="area_section-2">
+    <h2 class="section-title">
+      <News2 />Blog | Social Media posts
+    </h2>
+    <p class="parrafo">
       Escribo sobre cualquier cosa relacionada con la tecnología, el marketing y
       de vez en cuando sobre cosas interesantes que se cruzan en mí camino.
     </p>
 
-    <div class="box-left">
-      <a href="#" class="rss-btn">
-        <Rss class="h-3 w-3" />
-        <!-- <span>Suscríbete</span> -->
-      </a>
-    </div>
-  </article>
-
-  <ul>
-    {
-      posts.map(({ network, title, description, url }) => {
-        const Icon = SOCIAL_ICONS[network];
-
-        return (
-          <li>
-            <article>
-              <header>
-                <Icon class="w-4 h-4" />
-                <h3 class="truncate">
-                  <a
-                    href={url}
-                    title={`Ver el proyecto ${title}`}
-                    target="_blank"
-                  >
-                    {title}
-                  </a>
-                </h3>
-              </header>
-              <p class="line-clamp-2">{description}</p>
-            </article>
-          </li>
-        );
-      })
-    }
-  </ul>
+    <ul class="blog-posts">
+      {
+        posts.map(({ network, title, description, url }) => {
+          return (
+            <li>
+              <a
+                href={url}
+                title={`Ver el proyecto ${network}`}
+                target="_blank"
+                class="posts"
+              >
+                <Rss class="w-4 h-4" />
+                <div class="text-post">
+                  <h3 class="title">{title}</h3>
+                  <p class="textos line-clamp-1">{network}</p>
+                </div>
+              </a>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </div>
 </Section>
 
 <style>
-  ul {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 0.5rem;
+  .blog-posts {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
   }
-  li article {
-    padding: 0.5rem;
+  li {
+    /* border: 1px solid rgb(var(--dark), 0.1); */
     border-radius: 0.5rem;
-    border: 1px solid rgb(var(--secondary-100), 0.08);
-
-    transition: all 0.2s ease-in-out;
-    /* background-color: rgb(30, 37, 44, 0.03); */
+    padding: 0.5rem;
   }
-  li article:hover {
-    background-color: rgb(var(--secondary-100), 0.05);
-    border: 1px solid rgb(var(--secondary-100), 0.1);
-    box-shadow:
-      4px 4px 16px rgb(var(--secondary-100), 0.1),
-      -4px -4px 16px rgb(var(--secondary-100), 0.1);
+  li:hover {
+    background-color: rgb(var(--accent-50), 0.05);
+    /* color: rgb(var(--dark), 0.95); */
   }
-  li article header {
+  .posts {
     display: flex;
     align-items: center;
-    gap: 0.25rem;
+    gap: 0.5rem;
   }
-  li article header a {
+  .text-post {
+    border-left: 1px solid rgb(var(--dark), 0.25);
+    padding-left: 0.5rem;
+  }
+  .title {
     font-size: 14px;
-    font-weight: 500;
-    color: rgb(30, 37, 44, 0.9);
-    inset: 0;
-    width: auto;
+    font-weight: 600;
   }
-  li article header a:hover {
-    text-decoration: underline;
-    text-underline-offset: 4px;
-  }
-  li article p {
+  .textos {
     font-size: 12px;
-    line-height: 1.4;
-    color: rgb(30, 37, 44, 0.65);
-    text-wrap: pretty;
+    font-weight: 300;
   }
 
+  
   @media (width <= 700px) {
-    /* ul {
-      flex-direction: row;
-      justify-content: center;
-    }
-    li {
-      width: 300px;
-      height: 66px;
-    } */
+  
   }
 </style>

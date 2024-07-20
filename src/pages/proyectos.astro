@@ -1,7 +1,7 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import Section from "@/components/Section.astro";
-import MinNav from "@/components/sections/NavbarMin.astro";
+import MinNav from "@/components/sections/Navbar.astro";
 import Footer from "@/components/sections/Footer.astro";
 
 import {
@@ -17,43 +17,21 @@ import {
 import Circle from "@/icons/circle.astro";
 import AstroIcon from "@/icons/AstroIcon.astro";
 import Data from "@/icons/Data.astro";
-
-// const SKILL_ICONS: Record<string, any> = {
-//   Html5,
-//   Css3,
-//   React,
-//   Javascript,
-//   AstroIcon,
-//   Vite,
-// };
-
 import { basics } from "@landing";
 import { projects } from "@cv";
-
 const { name, label } = basics;
 ---
-
 <Layout title=`Proyectos de ${name} - ${label}`>
   <MinNav />
   <Section>
-    <h2 class="section-title flex flex-wrap items-center">
+    <h2 class="section-title mb-4">
       <Data />Proyectos | Prácticas
     </h2>
-
-    <article class="suscribe-container">
-      <p>
-        Los pequeños detalles marcan una gran diferencia. Con los años he
-        aprendido a fijarme en esos detalles. Nunca dejo de aprender. He aquí
-        varias recopilaciones a lo largo de este camino.
-      </p>
-
-      <!-- <div class="box-left">
-        <a href="#" class="rss-btn">
-          <Rss class="h-3 w-3" />
-          <span>Suscríbete</span>
-        </a>
-      </div> -->
-    </article>
+    <p class="parrafo mb-4">
+      Los pequeños detalles marcan una gran diferencia. Con los años he
+      aprendido a fijarme en esos detalles. Nunca dejo de aprender. He aquí
+      varias recopilaciones a lo largo de este camino.
+    </p>    
 
     <ul class="projects-items">
       {
@@ -102,154 +80,7 @@ const { name, label } = basics;
           }
         )
       }
-    </ul>
-
-    <!-- <article
-      class="projects-container"
-      
-    >
-      <header>
-        <h3>
-          Con HTML, CSS y JS
-          <span class="text-red-400"><Circle /></span>
-          <span class="text-blue-400"><Circle /></span>
-          <span class="text-yellow-500"><Circle /></span>
-        </h3>
-        <p>
-          Presento alguno de mis proyectos destacados enfocados en el uso de
-          HTML semantico, reglas CSS y funcionalidades en Javascript.
-        </p>
-      </header>
-
-      <ul class="projects-items">
-        {
-          projects.map(
-            ({
-              url,
-              description,
-              highlights,
-              name,
-              isActive,
-              github,
-              skill,
-            }) => {
-              const Icon = SKILL_ICONS[skill];
-
-              return (
-                <li class="items">
-                  <article class="item">
-                    <header>
-                      <h3 class="">
-                        <a
-                          href={url}
-                          title={`Ver el proyecto ${name}`}
-                          target="_blank"
-                        >
-                          {name}
-                        </a>
-                        {isActive && <span>•</span>}
-                        {github && (
-                          <a
-                            class="github-code-link"
-                            href={github}
-                            target="_blank"
-                            title={`Ver código fuente del proyecto ${name}`}
-                          >
-                            <Github class="w-4 h-4" />
-                          </a>
-                        )}
-                      </h3>
-                      <p class=" line-clamp-2">{description}</p>
-                    </header>
-                    <footer>
-                      <ul>
-                        {highlights.map((highlight) => {
-                          return <span>{highlight}</span>;
-                        })}
-                      </ul>
-                    </footer>
-                  </article>
-                </li>
-              );
-            }
-          )
-        }
-      </ul>
-    </article>
-
-    <article
-      class="projects-container"
-      
-    >
-      <header>
-        <h3>
-          Con Frameworks
-          <span class="text-green-400"><Circle /></span>
-          <span class="text-red-600"><Circle /></span>
-          <span class="text-purple-500"><Circle /></span>
-        </h3>
-        <p>
-          Algunos de mis proyectos, prácticas que brindan una idea de mi
-          experiencia y habilidades, asi como de la variedad de soluciones que
-          puedo ofrecer.
-        </p>
-      </header>
-
-      <ul class="projects-items">
-        {
-          projectsB.map(
-            ({
-              url,
-              description,
-              highlights,
-              name,
-              isActive,
-              github,
-              skill,
-            }) => {
-              const Icon = SKILL_ICONS[skill];
-
-              return (
-                <li class="items">
-                  <article class="item">
-                    <header>
-                      <h3 class="">
-                        <a
-                          href={url}
-                          title={`Ver el proyecto ${name}`}
-                          target="_blank"
-                        >
-                          {name}
-                        </a>
-                        {isActive && <span>•</span>}
-                        {github && (
-                          <a
-                            class="github-code-link"
-                            href={github}
-                            target="_blank"
-                            title={`Ver código fuente del proyecto ${name}`}
-                          >
-                            <Github class="w-4 h-4" />
-                          </a>
-                        )}
-                      </h3>
-                      <p class=" line-clamp-2">{description}</p>
-                    </header>
-                    <footer>
-                      <ul>
-                        {highlights.map((highlight) => {
-                          return <span>{highlight}</span>;
-                        })}
-                      </ul>
-                    </footer>
-                  </article>
-                </li>
-              );
-            }
-          )
-        }
-      </ul>
-    </article> -->
+    </ul>    
   </Section>
   <Footer />
 </Layout>
@@ -257,25 +88,25 @@ const { name, label } = basics;
 <style>
   .projects-items {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 0.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 1rem;
     border-radius: 0.5rem;
     padding: 8px;
   }
   .items {
     overflow: hidden;
-    border: 1px solid rgb(var(--text-200), 0.1);
+    border: 1px solid rgb(var(--dark), 0.08);
     border-radius: 0.5rem;
     padding: 8px;
     transition: all 0.3s ease-in-out;
     position: relative;
   }
   .items:hover {
-    background-color: rgb(var(--text-200), 0.05);
-    border: 1px solid rgb(var(--black), 0.1);
+    background-color: rgb(var(--accent-50), 0.05);
+    border: 1px solid rgb(var(--accent-50), 0.1);
     box-shadow:
-      4px 4px 16px rgb(var(--text-200), 0.1),
-      -4px -4px 16px rgb(var(--text-200), 0.1);
+      4px 4px 16px rgb(var(--dark), 0.05),
+      -4px -4px 16px rgb(var(--dark), 0.05);
   }
   .item {
     display: flex;
@@ -294,7 +125,7 @@ const { name, label } = basics;
     font-weight: 500;
     letter-spacing: -0.05rem;
     text-wrap: pretty;
-    color: rgb(var(--text-200), 0.8);
+    color: rgb(var(--accent-65), 0.8);
   }
   .item header h3 a:hover {
     text-decoration: underline;
@@ -306,7 +137,7 @@ const { name, label } = basics;
   .item header p {
     font-size: 12px;
     line-height: 1.4;
-    color: rgb(var(--text-100), 0.5);
+    color: rgb(var(--dark), 0.5);
     text-wrap: pretty;
   }
   .item footer ul {
@@ -316,8 +147,8 @@ const { name, label } = basics;
   }
   .item footer ul span {
     font-size: 10px;
-    color: rgb(var(--text-200), 0.5);
-    background: rgb(var(--text-100), 0.08);
+    color: rgb(var(--dark), 0.5);
+    background: rgb(var(--accent-65), 0.08);
     padding: 1px 3px;
     border-radius: 4px;
     width: fit-content;

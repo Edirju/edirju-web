@@ -1,40 +1,26 @@
 :root {
   /* Colors */
-  --white: 255, 255, 255;  /* #FFFFFF */
-  --black: 0, 0, 0;  /* #000000 */
-  --text-100: 30, 37, 44;  /* #1E252C */
-  --text-200: 0, 78, 146;  /* #004E92 */
-  --text-300: 224, 224, 224;  /* #E0E0E0 */
-  --text-400: 255, 254, 254;  /* #FFFEFE */
-  --bg-body: 255, 254, 254;  /* #FFFEFE */
-  --bg-100: 25, 57, 104;  /* #193968 */
-  --bg-200: 46, 73, 122;  /* #2E4B7A */
-  --bg-300: 75, 99, 150;  /* #4B6396 */
-  --primary-100: 255, 193, 7;  /* #FFC907 */
-  --primary-200: 221, 164, 0;  /* #DDA600 */
-  --primary-300: 145, 100, 0;  /* #916400 */
-  --primary-400: 255, 193, 52;  /* #FFC950 */
-  --secondary-100: 236, 69, 104;  /* #EC4568 */
-  --secondary-200: 214, 53, 58;  /* #D6333A */
-  --secondary-300: 228, 8, 72;  /* #E80072 */
-  --tertiary-100: 104, 213, 217;  /* #68D5D7 */
-  --tertiary-200: 177, 218, 233;  /* #B3DAE9 */
-  --accent-100: 76, 175, 80;  /* #4CBA50 */
-  --accent-200: 0, 81, 0;  /* #005100 */
-  --dark: 16, 14, 14;  /* #100E0E */
-  --light:255,253,248;  /* #FFFEFE */
-
+  --white: 255, 255, 255;       /* #FFFFFF */
+  --black: 0, 0, 0;             /* #000000 */
+  --dark: 30, 37, 44;						/* #1E252C */
+	--dark: 24, 24, 24;						/* #181818 */
+	--light: 255, 253, 248;				/* #FFFEFE */  
+  --accent-50: 0, 216, 255;			/* #00D8FF */
+	--accent-55: 255, 83, 182;		/* #FF53B6 */
+	--accent-60: 47, 72, 88;			/* #2D4858 */
+  --accent-65: 0, 78, 146;       /* #004E92 */
+	--primary-50: 255, 204, 51;		/* #FFCC33 */
   --gray-gradient: rgba(var(--white), 10%), #fffefe;
   --box-shadow: 0 2px 6px rgba(var(--dark), 1.5%), 0 8px 24px rgba(var(--dark), 5%), 0 16px 32px rgba(var(--dark), 5%);
-
   /* Fonts */
   --heading-font: "Montserrat Variable", sans-serif;  /* Montserrat Variable */
   --body-font: "Lato", sans-serif;  /* Lato */
+  --mono-font: 'Source Code Pro Variable', monospace;  /* Source Code Pro Variable */
 }
 
 *::selection {
-  background-color: rgb(var(--dark));
-  color: rgb(var(--light));
+  background-color: rgb(var(--primary-50));
+  color: rgb(var(--dark));
 }
 
 html {
@@ -76,13 +62,11 @@ h6 {
 
 body {
   font-family: var(--body-font);
-  color: rgb(var(--text-100));
-
+  color: rgb(var(--dark));
 }
 
-
 p {
-  color: rgb(var(--text-100));
+  color: rgb(var(--dark));
   font-size: 14px;
   line-height: 1.5;
   margin: 0;
@@ -101,7 +85,50 @@ code {
     monospace;
 }
 
+.area_section-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  /* background-color: rgb(var(--dark), 0.025); */
+  color: rgb(var(--dark), 0.9);
+  border-radius: 0.5rem;
+  border: 1px solid rgb(var(--dark), 0.05);
+}
+
+
+
+.area_section-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  /* background-color: rgb(var(--dark), 0.025); */
+  color: rgb(var(--dark), 0.9);
+  border-radius: 0.5rem;
+  /* border: 1px solid rgb(var(--dark), 0.05); */
+}
+
 .section-title {
+  font-size: clamp(18px, 1.5vw, 20px);
+  font-weight: 700;
+  text-wrap: pretty;
+  letter-spacing: -0.025rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.parrafo {
+  font-size: 14px;
+  font-weight: 300;
+  text-wrap: pretty;
+  /* letter-spacing: 0.025rem; */
+  line-height: 1.4;
+  color: rgb(var(--dark), 0.65);
+}
+
+/* .section-title {
   margin-bottom: 2rem;
   font-weight: 700;
   line-height: 1.5;
@@ -114,34 +141,34 @@ code {
   border-radius: 6px;
   border: 2px solid rgb(var(--dark), 0.95);
   box-shadow: 0.1em 0.1em rgb(var(--dark), 0.95);
-}
+} */
 
-.suscribe-container {
+/* .suscribe-container {
   border: 1px solid rgb(var(--dark), 0.08);
   padding: 0.5rem;
   margin-bottom: 2rem;
-}
+} */
 
-.suscribe-container p {
+/* .suscribe-container p {
   font-size: 0.75rem;
   font-weight: 300;
   text-wrap: pretty;
   color: rgb(var(--dark), 0.75);
-}
+} */
 
-.box-left {
+/* .box-left {
   display: flex;
   justify-content: flex-end;
   font-size: 0.625rem;
   color: rgb(var(--dark), 0.45);
-}
+} */
 
-.box-left .rss-btn {
+/* .box-left .rss-btn {
   display: flex;
   align-items: center;
   padding: 0.25rem;
   background-color: rgb(var(--dark), 0.08);
-}
+} */
 
 .print {
   display: none !important;

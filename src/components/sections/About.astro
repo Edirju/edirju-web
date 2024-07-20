@@ -1,17 +1,24 @@
 ---
 import Section from "../Section.astro";
 import User from "@/icons/User.astro";
-import Download from "@/icons/DownLoad2.astro";
 
 import { basics } from "@landing";
 const { summary } = basics;
 ---
 
 <Section>
-  <h2 class="section-title flex items-center gap-1"><User />Sobre mí</h2>
-  <p class="text-pretty font-light text-sm">{summary}</p>  
+  <div class="area_section-1">
+    <h2 class="section-title"><User />Sobre mí</h2>
+    <p class="parrafo">{summary}</p>
+  </div>
 </Section>
 
 <style>
-  
+  .area_section-1:hover {
+    background-color: rgb(var(--accent-50), 0.05);
+    border: 1px solid rgb(var(--accent-50), 0.1);
+    box-shadow:
+      0 4px 16px rgb(var(--dark), 0.02),
+      0 8px 32px rgb(var(--dark), 0.02);
+  }
 </style>
