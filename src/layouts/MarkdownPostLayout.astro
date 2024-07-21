@@ -1,6 +1,8 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import Section from "@/components/Section.astro";
+import Navbar from "@/components/sections/Navbar.astro";
+import Footer from "@/components/sections/Footer.astro";
 import Logo from "@/icons/Logo.astro";
 import News from "@/icons/News.astro";
 import { slide } from "astro:transitions";
@@ -8,8 +10,9 @@ const { frontmatter } = Astro.props;
 ---
 
 <Layout title={frontmatter.title}>
+  <Navbar />
   <Section>
-    <header
+    <!-- <header
       class="text-[rgb(var(--dark), 0.08)] body-font"
       transition:animate="slide"
     >
@@ -29,9 +32,9 @@ const { frontmatter } = Astro.props;
           <News class="w-4 h-4" />
         </a>
       </div>
-    </header>
+    </header> -->
 
-    <div class="mt-[72px]">
+    <div class="">
       <h2 class="text-2xl font-bold">
         {frontmatter.title}
       </h2>
@@ -54,22 +57,23 @@ const { frontmatter } = Astro.props;
       <slot />
     </div>
   </Section>
-
-  <style>
-    img {
-      border: 1px solid rgb(var(--dark), 0.08);
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
-      width: 700px;
-      height: 350px;
-      border-radius: 12px;
-      margin: 16px 0;
-    }
-
-    @media (width <= 700px) {
-      header {
-        margin-bottom: 38px;
-      }
-    }
-  </style>
+  <Footer />
 </Layout>
+
+<style>
+  img {
+    border: 1px solid rgb(var(--dark), 0.08);
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    width: 700px;
+    height: 350px;
+    border-radius: 12px;
+    margin: 16px 0;
+  }
+
+  @media (width <= 700px) {
+    header {
+      margin-bottom: 38px;
+    }
+  }
+</style>
