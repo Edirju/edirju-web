@@ -1,30 +1,9 @@
 ---
 import Section from "../Section.astro";
 import News2 from "@/icons/News2.astro";
-import News from "@/icons/News.astro";
 import File from "@/icons/File.astro";
-
-import {
-  Rss,
-  X,
-  Linkedin,
-  Threads,
-  Facebook,
-  Instagram,
-} from "simple-icons-astro";
-
-// const SOCIAL_ICONS: Record<string, any> = {
-//   Facebook,
-//   Instagram,
-//   Linkedin,
-//   Threads,
-//   X,
-//   News,
-// };
-
 const allPosts = await Astro.glob("@/pages/posts/*.md");
 ---
-
 <Section>
   <div class="area_section-2">
     <h2 class="section-title">
@@ -61,13 +40,11 @@ const allPosts = await Astro.glob("@/pages/posts/*.md");
     gap: 1rem;
   }
   li {
-    /* border: 1px solid rgb(var(--dark), 0.1); */
     border-radius: 0.5rem;
     padding: 0.5rem;
   }
   li:hover {
-    background-color: rgb(var(--accent-50), 0.05);
-    /* color: rgb(var(--dark), 0.95); */
+    background-color: rgb(var(--accent-50), 0.05);    
   }
   .posts {
     display: flex;
@@ -85,53 +62,5 @@ const allPosts = await Astro.glob("@/pages/posts/*.md");
   li .textos {
     font-size: 12px;
     font-weight: 300;
-  }
-  /* ul {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 0.5rem;
-  }
-  .items {
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-    border: 1px solid rgb(var(--primary-300), 0.1);
-    transition: all 0.2s ease-in-out;    
-  }
-  .items:hover {
-    background-color: rgb(var(--primary-200), 0.05);
-    border: 1px solid rgb(var(--primary-300), 0.1);
-    box-shadow:
-      4px 4px 16px rgb(var(--primary-200), 0.1),
-      -4px -4px 16px rgb(var(--primary-200), 0.1);
-  }
-  .items a {
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-  }
-  .items a h3 {
-    font-size: 14px;
-    font-weight: 500;
-    color: rgb(var(--dark), 0.85);
-  }
-  .items a h3:hover {
-    text-decoration: underline;
-    text-underline-offset: 4px;
-  }
-  .items p {
-    font-size: 12px;
-    color: rgb(var(--dark), 0.65);
-    text-wrap: pretty;
-  } */
-
-  @media (width <= 700px) {
-    /* ul {
-      flex-direction: row;
-      justify-content: center;
-    }
-    li {
-      width: 300px;
-      height: 66px;
-    } */
-  }
+  }    
 </style>
